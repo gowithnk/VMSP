@@ -1,48 +1,34 @@
 <?php
-$db=mysqli_connect("localhost","root","","newuser");
+$db = mysqli_connect("localhost", "root", "", "newuser");
 
-$oldpassword=$_POST['oldpassword'];
-$newpassword=$_POST['newpassword'];
-$confirmpassword=$_POST['confirmpassword'];
-$username=$_POST['username'];
-$sql="select * from form where username='$username'";
-$query=mysqli_query($db,$sql);
-$check=mysqli_num_rows($query);
-if($check>0)
-{
-	$fetch=mysqli_fetch_array($query);
-	if($fetch['Password']==$oldpassword)
-	{
-		if($newpassword==$confirmpassword)
-		{
-			$sql="UPDATE form SET Password='$confirmpassword' where username='$username'";
-			$query=mysqli_query($db,$sql);
-			if($query)
-			{
+$oldpassword = $_POST['oldpassword'];
+$newpassword = $_POST['newpassword'];
+$confirmpassword = $_POST['confirmpassword'];
+$username = $_POST['username'];
+$sql = "select * from form where username='$username'";
+$query = mysqli_query($db, $sql);
+$check = mysqli_num_rows($query);
+if ($check > 0) {
+	$fetch = mysqli_fetch_array($query);
+	if ($fetch['Password'] == $oldpassword) {
+		if ($newpassword == $confirmpassword) {
+			$sql = "UPDATE form SET Password='$confirmpassword' where username='$username'";
+			$query = mysqli_query($db, $sql);
+			if ($query) {
 				echo "<script>
 					alert('password Update');
 					 </script>";
-			}
-			else
-			{
+			} else {
 				echo "<script>
 					alert('error');
 					 </script>";
-			} 
-		}
-		else
-		{
+			}
+		} else {
 			echo "your new password and confirm password do not match";
 		}
-	}
-	else
-	{
+	} else {
 		echo "Your old password do not match";
 	}
-}
-else
-{
+} else {
 	echo "username does'nt exist";
 }
-
-?>

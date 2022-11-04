@@ -30,4 +30,3 @@ else
 		location.href='forgot_pass.php';
 			 </script>";
 }
-?>

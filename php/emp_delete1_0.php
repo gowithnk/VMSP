@@ -20,7 +20,7 @@ $fetch2 = mysqli_fetch_array($query);
 
 <head>
     <meta charset="utf-8">
-    <title>VMS</title>
+    <title>VMSP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -38,6 +38,36 @@ $fetch2 = mysqli_fetch_array($query);
             position: relative;
             top: 20px;
         }
+        body {
+			text-align: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		table {
+
+			border-collapse: collapse;
+			border: none;
+		}
+
+		td {
+			text-align: center;
+			height: 50px;
+			width: 150px;
+			color: white;
+		}
+
+		img {
+			border: none;
+		}
+
+		th {
+			font-family: verdana;
+			font-size: 16px;
+			color: skyblue;
+			padding: 5px;
+		}
+
     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -50,19 +80,11 @@ $fetch2 = mysqli_fetch_array($query);
 
 <body>
     <!-- Navbar -->
-    <?php
-
-    include('../topbar.php');
-
-    ?>
-
+    <?php include('../topbar.php');  ?>
     <!-- /END OF TOP NAVBAR -->
 
     <!-- SIDE MENU -->
-
-    <?php include('../sidebar_1.php');
-
-    ?>
+    <?php include('../sidebar_1.php'); ?>
     <!-- END OF SIDE MENU -->
 
     <!--  PAPER WRAP -->
@@ -70,49 +92,23 @@ $fetch2 = mysqli_fetch_array($query);
         <div class="container-fluid paper-wrap bevel tlbr">
             <div class="content-wrap">
                 <div class="row">
-                    <div class="col-sm-6" style="display: none ">
-                        <div class="chart-wrap">
-                            <div class="chart-dash">
-
-                                <div id="placeholder" style="width:100%;height:200px;"></div>
-                            </div>
+                    <div class="col-sm-12" style="overflow: auto; height:500px;">
+                        <div class="table-responsive">
+                         <?php include('emp_delete1.php') ?>
                         </div>
                     </div>
-
-                    <!-- center page-->
-
-                    <?php include('emp_delete1.php') ?>
-
                 </div>
             </div>
+            <!-- FOOTER -->
+            <?php include('../footer.php') ?>
+            <!-- / END OF FOOTER -->
         </div>
-
         <!-- /END OF CONTENT -->
-
-        <!-- FOOTER -->
-        <div class="footer-space"></div>
-        <div id="footer">
-            <div class="devider-footer-left"></div>
-            <div class="time">
-                <p id="spanDate"></p>
-                <p id="clock"></p>
-            </div>
-            <div class="copyright">
-                <span class="entypo-heart"></span>2022 <a href="http://synokempharma.com">Synokem</a> All Rights Reserved
-            </div>
-            <div class="devider-footer"></div>
-
-        </div>
-        <!-- / END OF FOOTER -->
-
-    </div>
-    </div>
     </div>
     <!--  END OF PAPER WRAP -->
-
     <!-- RIGHT SLIDER CONTENT -->
-
     <!-- END OF RIGHT SLIDER CONTENT-->
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
     <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
     <script src="assets/js/progress-bar/number-pb.js"></script>

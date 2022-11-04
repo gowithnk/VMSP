@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>VMS</title>
+    <title>VMSP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Le styles -->
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/loader-style.css">
@@ -16,13 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
-
-    <style type="text/css">
-        canvas#canvas4 {
-            position: relative;
-            top: 20px;
-        }
-    </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -34,69 +25,28 @@
 
 <body>
     <!-- Navbar -->
-    <?php
-
-    include('../topbar.php');
-
-    ?>
-
+    <?php include('../topbar.php'); ?>
     <!-- /END OF TOP NAVBAR -->
 
     <!-- SIDE MENU -->
-
-    <?php include('../sidebar.php');
-
-    ?>
+    <?php include('../sidebar_h.php'); ?>
     <!-- END OF SIDE MENU -->
 
     <!--  PAPER WRAP -->
     <div class="wrap-fluid">
         <div class="container-fluid paper-wrap bevel tlbr">
             <div class="content-wrap">
-                <!-- <div class="row"> -->
-                <!-- <div class="col-sm-6" style="display: none ">
-                            <div class="chart-wrap" >
-                                <div class="chart-dash">
-                                    
-                                    <div id="placeholder" style="width:100%;height:200px;"></div>
-                                </div>
-                            </div>  
-                        </div> -->
-
-                <!-- center page-->
                 <?php include('createpass.php'); ?>
-                <!-- </div> -->
             </div>
-
-            <!-- /END OF CONTENT -->
 
             <!-- FOOTER -->
-            <div class="footer-space"></div>
-            <div id="footer">
-                <div class="devider-footer-left"></div>
-                <div class="time">
-                    <p id="spanDate"></p>
-                    <p id="clock"></p>
-                </div>
-                <div class="copyright">
-                    <span class="entypo-heart"></span>2022 <a href="http://synokempharma.com">Synokem</a> All Rights Reserved
-                </div>
-                <div class="devider-footer"></div>
-
-
-            </div>
+            <?php include('../footer.php') ?>
             <!-- / END OF FOOTER -->
-
-
         </div>
     </div>
-    </div>
     <!--  END OF PAPER WRAP -->
-
-    <!-- RIGHT SLIDER CONTENT -->
-
-    <!-- END OF RIGHT SLIDER CONTENT-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
     <script src="assets/js/progress-bar/number-pb.js"></script>
     <script src="assets/js/progress-bar/progress-app.js"></script>
@@ -171,8 +121,6 @@
                 '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
         });
     </script>
-
-
 
 </body>
 

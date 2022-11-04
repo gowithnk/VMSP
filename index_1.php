@@ -32,16 +32,16 @@ if ($result = mysqli_query($db, $sql)) {
 
 <head>
     <meta charset="utf-8">
-    <title>VMS</title>
+    <title>VMSP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Niranjan">
     <!-- Le styles -->
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
 
@@ -181,29 +181,18 @@ if ($result = mysqli_query($db, $sql)) {
 
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
-
             </div>
+            
         </div>
+        <!-- FOOTER -->
+        <?php include('footer.php'); ?>
+        <!-- / END OF FOOTER -->
     </div>
 
     <!-- /END OF CONTENT -->
-
-    <!-- FOOTER -->
-    <?php
-
-    include('footer.php');
-
-    ?>
-    <!-- / END OF FOOTER -->
-
-    </div>
-    </div>
-    </div>
     <!--  END OF PAPER WRAP -->
 
     <!-- RIGHT SLIDER CONTENT -->

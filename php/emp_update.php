@@ -24,6 +24,3 @@ $query=mysqli_query($db,$sql);
 			echo"<script>alert ('error');
 				</script>";
 		}
-
-?>
-

@@ -7,5 +7,3 @@ if(isset($_GET['log']))
 	unset($_SESSION['user']);
 	header('location:../index.html');
 }
-
-?>

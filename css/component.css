@@ -8,7 +8,7 @@
 }
 
 .inputfile + label {
-    max-width: 80%;
+    max-width: 100%;
     font-size: 1.25rem;
     /* 20px */
     font-weight: 700;
@@ -195,6 +195,7 @@
     border: 1px solid #d3394c;
     background-color: #f1e5e6;
     padding: 0;
+    float: left;
 }
 
 .inputfile-6:focus + label,

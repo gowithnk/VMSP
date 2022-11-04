@@ -11,7 +11,7 @@ $fetch = mysqli_fetch_array($query);
 <div id="skin-select">
     <div id="logo">
         <h1 style="text-align:left;">
-            <a href="/vms/index_1.php" style="color:#ffffff;"><img src="/vms/images/synokem-logo.png" style="margin-right: 5px; margin-top: -8px;" width="30" alt="logo"> VMS </a>
+            <a href="/vmsp/index_1.php" style="color:#ffffff;"><img src="/vmsp/images/synokem-logo.png" style="margin-right: 5px; margin-top: -8px;" width="30" alt="logo"> vmsp </a>
         </h1>
     </div>
 
@@ -32,13 +32,13 @@ $fetch = mysqli_fetch_array($query);
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vms/index_1.php" title="Home">
+                        <a class="tooltip-tip ajax-load" href="/vmsp/index_1.php" title="Home">
                             <i class="icon-home"></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vms/dashboard.php" title="Creatpass Home">
+                        <a class="tooltip-tip ajax-load" href="/vmsp/dashboard.php" title="Creatpass Home">
                             <i class="icon-home"></i>
                             <span>Creatpass Home</span>
                         </a>
@@ -51,16 +51,16 @@ $fetch = mysqli_fetch_array($query);
                         </a>
                         <ul>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/emp_insert_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_insert_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/emp_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/emp_edit1_0.php" title="Edit"><i class="entypo-doc-text"></i><span>Edit</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_edit1_0.php" title="Edit"><i class="entypo-doc-text"></i><span>Edit</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/emp_delete1_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_delete1_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
                             </li>
                         </ul>
                     </li>
@@ -72,13 +72,13 @@ $fetch = mysqli_fetch_array($query);
                         </a>
                         <ul>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/department_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/department_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/department_delete_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_delete_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
                             </li>
                         </ul>
                     </li>
@@ -90,24 +90,24 @@ $fetch = mysqli_fetch_array($query);
                         </a>
                         <ul>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/admin_user_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/admin_user_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/admin_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/admin_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vms/php/admin_delete_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/admin_delete_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
                             </li>
                         </ul>
                     </li>
                     <li class="hide1">
-                        <a class="tooltip-tip ajax-load" href="/vms/php/report_0.php" title="Report">
+                        <a class="tooltip-tip ajax-load" href="/vmsp/php/report_0.php" title="Report">
                             <i class="icon-camera"></i>
                             <span>Report</span>
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vms/php/logout.php?log" title="Log out">
+                        <a class="tooltip-tip ajax-load" href="/vmsp/php/logout.php?log" title="Log out">
                             <i class="icon-chevron-right"></i>
                             <span>Log Out</span>
                         </a>

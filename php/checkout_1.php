@@ -8,23 +8,24 @@ $sql="select max(Id) from inquery where Phone='$phone'";
 $query1=mysqli_query($db,$sql);
 $fetch=mysqli_fetch_array($query1);
 $p= $fetch[0];
-/*
-$sql="select * from inquery where Phone='$phone' and Date='$date' and Id='$p'";
-$query=mysqli_query($db,$sql);
-$count=mysqli_num_rows($query);
-if($count<0)
-{
-	echo "<script>
-		alert('phone number exist');
-	</script>";
-}
-else
-{
-	echo "<script>
-		alert('phone number not exist');
-	</script>";
-}
-*/
+
+// $sql="UPDATE inquery SET Out_Time='$out_time' where Phone='$phone' and Id='$p'";
+// $query=mysqli_query($db,$sql);
+// $count=mysqli_num_rows($query);
+// if($count<0)
+// {
+// 	echo "<script>
+// 		alert('Visitor Out time Updated');
+// 		location.href='../dashboard.php';
+// 		</script>";
+// }
+// else
+// {
+// 	echo "<script>
+// 		alert('phone number not exist');
+// 	</script>";
+// }
+
 
 // $sql="UPDATE inquery SET Out_Time='$out_time' where Phone='$phone' and Date='$date' and Id='$p'";
 $sql="UPDATE inquery SET Out_Time='$out_time' where Phone='$phone' and Id='$p'";
@@ -43,5 +44,3 @@ else
 		location.href='checkout.php';
 		</script>";
 }
-
-?>

@@ -30,7 +30,7 @@ $fetch2 = mysqli_fetch_array($query);
 
 <head>
     <meta charset="utf-8">
-    <title>VMS</title>
+    <title>VMSP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -129,8 +129,6 @@ $fetch2 = mysqli_fetch_array($query);
     <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
     <script src="assets/js/progress-bar/number-pb.js"></script>
     <script src="assets/js/progress-bar/progress-app.js"></script>
-
-
 
     <!-- MAIN EFFECT -->
     <script type="text/javascript" src="assets/js/preloader.js"></script>

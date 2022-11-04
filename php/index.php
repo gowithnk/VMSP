@@ -1,4 +1,4 @@
 <?php
-header("Location: /vms/dashboard.php");
+header("Location: /vmsp/dashboard.php");
 die();
 ?>

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>VMS</title>
+    <title>VMSP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -39,7 +38,6 @@
 
     <?php include('../sidebar_h.php');
 
-
     ?>
     <!-- END OF SIDE MENU -->
 
@@ -64,20 +62,8 @@
 
             <!-- /END OF CONTENT -->
 
-
             <!-- FOOTER -->
-            <div class="footer-space"></div>
-            <div id="footer">
-                <div class="devider-footer-left"></div>
-                <div class="time">
-                    <p id="spanDate"></p>
-                    <p id="clock"></p>
-                </div>
-                <div class="copyright">
-                    <span class="entypo-heart"></span>2022 <a href="http://synokempharma.com">Synokem</a> All Rights Reserved
-                </div>
-                <div class="devider-footer"></div>
-            </div>
+            <?php include('../footer.php') ?>
             <!-- / END OF FOOTER -->
         </div>
     </div>
@@ -92,8 +78,6 @@
     <script src="assets/js/progress-bar/number-pb.js"></script>
     <script src="assets/js/progress-bar/progress-app.js"></script>
 
-
-
     <!-- MAIN EFFECT -->
     <script type="text/javascript" src="assets/js/preloader.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
@@ -101,12 +85,7 @@
     <script type="text/javascript" src="assets/js/load.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 
-
-
-
     <!-- GAGE -->
-
-
 
     <script src="assets/js/jhere-custom.js"></script>
 
@@ -169,8 +148,6 @@
                 '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
         });
     </script>
-
-
 
 </body>
 

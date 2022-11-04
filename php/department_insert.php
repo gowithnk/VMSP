@@ -1,7 +1,6 @@
 <?php
 include('dbconn.php');
 
-
 $department_name=$_POST['department_name'];
 
 $sql="select department_name from department where department_name='$department_name'";
@@ -31,6 +30,3 @@ else
 		}
 
 }
-
-?>
-

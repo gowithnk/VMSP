@@ -13,7 +13,7 @@ $fetch = mysqli_fetch_array($query);
 
 <head>
     <title>SLIP</title>
-    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
 </head>
 
 <body>

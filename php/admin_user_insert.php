@@ -7,10 +7,9 @@ $gender=$_POST['gender'];
 $phone=$_POST['phone'];
 $user=$_POST['user'];
 
-
 $image=$_FILES['image']['name'];
 $temp_name=$_FILES['image']['tmp_name'];
-move_uploaded_file($temp_name,"folder/$image");
+move_uploaded_file($temp_name,"../images/$image");
 
 $username=$_POST['username'];
 $sql="select username from login_user where username='$username'";
@@ -42,5 +41,3 @@ else
 		}
 	
 }
-
-?>

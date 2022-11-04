@@ -33,4 +33,3 @@ else
 			location.href='createpass_0.php';	
 				</script>";
 }
-?>

@@ -1,0 +1,56 @@
+/* import all style.css codes */
+/* @import url('style.css'); */
+
+/* new codes goes here */
+body {
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.table-responsive {
+    overflow: auto;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+td {
+    text-align: center;
+    height: 50px;
+    font-size: 13px;
+}
+
+th {
+    font-size: 16px;
+    color: skyblue;
+    font-weight: 600;
+    padding: 4px 8px;
+}
+
+.pagination {
+    display: inline-block;
+    margin: 10px 0px;
+}
+
+.pagination a {
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    float: left;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: #ffffff;
+}
+
+.pagination a.active {
+    background-color: pink;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: skyblue;
+}

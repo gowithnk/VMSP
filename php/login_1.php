@@ -6,7 +6,6 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 $user=$_POST['user'];
 
-
 $sql="select * from login_user where username='$username'";
 $query=mysqli_query($db,$sql);
 $check=mysqli_num_rows($query); 

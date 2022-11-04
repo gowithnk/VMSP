@@ -29,28 +29,19 @@ if ($query = mysqli_query($db, $sql)) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>VMS</title>
+    <title>VMSP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Le styles -->
+    <meta name="author" content="Niranjan">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
-
-    <style type="text/css">
-        canvas#canvas4 {
-            position: relative;
-            top: 20px;
-        }
-    </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -58,8 +49,8 @@ if ($query = mysqli_query($db, $sql)) {
         <![endif]-->
     <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/minus.png">
-</head>
 
+</head>
 <body>
     <!-- Navbar -->
     <?php include('topbar.php'); ?>
@@ -74,15 +65,6 @@ if ($query = mysqli_query($db, $sql)) {
         <div class="container-fluid paper-wrap bevel tlbr">
             <div class="content-wrap">
                 <div class="row">
-                    <div class="col-sm-6" style="display: none ">
-                        <div class="chart-wrap">
-                            <div class="chart-dash">
-
-                                <div id="placeholder" style="width:100%;height:200px;"></div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- center page-->
                     <div class="content-wrap">
                         <div class="row">
@@ -165,29 +147,16 @@ if ($query = mysqli_query($db, $sql)) {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
+        <!-- footer -->
+        <?php include('footer.php') ?>
+        <!-- end of footer -->
     </div>
-
     <!-- /END OF CONTENT -->
-
-    <!-- FOOTER -->
-    
-    <?php
-
-    include('footer.php');
-
-    ?>
-    <!-- / END OF FOOTER -->
-
     <!--  END OF PAPER WRAP -->
 
-    <!-- RIGHT SLIDER CONTENT -->
-
-    <!-- END OF RIGHT SLIDER CONTENT-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
     <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
     <script src="assets/js/progress-bar/number-pb.js"></script>
@@ -200,10 +169,7 @@ if ($query = mysqli_query($db, $sql)) {
     <script type="text/javascript" src="assets/js/load.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 
-
     <!-- GAGE -->
-
-
     <script src="assets/js/jhere-custom.js"></script>
 
     <script>
@@ -220,12 +186,6 @@ if ($query = mysqli_query($db, $sql)) {
         }, 3500);
     </script>
 
-    <script type="text/javascript">
-        /* Javascript
-         *
-         * See http://jhere.net/docs.html for full documentation
-         */
-    </script>
     <script type="text/javascript">
         var output, started, duration, desired;
 
@@ -264,7 +224,5 @@ if ($query = mysqli_query($db, $sql)) {
                 '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
         });
     </script>
-
 </body>
-
 </html>

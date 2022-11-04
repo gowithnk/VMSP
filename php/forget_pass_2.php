@@ -23,7 +23,3 @@ else
 		location.href='../html/forget_pass3.html';
 			</script>";	
 }
-
-?>
-
-
