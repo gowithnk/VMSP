@@ -8,6 +8,7 @@
 	$query = mysqli_query($db, $sql);
 	echo "<table align='center' class='new table table-bordered'>";
 	echo "<tr>";
+	echo "<th> Print</th>";
 	echo "<th> Name</th>";
 	echo "<th> Gender</th>";
 	echo "<th> Phone</th>";
@@ -22,7 +23,6 @@
 	echo "<th> In Time</th>";
 	echo "<th> Out Time</th>";
 	echo "<th> Date</th>";
-	echo "<th> Print</th>";
 	echo "</tr>";
 
 

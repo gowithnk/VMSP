@@ -15,12 +15,6 @@
 
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
 
-    <style type="text/css">
-        canvas#canvas4 {
-            position: relative;
-            top: 20px;
-        }
-    </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

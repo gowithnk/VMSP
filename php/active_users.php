@@ -34,7 +34,7 @@
 		if (empty($fetch[8])) {
 			echo "<td> $fetch[Name] </td>";
 			echo "<td> $fetch[Phone] </td>";
-			echo "<td> <a class='delete_data' href='checkout_0.php'> Check Out</a> </td>";
+			echo "<td> <a class='btn btn-warning' href='checkout_0.php'> Check Out</a> </td>";
 		}
 	}
 	echo "</tr>";
