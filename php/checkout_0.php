@@ -15,9 +15,8 @@
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
 
     <style type="text/css">
-        canvas#canvas4 {
-            position: relative;
-            top: 20px;
+        .main {
+            text-align: center;
         }
     </style>
     <!-- Fav and touch icons -->

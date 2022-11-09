@@ -29,6 +29,7 @@ if ($query = mysqli_query($db, $sql)) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>VMSP</title>
@@ -38,6 +39,8 @@ if ($query = mysqli_query($db, $sql)) {
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 
@@ -51,6 +54,7 @@ if ($query = mysqli_query($db, $sql)) {
     <link rel="shortcut icon" href="assets/ico/minus.png">
 
 </head>
+
 <body>
     <!-- Navbar -->
     <?php include('topbar.php'); ?>
@@ -63,88 +67,95 @@ if ($query = mysqli_query($db, $sql)) {
     <!--  PAPER WRAP -->
     <div class="wrap-fluid">
         <div class="container-fluid paper-wrap bevel tlbr">
+            <!-- center page-->
             <div class="content-wrap">
                 <div class="row">
-                    <!-- center page-->
-                    <div class="content-wrap">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="profit" id="profitClose">
-                                    <div class="headline ">
-                                        <h3>
-                                            <span><i class="maki-ferry"></i> Total Visitors</span>
-                                        </h3>
-                                        <div class="titleClose">
-                                        </div>
-                                    </div>
+                    <div class="col-sm-4">
+                        <div class="profit" id="profitClose">
+                            <div class="headline ">
+                                <h3>
+                                    <span><i class="maki-ferry"></i> Total Visitors</span>
+                                </h3>
+                                <div class="titleClose">
+                                </div>
+                            </div>
 
-                                    <div class="value">
-                                        <span class="pull-left"><i class="entypo-clock clock-position"></i>
-                                        </span>
-                                        <div id="getting-started">
-                                            <span><?php echo $totalVisitor; ?></span>
-                                        </div>
-                                    </div>
+                            <div class="value">
+                                <span class="pull-left"><i class="entypo-clock clock-position"></i>
+                                </span>
+                                <div id="getting-started">
+                                    <span><?php echo $totalVisitor; ?></span>
+                                </div>
+                            </div>
 
-                                    <div class="active_users">
-                                        <div class="bar">
-                                            <p class="au_title">Active Visitors: <span class="au_number"><?php echo $rowcount; ?></span></p>
-                                        </div>
-                                    </div>
+                            <div class="active_users">
+                                <div class="bar">
+                                    <p class="au_title">Active Visitors: <span class="au_number"><?php echo $rowcount; ?></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="profit" id="profitClose">
+                            <div class="headline ">
+                                <h3>
+                                    <span>
+                                        <i class="maki-ferry"></i> Total Employees</span>
+                                </h3>
+                                <div class="titleClose">
 
                                 </div>
                             </div>
 
-                            <div class="col-sm-4">
-                                <div class="profit" id="profitClose">
-                                    <div class="headline ">
-                                        <h3>
-                                            <span>
-                                                <i class="maki-ferry"></i> Total Employees</span>
-                                        </h3>
-                                        <div class="titleClose">
+                            <div class="value">
+                                <span class="pull-left"><i class="entypo-clock clock-position"></i>
+                                </span>
+                                <div id="getting-started">
+                                    <span><?php echo $fetch1[0] ?></span>
+                                </div>
+                            </div>
+                            <div class="progress-tinny">
+                                <div style="width: 50%" class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
 
-                                        </div>
-                                    </div>
+                    <div class="col-sm-4">
+                        <div class="profit" id="profitClose">
+                            <div class="headline ">
+                                <h3>
+                                    <span>
+                                        <i class="maki-ferry"></i> Total Departments</span>
+                                </h3>
+                                <div class="titleClose">
 
-                                    <div class="value">
-                                        <span class="pull-left"><i class="entypo-clock clock-position"></i>
-                                        </span>
-                                        <div id="getting-started">
-                                            <span><?php echo $fetch1[0] ?></span>
-                                        </div>
-                                    </div>
-                                    <div class="progress-tinny">
-                                        <div style="width: 50%" class="bar"></div>
-                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-sm-4">
-                                <div class="profit" id="profitClose">
-                                    <div class="headline ">
-                                        <h3>
-                                            <span>
-                                                <i class="maki-ferry"></i> Total Departments</span>
-                                        </h3>
-                                        <div class="titleClose">
-
-                                        </div>
-                                    </div>
-
-                                    <div class="value">
-                                        <span class="pull-left"><i class="entypo-clock clock-position"></i>
-                                        </span>
-                                        <div id="getting-started">
-                                            <span><?php echo $fetch2[0] ?></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="progress-tinny">
-                                        <div style="width: 50%" class="bar"></div>
-                                    </div>
+                            <div class="value">
+                                <span class="pull-left"><i class="entypo-clock clock-position"></i>
+                                </span>
+                                <div id="getting-started">
+                                    <span><?php echo $fetch2[0] ?></span>
                                 </div>
                             </div>
+
+                            <div class="progress-tinny">
+                                <div style="width: 50%" class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Active visitors -->
+                <div class="active_visitors">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <?php include('php/active_visitors.php') ?>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+
                         </div>
                     </div>
                 </div>
@@ -225,4 +236,5 @@ if ($query = mysqli_query($db, $sql)) {
         });
     </script>
 </body>
+
 </html>

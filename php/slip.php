@@ -11,55 +11,70 @@ $fetch = mysqli_fetch_array($query);
 <html>
 
 <head>
-	<title>SLIP</title>
+	<meta charset="utf-8">
+	<title>Slip</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+	<!-- Fav and touch icons -->
+	<link rel="shortcut icon" href="assets/ico/minus.png">
 	<link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
+	<style>
+		p {
+			font-size: 13px;
+		}
+	</style>
 </head>
 
 <body>
-	<form action="../index_1.php" method="post">
-		<div class="slip_main">
-			<img src="../images/logo.png" width="200px"><br><br>
-			<!--Left box in the main form-->
-			<div class="slip_left">
-
-				<label style="word-spacing: -2px; font-weight:600;">Name : </label>
-				<input disabled type="text" name="name" value="<?php echo "$fetch[1]"; ?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 65px;"><br>
-				<label style="word-spacing: -2px; font-weight:600;">Company : </label>
-				<input disabled type="text" name="company" value="<?php echo "$fetch[12]"; ?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 42px;"><br>
-				<label style="word-spacing: -2px; font-weight:600;">Purpose : </label>
-				<input disabled type="text" name="purpose" value="<?php echo "$fetch[13]"; ?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 50px;"><br>
-				<label style="word-spacing: -2px; font-weight:600;">Person To Meet : </label>
-				<input disabled type="text" name="person_meet" value="<?php echo "$fetch[6]"; ?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 6px;"><br>
-				<label style="word-spacing: -2px; font-weight:600;">Entry Time : </label>
-				<input disabled type="text" name="in_time" value="<?php echo "$fetch[7]"; ?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 35px;"><br>
-				<label style="word-spacing: -2px; font-weight:600;">Date : </label>
-				<input disabled type="text" name="date" value="<?php echo "$fetch[10]"; ?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 75px;"><br>
-				<div class="slip_btn">
-					<input type="button" id="p1" value="Print" style="height: 25px; border-radius: 5px;border: 1px solid black; margin: 0px 10px; padding: 5px 30px; background-color:#d9e8f7; cursor:pointer;" onclick="print1()"><br>
-					<a href="../dashboard.php"> <input type="button" id="p2" value="Back" style="height: 25px; border-radius: 5px; margin: 0px 10px; border: 1px solid black;padding: 5px 30px; background-color:#d9e8f7; cursor:pointer;"></a><br>
+		<div id="divToPrint" class="card" style="width: 28rem;margin-top:20px;">
+			<div class="card-body">
+				<img src="../images/logo.png" width="200px"><br><br>
+				<div class="row">
+					<div class="col-4" style="padding-right: 0px !important;">
+						<p style="font-weight:600;">Name : </p>
+						<p style="font-weight:600;">Company : </p>
+						<p style="font-weight:600;">Purpose : </p>
+						<p style="font-weight:600;">Person To Meet : </p>
+						<p style="font-weight:600;">Entry Time : </p>
+						<p style="font-weight:600;">Date : </p>
+					</div>
+					<div class="col-4">
+						<p style="font-weight:600;"><?php echo "$fetch[1]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[12]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[13]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[6]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[7]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[10]"; ?></p>
+					</div>
+					<div class="col-3">
+						<img src="<?php echo $fetch[9] ?>" height="110px" width="110"><br>
+						<img src="<?php echo $fetch[4] ?>" width="110">
+					</div>
+				</div><br>
+				<!--Instruction box in the main form-->
+				<div class="slip_instruction">
+					<h4>Instruction To Follow:</h4>
+					<ul>
+						<li>Visitors should sign in at the [reception/ gate/ front-office] and show some form of identification.</li>
+						<li>Visitors will receive passess and return them to [reception/ gate/ front-office] once the visit is over.</li>
+						<li>Employees must always tend to their visitors while they are inside our premises.</li>
+					</ul>
 				</div>
-			</div>
-			<!--Right box in the main form-->
-			<div class="slip_right">
-				<div class="qr">
-					<img src="<?php echo $fetch[9] ?>" height="120px" width="120">
+				<div class="slip_left">
+					<div class="slip_btn">
+						<button class="btn btn-primary" id="p1" onclick="print1()" style="margin-right: 20px;">Print</button>
+						<a id="p2" class="btn btn-info" href="../dashboard.php">Back</a><br>
+					</div>
 				</div>
-				<div class="qr">
-					<img src="<?php echo $fetch[4] ?>" width="120">
-				</div>
-			</div>
-			<!--Instruction box in the main form-->
-
-			<div class="slip_instruction">
-				<h4>Instruction To Follow:</h4>
-				<ul>
-					<li>Visitors should sign in at the [reception/ gate/ front-office] and show some form of identification.</li>
-					<li>Visitors will receive passess and return them to [reception/ gate/ front-office] once the visit is over.</li>
-					<li>Employees must always tend to their visitors while they are inside our premises.</li>
-				</ul>
 			</div>
 		</div>
-	</form>
 	<script type="text/javascript">
 		function print1() {
 			w = document.getElementById('p1');

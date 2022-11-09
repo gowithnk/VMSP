@@ -15,12 +15,12 @@
 	}
 
 	if (!empty($rowcount == 0)) {
-		echo '<div class="main"><h2 style="color:red;">No Active Visitors</h2>';
+		echo '<div class="card px-3"><h2 style="color:red;">No Active Visitors</h2>';
 	} else {
-		echo '<div class="main"><h2 style="color:#ffffff;">Active Visitors</h2>';
+		echo '<div class="card px-3"><h2 style="color:#000000;">Active Visitors</h2>';
 	}
 
-	echo "<table class='table  table-condensed table-bordered'>";
+	echo "<table class='table table-condensed table-bordered'>";
 	if (empty($rowcount == 0)) {
 		echo "<tr>";
 		echo "<th> Visitor Name</th>";
@@ -34,10 +34,10 @@
 		if (empty($fetch[8])) {
 			echo "<td> $fetch[Name] </td>";
 			echo "<td> $fetch[Phone] </td>";
-			echo "<td> <a class='btn btn-warning' href='checkout_0.php?phone=$fetch[3]'> Check Out</a> </td>";
+			echo "<td> <a class='btn btn-warning' href='php/checkout_0.php?phone=$fetch[3]'> Check Out</a> </td>";
 		}
 	}
 	echo "</tr>";
 	echo "</table>";
-	echo "<br><br></div>";
+	echo "</div>";
 	?>

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <!-- Le styles -->
     <link rel="stylesheet" href="assets/css/loader-style.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/styles.nk.css">
@@ -53,7 +53,7 @@
             <!-- / END OF FOOTER -->
     </div>
     <!--  END OF PAPER WRAP -->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
     <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
     <script src="assets/js/progress-bar/number-pb.js"></script>
