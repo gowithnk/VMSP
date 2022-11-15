@@ -15,18 +15,20 @@
 	}
 
 	if (!empty($rowcount == 0)) {
-		echo '<div class="card px-3"><h2 style="color:red;">No Active Visitors</h2>';
+		echo '<div class="card table-responsive px-3"><h2 style="color:red;">No Active Visitors</h2>';
 	} else {
-		echo '<div class="card px-3"><h2 style="color:#000000;">Active Visitors</h2>';
+		echo '<div class="card table-responsive px-3"><h2 style="color:#000000;">Active Visitors</h2>';
 	}
 
-	echo "<table class='table table-condensed table-bordered'>";
+	echo "<table id='dashav' class='table table-condensed table-bordered table-striped'>";
 	if (empty($rowcount == 0)) {
+		echo "<thead>";
 		echo "<tr>";
 		echo "<th> Visitor Name</th>";
 		echo "<th> Phone</th>";
 		echo "<th> Log Out (Exit)</th>";
 		echo "</tr>";
+		echo "</thead>";
 	}
 
 	while ($fetch = mysqli_fetch_array($query)) {

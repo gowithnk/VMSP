@@ -37,20 +37,13 @@ if ($query = mysqli_query($db, $sql)) {
     <meta name="description" content="">
     <meta name="author" content="Niranjan">
 
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    <!-- Fav and touch icons -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/ico/minus.png">
 
 </head>
@@ -180,61 +173,6 @@ if ($query = mysqli_query($db, $sql)) {
     <script type="text/javascript" src="assets/js/load.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 
-    <!-- GAGE -->
-    <script src="assets/js/jhere-custom.js"></script>
-
-    <script>
-        var gauge4 = new Gauge("canvas4", {
-            'mode': 'needle',
-            'range': {
-                'min': 0,
-                'max': 90
-            }
-        });
-        gauge4.draw(Math.floor(Math.random() * 90));
-        var run = setInterval(function() {
-            gauge4.draw(Math.floor(Math.random() * 90));
-        }, 3500);
-    </script>
-
-    <script type="text/javascript">
-        var output, started, duration, desired;
-
-        // Constants
-        duration = 5000;
-        desired = '50';
-
-        // Initial setup
-        output = $('#speed');
-        started = new Date().getTime();
-
-        // Animate!
-        animationTimer = setInterval(function() {
-            // If the value is what we want, stop animating
-            // or if the duration has been exceeded, stop animating
-            if (output.text().trim() === desired || new Date().getTime() - started > duration) {
-                console.log('animating');
-                // Generate a random string to use for the next animation step
-                output.text('' + Math.floor(Math.random() * 60)
-
-                );
-
-            } else {
-                console.log('animating');
-                // Generate a random string to use for the next animation step
-                output.text('' + Math.floor(Math.random() * 120)
-
-                );
-            }
-        }, 5000);
-    </script>
-    <script type="text/javascript">
-        $('#getting-started').countdown('2015/01/01', function(event) {
-            $(this).html(event.strftime(
-
-                '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
-        });
-    </script>
 </body>
 
 </html>

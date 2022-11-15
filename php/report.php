@@ -1,12 +1,13 @@
 
-<div class="table-responsive" style="height: 500px;">
+<div class="table-responsive">
 	<?php
 	include('dbconn.php');
 	$from = $_POST['from'];
 	$to = $_POST['to'];
 	$sql = "Select * from inquery where Date between '$from' and '$to'";
 	$query = mysqli_query($db, $sql);
-	echo "<table align='center' class='new table table-bordered'>";
+	echo "<table id='dt' align='center' class='table table-hover text-nowrap table-bordered'>";
+	echo "<thead class='table-dark'>";
 	echo "<tr>";
 	echo "<th> Print</th>";
 	echo "<th> Name</th>";
@@ -24,11 +25,12 @@
 	echo "<th> Out Time</th>";
 	echo "<th> Date</th>";
 	echo "</tr>";
+	echo "</thead>";
 
 
 	while ($fetch = mysqli_fetch_array($query)) {
 		echo "<tr>";
-		echo "<td> <a class='btn btn-warning' target='_blank' href='slip-print.php?id=$fetch[0]'>Print</a></td>";
+		echo "<td> <a class='btn btn-warning' target='_blank' href='print_passes.php?id=$fetch[0]'><i class='fa-solid fa-print'></i></a></td>";
 		echo "<td> $fetch[Name]</td>";
 		echo "<td> $fetch[Gender]</td>";
 		echo "<td> $fetch[Phone]</td>";
@@ -37,7 +39,7 @@
 		echo "<td> $fetch[Purpose]</td>";
 		echo "<td> $fetch[City]</td>";
 		echo "<td> $fetch[Address]</td>";
-		echo "<td> <img src='$fetch[Image]' width='80' height='70'</td>";
+		echo "<td> <img src='$fetch[Image]' width='50' height='45'</td>";
 		echo "<td> $fetch[Person_Meet]</td>";
 		echo "<td> $fetch[Department]</td>";
 		echo "<td> $fetch[In_Time]</td>";
@@ -46,6 +48,5 @@
 		echo "</tr>";
 	}
 	echo "</table>";
-	echo "<br><br>";
 	?>
 </div>

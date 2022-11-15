@@ -8,16 +8,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.table-responsive {
-    overflow: auto;
-    border: 1px solid #ddd;
-    width: 100%;
-}
-
-.table {
-    margin-bottom: 0px;
-}
-
 td {
     text-align: center;
     height: 50px;

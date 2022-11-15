@@ -23,8 +23,8 @@ if (isset($_GET['phone'])) {
         <div class="main">
             <h2>Phone Number</h2>
             <input class="form-control" id="phone" value="<?php echo $phone ?>" placeholder="example: 0987654321" type="text" pattern="\d{10}" 
-            title="Please enter 10 digits Phone no." required onkeypress="phoneno()" maxlength="10" name="phone" style="min-width: 280px;padding:0px 30px !important;"><br><br>
-            <input class="btn btn-info" type="submit" value="Checkout" style="color: black; border-radius:15px;">
+            title="Please enter 10 digits Phone no." required onkeypress="phoneno()" maxlength="10" name="phone" style="min-width: 280px;padding:0px 10px !important;"><br><br>
+            <input class="btn btn-danger" type="submit" value="Confirm Checkout" style="border-radius:15px;">
         </div>
     </form>
 </body>

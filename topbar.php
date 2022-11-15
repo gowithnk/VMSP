@@ -49,7 +49,6 @@
                      <li class="sec"></li>
                      <li class="meridiem"></li>
                  </ul>
-
              </div>
 
              <ul style="margin-right:0;" class="nav navbar-nav navbar-right">

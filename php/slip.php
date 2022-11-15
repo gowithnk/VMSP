@@ -33,7 +33,7 @@ $fetch = mysqli_fetch_array($query);
 </head>
 
 <body>
-		<div id="divToPrint" class="card" style="width: 28rem;margin-top:20px;">
+		<div id="divToPrint" class="card" style="width: 30rem;margin-top:20px;left:50px;">
 			<div class="card-body">
 				<img src="../images/logo.png" width="200px"><br><br>
 				<div class="row">
@@ -69,7 +69,8 @@ $fetch = mysqli_fetch_array($query);
 				</div>
 				<div class="slip_left">
 					<div class="slip_btn">
-						<button class="btn btn-primary" id="p1" onclick="print1()" style="margin-right: 20px;">Print</button>
+						<!-- <button class="btn btn-primary" id="p1" onclick="print1()" style="margin-right: 20px;">Print</button> -->
+						<a href="print_pass.php" target="_blank" class="btn btn-primary" id="p1" style="margin-right: 20px;">Print</a>
 						<a id="p2" class="btn btn-info" href="../dashboard.php">Back</a><br>
 					</div>
 				</div>

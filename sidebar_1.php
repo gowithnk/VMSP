@@ -2,10 +2,10 @@
 
 include('php/dbconn.php');
 
-$sql = "Select count(*) from inquery";
+$sql = "Select * from login_user";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
-
+$user = $fetch['username'];
 ?>
 
 <div id="skin-select">
@@ -51,16 +51,24 @@ $fetch = mysqli_fetch_array($query);
                         </a>
                         <ul>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_insert_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_insert_0.php" title="Add"><i class="entypo-doc-text">
+
+                                </i><span>Add</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_display_0.php" title="View"><i class="entypo-doc-text">
+
+                                </i><span>View</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_edit1_0.php" title="Edit"><i class="entypo-doc-text"></i><span>Edit</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_edit1_0.php" title="Edit"><i class="entypo-doc-text">
+
+                                </i><span>Edit</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_delete1_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_delete1_0.php" title="Delete"><i class="entypo-doc-text">
+
+                                </i><span>Delete</span></a>
                             </li>
                         </ul>
                     </li>
@@ -72,13 +80,17 @@ $fetch = mysqli_fetch_array($query);
                         </a>
                         <ul>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_0.php" title="Add"><i class="entypo-doc-text">
+
+                                </i><span>Add</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_display_0.php" title="View">
+                                    <i class="entypo-doc-text"></i><span>View</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_delete_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_delete_0.php" title="Delete">
+                                    <i class="entypo-doc-text"></i><span>Delete</span></a>
                             </li>
                         </ul>
                     </li>

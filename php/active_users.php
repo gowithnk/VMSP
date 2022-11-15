@@ -20,7 +20,7 @@
 		echo '<div class="main"><h2 style="color:#ffffff;">Active Visitors</h2>';
 	}
 
-	echo "<table class='table  table-condensed table-bordered'>";
+	echo "<table class='table align-middle mb-0 bg-white table-bordered'>";
 	if (empty($rowcount == 0)) {
 		echo "<tr>";
 		echo "<th> Visitor Name</th>";

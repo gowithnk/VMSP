@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,26 +10,19 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/loader-style.css">
+    <!-- MDB -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" /> -->
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
 
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
 
     <style type="text/css">
-        canvas#canvas4 {
-            position: relative;
-            top: 20px;
+        th {
+            text-align: center;
         }
-		td {
-			text-align: center;
-			color: white;
-		}
-		th {
-			font-size: 16px;
-			color: skyblue;
-			padding: 8px;
-			text-align: center;
-		}
     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -54,25 +46,15 @@
     <div class="wrap-fluid">
         <div class="container-fluid paper-wrap bevel tlbr">
             <div class="content-wrap">
-                <div class="row">
-                    <div class="col-sm-6" style="display: none ">
-                        <div class="chart-wrap">
-                            <div class="chart-dash">
-
-                                <div id="placeholder" style="width:100%;height:200px;"></div>
-                            </div>
-                        </div>
+                <div class="row" style="color: #000 !important;">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <?php include('active_users.php') ?>
                     </div>
-
-                    <!-- center page-->
-
-                    <?php include('active_users.php') ?>
-
                 </div>
             </div>
-                <!-- FOOTER -->
-                <?php include('../footer.php') ?>
-                <!-- / END OF FOOTER -->
+            <!-- FOOTER -->
+            <?php include('../footer.php') ?>
+            <!-- / END OF FOOTER -->
         </div>
 
         <!-- /END OF CONTENT -->
