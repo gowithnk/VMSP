@@ -6,7 +6,7 @@
 	$to = $_POST['to'];
 	$sql = "Select * from inquery where Date between '$from' and '$to'";
 	$query = mysqli_query($db, $sql);
-	echo "<table id='dt' align='center' class='table table-hover text-nowrap table-bordered'>";
+	echo "<table id='dt' align='center' class='table text-wrap align-middle mb-0 bg-white table-bordered table-hover table-striped'>";
 	echo "<thead class='table-dark'>";
 	echo "<tr>";
 	echo "<th> Print</th>";

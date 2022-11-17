@@ -15,7 +15,7 @@ $user = $fetch['username'];
         </h1>
     </div>
 
-    <a id="toggle">
+    <a id="toggle" class="active">
         <span class="entypo-menu"></span>
     </a>
 

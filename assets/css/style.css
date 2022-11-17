@@ -11,7 +11,6 @@
     font-family:'FontAwesome', sans-serif;
 }
 body {
-    color: #ffffff!important;
     font-family:"Open Sans", Arial, sans-serif!important;
     line-height: 20px;
     overflow-x: hidden!important;
@@ -57,7 +56,7 @@ body {
 #logo {
     left: 19px;
     position: relative;
-    top: -34px;
+    top: -20px;
     max-width: 191px;
 }
 #logo-mobile {
@@ -840,6 +839,7 @@ input {
 input[type=search] {
     -webkit-appearance: textfield;
     -webkit-box-sizing: content-box;
+    box-sizing: content-box;
     font-family: inherit;
     font-size: 100%;
 }
@@ -856,16 +856,6 @@ input[type=search] {
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
     transition: all 0.1s;
-}
-input[type=search]:focus {
-    width: 300px;
-    background-color: #252D3B;
-    border-color: #66CC75;
-    border-radius: 0 4px 4px 0;
-    margin-right: 100px;
-    /*   -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
-  -moz-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
-  box-shadow: 0 0 5px rgba(109, 207, 246, .5); */
 }
 input:-moz-placeholder {
     color: #999;
@@ -1323,8 +1313,6 @@ img.bus-icon {
     margin-left: 4%;
     margin-top: 40px;
 }
-.side-bar {
-}
 .topnav {
     padding: 40px 28px 25px 0;
 }
@@ -1340,8 +1328,6 @@ ul.topnav {
     list-style: none!important;
     padding: 0;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-ul.topnav li {
 }
 ul.topnav li a {
     color: #FFFFFF !important;
@@ -1400,7 +1386,7 @@ ul.topnav li a {
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    tranform: rotate(45deg);
+    transform: rotate(45deg);
 }
 .arrow.top:after {
     bottom: -20px;
@@ -1430,7 +1416,7 @@ ul.topnav li a:hover:after {
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
-    tranform: rotate(90deg);
+    transform: rotate(90deg);
 }
 ul.topnav ul {
     margin: 0;
@@ -1451,8 +1437,6 @@ ul.topnav ul li a {
     outline: 0 none;
     padding-left: 30px;
     /* transition: all 0.2s ease 0s;*/
-}
-ul.topnav ul li a i {
 }
 ul.topnav ul li a:hover {
     background-color: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
@@ -1616,6 +1600,7 @@ ul.topnav h4 {
 #panelHandle p {
     -moz-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
     color: #FFFFFF;
     font-size: 24px;
     font-weight: bold;
@@ -1729,8 +1714,6 @@ ul.topnav h4 {
     font-weight: normal;
     text-transform: capitalize;
 }
-.tittle-content-header span {
-}
 .tittle-middle-header {
     margin: -17px 0;
     padding: 1px 0;
@@ -1743,8 +1726,6 @@ ul.topnav h4 {
     clear: both;
     position: relative;
     border-radius: 3px;
-}
-.nest, .middleNav, .sItem, .statsDetailed {
 }
 .nest .title {
     height: 50px;
@@ -2078,8 +2059,6 @@ img.sidebar-icon {
 }
 .weather-icon i {
     font-size: 90px;
-}
-.weather-text {
 }
 .weather-text > h3 {
     float: right;
@@ -2678,6 +2657,7 @@ b#speed {
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
     filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 .content-wrap {
@@ -3058,3 +3038,9 @@ small.pull-right {
     font-size: 25px;
 }
 
+.navbar{
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.0) !important;
+}
+.table{
+    font-size: 14px !important;
+}

@@ -38,42 +38,22 @@ $fetch2 = mysqli_fetch_array($query);
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/loader-style.css">
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
-
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
-
-    <style type="text/css">
-        canvas#canvas4 {
-            position: relative;
-            top: 20px;
-        }
-    </style>
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/minus.png">
 </head>
 
 <body>
     <!-- Navbar -->
-    <?php
-
-    include('../topbar.php');
-
-    ?>
-
+    <?php include('../topbar.php'); ?>
     <!-- /END OF TOP NAVBAR -->
 
     <!-- SIDE MENU -->
-
-    <?php include('../sidebar_1.php');
-
-
-    ?>
+    <?php include('../sidebar_1.php'); ?>
     <!-- END OF SIDE MENU -->
 
     <!--  PAPER WRAP -->
@@ -81,19 +61,11 @@ $fetch2 = mysqli_fetch_array($query);
         <div class="container-fluid paper-wrap bevel tlbr">
             <div class="content-wrap">
                 <div class="row">
-                    <div class="col-sm-6" style="display: none ">
-                        <div class="chart-wrap">
-                            <div class="chart-dash">
-
-                                <div id="placeholder" style="width:100%;height:200px;"></div>
-                            </div>
-                        </div>
+                    <div class="col-2"></div>
+                    <div class="col-lg-8 col-md-12 col-sm-12 card" >
+                        <?php include('emp_insert.php') ?>
                     </div>
-
-                    <!-- center page-->
-
-                    <?php include('emp_insert.php') ?>
-
+                    <div class="col-2"></div>
                 </div>
             </div>
             <!-- FOOTER -->

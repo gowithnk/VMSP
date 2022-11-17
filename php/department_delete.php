@@ -10,7 +10,7 @@
 
 	$sql = "Select * from department";
 	$query = mysqli_query($db, $sql);
-	echo "<table class='table table-bordered'>";
+	echo "<table class='table table-bordered table-hover'>";
 	echo "<tr>";
 	echo "<th> Department</th>";
 	echo "<th> Delete</th>";

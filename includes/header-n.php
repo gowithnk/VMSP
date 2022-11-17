@@ -14,7 +14,7 @@ $fetch = mysqli_fetch_array($query);
 $avatar = $fetch[6];
 if (empty($avatar)) $avatar = 'avatar.png';
 ?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg " style="background-color: #189ADB;color:#fff;">
     <!-- Container wrapper -->
     <button type="button" id="sidebarCollapse" class="btn btn-info">
         <i class="fas fa-align-left"></i>

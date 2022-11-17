@@ -48,8 +48,8 @@
 <body>
 	<form action="emp_insert_1.php" method="post">
 
-		<div class="emp_main">
-			<span style="color: white; font-size: 32px;font-family: sans-serif;">Employee Details</span>
+		<div class="py-5">
+			<span style="font-size: 32px;">Employee Details</span>
 			<div class="admin_center">
 				<div class="form-group">
 					<input class="form-control" type="text" onkeypress="return onlyAlphabets(event);" name="name" placeholder="Enter your Name" required>

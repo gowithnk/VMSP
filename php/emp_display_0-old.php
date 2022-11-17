@@ -27,19 +27,16 @@ $fetch2 = mysqli_fetch_array($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>VMS</title>
+    <title>VMSP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Le styles -->
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Le styles -->
     <link rel="stylesheet" href="assets/css/loader-style.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <!-- Google Fonts -->
+      <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
@@ -48,20 +45,27 @@ $fetch2 = mysqli_fetch_array($query);
     <!-- bootstrap 4 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <!-- databatle -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.dataTables.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles.nk.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/styles.nk.css">
 
+    <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/minus.png">
 </head>
 
 <body>
     <!-- Navbar -->
-    <?php include('../topbar.php'); ?>
+    <?php  include('../topbar.php'); ?>
     <!-- /END OF TOP NAVBAR -->
 
     <!-- SIDE MENU -->
@@ -72,21 +76,21 @@ $fetch2 = mysqli_fetch_array($query);
     <div class="wrap-fluid">
         <div class="container-fluid paper-wrap bevel tlbr">
             <div class="content-wrap">
-                <div class="card py-2 px-2 mb-6" style="max-height:580px">
-                    <div class="table-responsive">
-                        <?php include('emp_edit1.php') ?>
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <div class="card" style='align-items: center;'>
+                            <?php include('emp_display.php') ?>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- FOOTER -->
+             <!-- FOOTER -->
             <?php include('../footer.php') ?>
             <!-- / END OF FOOTER -->
         </div>
-        <!-- /END OF CONTENT -->  
+        <!-- /END OF CONTENT -->
     </div>
     <!--  END OF PAPER WRAP -->
-    <!-- RIGHT SLIDER CONTENT -->
-    <!-- END OF RIGHT SLIDER CONTENT-->
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
     <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
@@ -107,21 +111,7 @@ $fetch2 = mysqli_fetch_array($query);
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
     <!-- Datatable -->
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
-    <script type="text/javascript">
-         $(document).ready(function() {
-            $('#dtEmpE').DataTable( {
-                dom: 'Bfrtip',
-                buttons: [
-                    'copy', 'csv', 'excel', 'print'
-                ]
-                // ,"lengthMenu": [ 10, 25, 50, 75, 100 ]
-            } );
-        } );
-    </script>
+    
 
     <!-- MAIN EFFECT -->
     <script type="text/javascript" src="assets/js/preloader.js"></script>
@@ -147,7 +137,6 @@ $fetch2 = mysqli_fetch_array($query);
             gauge4.draw(Math.floor(Math.random() * 90));
         }, 3500);
     </script>
-
 
     <script type="text/javascript">
         /* Javascript
@@ -193,7 +182,5 @@ $fetch2 = mysqli_fetch_array($query);
                 '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
         });
     </script>
-
 </body>
-
 </html>

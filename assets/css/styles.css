@@ -75,7 +75,7 @@ button#sidebarCollapse {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #0033a0;
+    background: #189ADB;
     color: #fff;
     transition: all 0.3s;
 }
@@ -186,7 +186,7 @@ a.article:hover {
     justify-content: flex-end !important;
 }
 .admin-pic {
-    border: 2px solid rgba(0, 58, 250, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.8);
     display: inline-block;
     height: 40px;
     margin-right: 10px;
