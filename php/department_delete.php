@@ -1,10 +1,4 @@
 
-	<script type="text/javascript">
-		function print11() {
-			window.print();
-		}
-	</script>
-
 	<?php
 	include('dbconn.php');
 

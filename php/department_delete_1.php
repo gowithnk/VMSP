@@ -9,7 +9,7 @@ if($query)
 {
 	echo "<script>
 		alert('data deleted');
-		location.href='department_delete_0.php';
+		location.href='department_display_0.php';
 			</script>";
 }
 else

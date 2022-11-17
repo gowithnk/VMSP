@@ -1044,7 +1044,7 @@ input::-webkit-input-placeholder {
     right: 10px;
 }
 .date-top {
-    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: none;
     box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
     float: left;
     margin-left: -30px;
@@ -1131,7 +1131,7 @@ input::-webkit-input-placeholder {
     white-space: nowrap;
 }
 .digital {
-    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: none;
     box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
     float: left;
     margin-left: -25px;

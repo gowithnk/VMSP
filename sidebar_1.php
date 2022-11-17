@@ -53,22 +53,22 @@ $user = $fetch['username'];
                             <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_insert_0.php" title="Add"><i class="entypo-doc-text">
 
-                                </i><span>Add</span></a>
+                                    </i><span>Add</span></a>
                             </li>
                             <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_display_0.php" title="View"><i class="entypo-doc-text">
 
-                                </i><span>View</span></a>
+                                    </i><span>View</span></a>
                             </li>
                             <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_edit1_0.php" title="Edit"><i class="entypo-doc-text">
 
-                                </i><span>Edit</span></a>
+                                    </i><span>Edit</span></a>
                             </li>
                             <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_delete1_0.php" title="Delete"><i class="entypo-doc-text">
 
-                                </i><span>Delete</span></a>
+                                    </i><span>Delete</span></a>
                             </li>
                         </ul>
                     </li>
@@ -76,22 +76,21 @@ $user = $fetch['username'];
                         <a class="tooltip-tip ajax-load" href="#" title="Department">
                             <i class="icon-document-edit"></i>
                             <span>Department</span>
-
                         </a>
                         <ul>
                             <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_0.php" title="Add"><i class="entypo-doc-text">
 
-                                </i><span>Add</span></a>
+                                    </i><span>Add</span></a>
                             </li>
                             <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_display_0.php" title="View">
                                     <i class="entypo-doc-text"></i><span>View</span></a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_delete_0.php" title="Delete">
                                     <i class="entypo-doc-text"></i><span>Delete</span></a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li class="hide1">
