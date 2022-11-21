@@ -6,4 +6,4 @@ temp/
 php/upload/
 Login cred.txt
 vms.sql
-.gitignore
+*.gitignore
