@@ -8,9 +8,9 @@ $fetch = mysqli_fetch_array($query);
 ?>
 
 <form action="emp_update.php" method="post">
-	<h2>Edit Employee Details</h1><br>
+	<h2 class="ml-2">Edit Employee Details</h1><br>
 		<div class="row">
-			<div class="col-12">
+			<div class="col-12 py-1 px-4">
 				<div class="form-group">
 					<input class="form-control" type="text" name="name" placeholder="Enter New Name" value="<?php echo $fetch[1]; ?>" required>
 				</div>
@@ -56,7 +56,9 @@ $fetch = mysqli_fetch_array($query);
 						</select>
 					</div>
 				</div>
-				<input class="btn btn-info" type="submit" value="Update" style="width: 100%; border-radius: 10px; margin-top: 30px; "><br><br>
+			</div>
+			<div class="col-12 my-3 px-4">
+				<button class="btn btn-info btn-block mb-3" type="submit">Update</button>
 			</div>
 		</div>
 </form>

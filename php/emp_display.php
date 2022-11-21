@@ -15,6 +15,7 @@ echo "<th> E-mail</th>";
 echo "<th> Department</th>";
 echo "</tr>";
 echo "</thead>";
+echo "</tbody>";
 
 while ($fetch = mysqli_fetch_array($query)) {
     echo "<tr>";
@@ -26,6 +27,7 @@ while ($fetch = mysqli_fetch_array($query)) {
     echo "<td> $fetch[department_name]</td>";
     echo "</tr>";
 }
+echo "</tbody>";
 echo "</table>";
 echo "</div>";
 

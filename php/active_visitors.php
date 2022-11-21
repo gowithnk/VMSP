@@ -22,7 +22,7 @@
 
 	echo "<table id='dashav' class='table table-condensed table-bordered table-striped table-hover'>";
 	if (empty($rowcount == 0)) {
-		echo "<thead>";
+		echo "<thead class='table-dark'>";
 		echo "<tr>";
 		echo "<th> Visitor Name</th>";
 		echo "<th> Phone</th>";
@@ -32,14 +32,16 @@
 	}
 
 	while ($fetch = mysqli_fetch_array($query)) {
-		echo "<tr>";
+		
 		if (empty($fetch[8])) {
+			echo "<tr>";
 			echo "<td> $fetch[Name] </td>";
 			echo "<td> $fetch[Phone] </td>";
 			echo "<td> <a class='btn btn-warning' href='php/checkout_0.php?phone=$fetch[3]'> Check Out</a> </td>";
+			echo "</tr>";
 		}
 	}
-	echo "</tr>";
+	
 	echo "</table>";
 	echo "</div>";
 	?>

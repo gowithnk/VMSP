@@ -1,7 +1,7 @@
  <?php
     session_start();
     if ($_SESSION['user'] == "") {
-        header('location:index.html');
+        header('location:/vmsp/index.html');
     }
 
     include('php/dbconn.php');

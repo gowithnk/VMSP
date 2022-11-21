@@ -106,9 +106,9 @@ $user = $fetch['username'];
                             <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/admin_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/admin_delete_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li class="hide1">

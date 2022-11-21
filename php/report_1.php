@@ -14,43 +14,37 @@
   <form class="form-horizontal" action="report_display.php" method="post">
       <h2 class="text-center">Report</h2><br>
       <div class="row">
-        <div class="col-12">
           <div class="form-group">
             <label for="datepicker" class="col-sm-2 control-label">Date From :</label>
-            <div class="col-sm-9"> 
+            <div class="col-sm-10"> 
              <input class="form-control" type="text" name="from" id="datepicker" placeholder="From" required >
             </div>
-            <div class="col-sm-1"></div>
           </div>
           <div class="form-group">
             <label for="datepicker1" class="col-sm-2 control-label">Date To :</label>
-            <div class="col-sm-9"> 
+            <div class="col-sm-10"> 
               <input class="form-control" type="text" name="to" id="datepicker1" placeholder="To" required > 
             </div>
-            <div class="col-sm-1"></div>
           </div>
           <div class="form-group">
             <div class="col-sm-2"></div>
-            <div class="col-sm-9"> 
-              <input class="btn btn-info" type="submit" value="Check" style="width: 300px;">
+            <div class="col-sm-10"> 
+              <input class="btn btn-info btn-block" type="submit" value="View Report">
             </div>
-            <div class="col-sm-1"></div>
           </div>
-          
-        </div>
       </div>
   </form>
   
 <script>
   $("#datepicker").datepicker({
     dateFormat: 'yy-mm-dd',
-    minDate: -90,
+    minDate: -180,
     maxDate: 0,
   });
 
   $("#datepicker1").datepicker({
     dateFormat: 'yy-mm-dd',
-    minDate: -90,
+    minDate: -179,
     maxDate: 0,
   });
 </script>

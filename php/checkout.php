@@ -19,12 +19,15 @@ if (isset($_GET['phone'])) {
             });
         }
     </script>
-    <form class="form-inline" action="checkout_1.php" method="post">
-        <div class="main">
-            <h2>Phone Number</h2>
-            <input class="form-control" id="phone" value="<?php echo $phone ?>" placeholder="example: 0987654321" type="text" pattern="\d{10}" 
-            title="Please enter 10 digits Phone no." required onkeypress="phoneno()" maxlength="10" name="phone" style="min-width: 280px;padding:0px 10px !important;"><br><br>
-            <input class="btn btn-danger" type="submit" value="Confirm Checkout" style="border-radius:15px;">
+    <h2>Phone Number</h2><br>
+    <form action="checkout_1.php" method="post">
+        <div class="form-outline">
+            <input type="text" id="phone" value="<?php echo $phone ?>" pattern="\d{10}" 
+                title="Please enter 10 digits Phone no." required onkeypress="phoneno()" maxlength="10" name="phone" class="form-control" />
+            <label class="form-label" id="phone">Confirm Phone No.</label>
+        </div><br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger btn-block mb-4">Confirm Checkout</button>
         </div>
     </form>
 </body>

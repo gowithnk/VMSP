@@ -796,7 +796,7 @@ input[type="search"] {
     border: 1px solid #CCCCCC;
     border-radius: 10em 10em 10em 10em;
     padding: 9px 10px 9px 32px;
-    width: 55px;
+    width: 100px;
 }
 input[type="search"]:focus {
     background-color: #FFFFFF;

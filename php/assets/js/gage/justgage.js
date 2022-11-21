@@ -1,6 +1,6 @@
 /**
  * JustGage - this is work-in-progress, unreleased, unofficial code, so it might not work top-notch :)
- * Check http://www.justgage.com for official releases
+ * Check https://www.justgage.com for official releases
  * Licensed under MIT.
  * @author Bojan Djuricic  (@Toorshia)
  *

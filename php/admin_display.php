@@ -18,7 +18,8 @@
 	$sql = "Select * from login_user order by name";
 	$query = mysqli_query($db, $sql);
 	
-	echo "<table class='table table-bordered'>";
+	echo "<table id='dtAdmin' class='table text-wrap table-bordered table-striped table-hover bg-white align-middle'>";
+	echo "<thead class='table-dark'>";
 	echo "<tr>";
 	echo "<th> Name</th>";
 	echo "<th> Username</th>";
@@ -27,7 +28,9 @@
 	echo "<th> Password</th>";
 	echo "<th> User Type</th>";
 	echo "<th> Image</th>";
+	echo "<th> Delete</th>";
 	echo "</tr>";
+	echo "</thead>";
 
 	while ($fetch = mysqli_fetch_array($query)) {
 		echo "<tr>";
@@ -38,6 +41,7 @@
 		echo "<td> $fetch[password]</td>";
 		echo "<td> $fetch[user]</td>";
 		echo "<td> <img src='../images/$fetch[image]' width='100' height='100'</td>";
+		echo "<td> <a class='btn btn-danger' href='admin_delete_1.php?id=$fetch[0]'>Delete</a></td>";
 		echo "</tr>";
 	}
 	echo "</table>";
