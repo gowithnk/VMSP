@@ -27,7 +27,6 @@
 		echo "<td> $fetch[email_id]</td>";
 		echo "<td> $fetch[department_name]</td>";
 		echo "<td> <a class='btn btn-warning' href='emp_edit2_0.php?id=$fetch[0]'>Edit</a></td>";
-
 		echo "</tr>";
 	}
 	echo "</table>";

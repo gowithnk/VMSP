@@ -182,3 +182,6 @@ ul.CTAs a {
     width: 40px;
     border-radius: 50%;
 }
+.btn{
+    padding: 0.2rem 0.5rem;
+}

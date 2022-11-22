@@ -51,7 +51,7 @@
         <div class="container-fluid paper-wrap bevel tlbr">
             <div class="content-wrap">
                 <div class="row" style="color: #000 !important;">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-lg-8 col-md-12 col-sm-12">
                         <?php include('active_users.php') ?>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ if (empty($avatar)) $avatar = 'avatar.png';
 ?>
 <nav class="navbar navbar-expand-lg " style="background-color: #189ADB;color:#fff;">
     <!-- Container wrapper -->
-    <button type="button" id="sidebarCollapse" class="btn btn-info">
+    <button type="button" id="sidebarCollapse" class="btn btn-primary">
         <i class="fas fa-align-left"></i>
         <span></span>
     </button>

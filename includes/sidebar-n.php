@@ -26,16 +26,16 @@
                     </li>
                     <li>
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/emp_display_0.php" title="View">
-                            <i class="fa-solid fa-users-viewfinder me-2"></i>View</a>
+                            <i class="fa-solid fa-users-viewfinder me-2"></i>View All</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/emp_edit1_0.php" title="Edit">
                             <i class="fa-solid fa-user-pen me-2"></i>Edit</a>
                     </li>
                     <li>
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/emp_delete1_0.php" title="Delete">
                             <i class="fa-solid fa-trash-can me-2"></i>Delete</a>
-                    </li>
+                    </li> -->
                 </ul>
             </li>
             <li class="dp2">
@@ -48,12 +48,12 @@
                     </li>
                     <li>
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/department_display_0.php" title="View">
-                            <i class="fa-solid fa-users-viewfinder me-2"></i>View</a>
+                            <i class="fa-solid fa-users-viewfinder me-2"></i>View All</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/department_delete_0.php" title="Delete">
                             <i class="fa-solid fa-trash-can me-2"></i>Delete</a>
-                    </li>
+                    </li> -->
                 </ul>
             </li>
             <li class="dp3">
@@ -66,12 +66,12 @@
                     </li>
                     <li>
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/admin_display_0.php" title="View">
-                            <i class="fa-solid fa-users-viewfinder me-2"></i>View</a>
+                            <i class="fa-solid fa-users-viewfinder me-2"></i>View All</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/admin_delete_0.php" title="Delete">
                             <i class="fa-solid fa-trash-can me-2"></i>Delete</a>
-                    </li>
+                    </li> -->
                 </ul>
             </li>
             <li class="sidenav-item">

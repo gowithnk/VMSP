@@ -16,7 +16,7 @@ $query=mysqli_query($db,$sql);
 		if($query) 
 		{     
 			echo"<script>alert('Employe Details Update'); 
-			location.href='emp_edit1_0.php';
+			location.href='emp_display_0.php';
 					</script>";	
 		}
 		else

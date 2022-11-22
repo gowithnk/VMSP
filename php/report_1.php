@@ -29,7 +29,7 @@
           <div class="form-group">
             <div class="col-sm-2"></div>
             <div class="col-sm-10"> 
-              <input class="btn btn-info btn-block" type="submit" value="View Report">
+              <button class="btn btn-info btn-block" type="submit">View Report</button>
             </div>
           </div>
       </div>

@@ -48,7 +48,7 @@
 <body>
 	<form action="emp_insert_1.php" method="post">
 
-		<div class="py-5">
+		<div class="py-3">
 			<span style="font-size: 32px;">Employee Details</span>
 			<div class="admin_center">
 				<div class="form-group">
@@ -89,7 +89,8 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<input class="form-control submit btn-info" type="submit" value="Add New Employee" style="color:#ffffff !important;">
+					<button class="btn btn-info btn-block" type="submit" type="submit">Add New Employee</button>
+					<!-- <input class="form-control submit btn-info" type="submit" value="Add New Employee" style="color:#ffffff !important;"> -->
 				</div>
 			</div>
 		</div>

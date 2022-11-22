@@ -1,29 +1,22 @@
 <?php
-
 include('dbconn.php');
-
 $sql = "Select count(*) from inquery";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
-
 ?>
+
 <?php
-
 include('dbconn.php');
-
 $sql = "Select count(*) from emp_table";
 $query = mysqli_query($db, $sql);
 $fetch1 = mysqli_fetch_array($query);
-
 ?>
+
 <?php
-
 include('dbconn.php');
-
 $sql = "Select count(*) from department";
 $query = mysqli_query($db, $sql);
 $fetch2 = mysqli_fetch_array($query);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,17 +41,16 @@ $fetch2 = mysqli_fetch_array($query);
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.bootstrap4.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css" /> -->
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/styles.nk.css">
-
+    <!-- <link rel="stylesheet" href="../assets/css/styles.nk.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
-
     <link rel="shortcut icon" href="assets/ico/minus.png">
 </head>
-
 <body>
     <!-- Navbar -->
     <?php  include('../topbar.php'); ?>
@@ -84,13 +76,12 @@ $fetch2 = mysqli_fetch_array($query);
             <?php include('../footer.php') ?>
             <!-- / END OF FOOTER -->
         </div>
-        <!-- /END OF CONTENT -->
     </div>
     <!--  END OF PAPER WRAP -->
 
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- jQuery CDN - minified version  -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
     <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
     <script src="assets/js/progress-bar/number-pb.js"></script>
@@ -105,6 +96,7 @@ $fetch2 = mysqli_fetch_array($query);
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
     <!-- Datatable -->
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.bootstrap4.min.js"></script>
@@ -112,15 +104,27 @@ $fetch2 = mysqli_fetch_array($query);
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.colVis.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script> -->
     <script type="text/javascript">
          $(document).ready(function() {
             $('#dtEmp').DataTable( {
                 dom: 'Bfrtip',
                 lengthChange: false,
-                buttons: [ 'copy', 'csv', 'excel', 'print', 'colvis' ]
+                buttons: [ 'copy', 'csv', 'excel', 'print', 'colvis' ],
                 // ,"lengthMenu": [ 10, 25, 50, 75, 100 ]
             } );
         } );
+        // $(document).ready(function() {
+        //     var table = $('#dtEmp').DataTable( {
+        //         dom: 'Bfrtip',
+        //         lengthChange: false,
+        //         buttons: [ 'copy', 'csv', 'excel', 'print', 'colvis' ],
+        //         responsive: true
+        //     } );
+        
+        //     new $.fn.dataTable.FixedHeader( table );
+        // } );
     </script>
 
     <!-- MAIN EFFECT -->
@@ -134,63 +138,8 @@ $fetch2 = mysqli_fetch_array($query);
 
     <script src="assets/js/jhere-custom.js"></script>
 
-    <script>
-        var gauge4 = new Gauge("canvas4", {
-            'mode': 'needle',
-            'range': {
-                'min': 0,
-                'max': 90
-            }
-        });
-        gauge4.draw(Math.floor(Math.random() * 90));
-        var run = setInterval(function() {
-            gauge4.draw(Math.floor(Math.random() * 90));
-        }, 3500);
-    </script>
 
-    <script type="text/javascript">
-        /* Javascript
-         *
-         * See http://jhere.net/docs.html for full documentation
-         */
-    </script>
-    <script type="text/javascript">
-        var output, started, duration, desired;
 
-        // Constants
-        duration = 5000;
-        desired = '50';
-
-        // Initial setup
-        output = $('#speed');
-        started = new Date().getTime();
-
-        // Animate!
-        animationTimer = setInterval(function() {
-            // If the value is what we want, stop animating
-            // or if the duration has been exceeded, stop animating
-            if (output.text().trim() === desired || new Date().getTime() - started > duration) {
-                console.log('animating');
-                // Generate a random string to use for the next animation step
-                output.text('' + Math.floor(Math.random() * 60)
-
-                );
-
-            } else {
-                console.log('animating');
-                // Generate a random string to use for the next animation step
-                output.text('' + Math.floor(Math.random() * 120)
-
-                );
-            }
-        }, 5000);
-    </script>
-    <script type="text/javascript">
-        $('#getting-started').countdown('2015/01/01', function(event) {
-            $(this).html(event.strftime(
-
-                '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
-        });
-    </script>
+   
 </body>
 </html>

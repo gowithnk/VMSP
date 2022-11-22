@@ -1,4 +1,6 @@
 <?php
+echo "<script> alert('Are you sure you want to delete?');</script>";
+
 include('dbconn.php');
 $id=$_GET['id'];
 
@@ -9,7 +11,7 @@ if($query)
 {
 	echo "<script>
 		alert('data deleted');
-		location.href='emp_delete1_0.php';
+		location.href='emp_display_0.php';
 			</script>";
 }
 else

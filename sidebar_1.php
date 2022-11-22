@@ -58,9 +58,9 @@ $user = $fetch['username'];
                             <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_display_0.php" title="View"><i class="entypo-doc-text">
 
-                                    </i><span>View</span></a>
+                                    </i><span>View All</span></a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_edit1_0.php" title="Edit"><i class="entypo-doc-text">
 
                                     </i><span>Edit</span></a>
@@ -69,7 +69,7 @@ $user = $fetch['username'];
                                 <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_delete1_0.php" title="Delete"><i class="entypo-doc-text">
 
                                     </i><span>Delete</span></a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li class="hide1">

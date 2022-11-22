@@ -130,6 +130,9 @@
 	padding-left: .75em;
 	padding-right: .75em;
 	}
-	.card-registration .select-arrow {
+.card-registration .select-arrow {
 	top: 13px;
-	}
+}
+.btn{
+	padding: 0.2rem 0.5rem;
+}
