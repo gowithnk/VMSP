@@ -41,8 +41,8 @@ $fetch2 = mysqli_fetch_array($query);
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.bootstrap4.min.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css" />
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -96,7 +96,7 @@ $fetch2 = mysqli_fetch_array($query);
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
     <!-- Datatable -->
-    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.bootstrap4.min.js"></script>
@@ -104,27 +104,27 @@ $fetch2 = mysqli_fetch_array($query);
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.colVis.min.js"></script>
-    <!-- <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
     <script type="text/javascript">
-         $(document).ready(function() {
-            $('#dtEmp').DataTable( {
-                dom: 'Bfrtip',
-                lengthChange: false,
-                buttons: [ 'copy', 'csv', 'excel', 'print', 'colvis' ],
-                // ,"lengthMenu": [ 10, 25, 50, 75, 100 ]
-            } );
-        } );
-        // $(document).ready(function() {
-        //     var table = $('#dtEmp').DataTable( {
+        //  $(document).ready(function() {
+        //     $('#dtEmp').DataTable( {
         //         dom: 'Bfrtip',
         //         lengthChange: false,
         //         buttons: [ 'copy', 'csv', 'excel', 'print', 'colvis' ],
-        //         responsive: true
+        //         // ,"lengthMenu": [ 10, 25, 50, 75, 100 ]
         //     } );
-        
-        //     new $.fn.dataTable.FixedHeader( table );
         // } );
+        $(document).ready(function() {
+            var table = $('#dtEmp').DataTable( {
+                dom: 'Bfrtip',
+                lengthChange: false,
+                buttons: [ 'copy', 'csv', 'excel', 'print', 'colvis' ],
+                responsive: true
+            } );
+        
+            new $.fn.dataTable.FixedHeader( table );
+        } );
     </script>
 
     <!-- MAIN EFFECT -->

@@ -40,7 +40,7 @@ $user = $fetch['username'];
                     <li>
                         <a class="tooltip-tip ajax-load" href="/vmsp/dashboard.php" title="Creatpass Home">
                             <i class="icon-home"></i>
-                            <span>Creatpass Home</span>
+                            <span>Dashboard</span>
                         </a>
                     </li>
 

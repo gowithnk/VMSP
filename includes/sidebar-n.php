@@ -1,7 +1,7 @@
 <nav id="sidebar" class="position-sticky d-lg-block sidebar">
     <div class="list-group list-group-flush mx-2 mt-2">
         <div class="sidebar-header">
-            <a href="/vmps/index_1.php"><img src="/vmsp/images/logo.png" width="180" alt="logo"></a>
+            <a href="/vmsp/index_1.php"><img src="/vmsp/images/logo.png" width="180" alt="logo"></a>
         </div>
 
         <ul class="list-unstyled components">
