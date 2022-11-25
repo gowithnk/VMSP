@@ -15,9 +15,9 @@
 	}
 
 	if (!empty($rowcount == 0)) {
-		echo '<div class="card table-responsive px-3"><h2 style="color:red;">No Active Visitors</h2>';
+		echo '<div class="card table-responsive p-3"><h2 style="color:red;">No Active Visitors</h2>';
 	} else {
-		echo '<div class="card table-responsive px-3"><h2 style="color:#000000;">Active Visitors</h2>';
+		echo '<div class="card table-responsive p-3"><h2 style="color:#000000;">Active Visitors</h2>';
 	}
 
 	echo "<table id='dashav' class='table table-condensed table-bordered table-striped table-hover'>";

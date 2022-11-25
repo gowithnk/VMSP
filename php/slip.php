@@ -1,8 +1,10 @@
 <?php
 include('dbconn.php');
+
 session_start();
 $phone = $_SESSION['phone'];
-$sql = "Select * from inquery where Phone='$phone'";
+$id=$_GET['id'];
+$sql = "SELECT * FROM inquery WHERE id='$id' OR Phone='$phone' ";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
 ?>
@@ -16,12 +18,9 @@ $fetch = mysqli_fetch_array($query);
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 	<!-- Fav and touch icons -->
 	<link rel="shortcut icon" href="assets/ico/minus.png">
 	<link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
@@ -70,7 +69,7 @@ $fetch = mysqli_fetch_array($query);
 				<div class="slip_left">
 					<div class="slip_btn">
 						<!-- <button class="btn btn-primary" id="p1" onclick="print1()" style="margin-right: 20px;">Print</button> -->
-						<a href="print_pass.php" target="_blank" class="btn btn-primary" id="p1" style="margin-right: 20px;">Print</a>
+						<a href="print_pass.php?id=<?php echo $id?>" target="_blank" class="btn btn-primary" id="p1" style="margin-right: 20px;">Print</a>
 						<a id="p2" class="btn btn-info" href="../dashboard.php">Back</a><br>
 					</div>
 				</div>

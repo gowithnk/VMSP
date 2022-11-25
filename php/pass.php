@@ -22,7 +22,7 @@ if($count>0)
 	{
 		$_SESSION['phone']=$phone;
 		echo"<script>alert('Phone number already exist'); 
-		location.href='createpass_0.php';
+		location.href='create_pass.php';
 		</script>";
 	}
 }
@@ -30,6 +30,6 @@ else
 {
 		$_SESSION['phone']=$phone;
 		echo "<script>
-			location.href='createpass_0.php';	
+			location.href='create_pass.php';	
 				</script>";
 }

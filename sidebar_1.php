@@ -1,7 +1,6 @@
 <?php
 
 include('php/dbconn.php');
-
 $sql = "Select * from login_user";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
@@ -25,10 +24,8 @@ $user = $fetch['username'];
                 <ul class="topnav menu-left-nest">
                     <li>
                         <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
-
                             <span class="widget-menu"></span>
                             <i data-toggle="tooltip" class="entypo-cog pull-right config-wrap"></i>
-
                         </a>
                     </li>
                     <li>

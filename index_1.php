@@ -2,8 +2,6 @@
 // if( isset($_SESSION["user"]) && $_SESSION["user"] != 'niranjan' ){  
 //     header('location:dashboard.php'); 
 //     } 
-
-
 include('php/dbconn.php');
 
 $sql = "Select count(*) from inquery";
@@ -25,7 +23,6 @@ if ($result = mysqli_query($db, $sql)) {
     $rowcount = mysqli_num_rows($result);
     // Display result
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,13 +32,7 @@ if ($result = mysqli_query($db, $sql)) {
     <title>VMSP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Niranjan">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/loader-style.css">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <meta name="author" content="">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- Font Awesome -->
@@ -51,145 +42,67 @@ if ($result = mysqli_query($db, $sql)) {
     <!-- bootstrap 4 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
-
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/minus.png">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
 </head>
 
 <body>
-    <!-- Navbar -->
-    <?php include('topbar.php');?>
-    <!-- /END OF TOP NAVBAR -->
+    <!-- TOP MENU -->
+    <?php include('includes/header-n.php'); ?>
+    <div class="wrapper">
+        <!-- Navbar -->
+        <?php include('includes/sidebar-n.php'); ?>
 
-    <!-- SIDE MENU -->
-    <?php include('sidebar_1.php'); ?>
-    <!-- END OF SIDE MENU -->
-
-    <!--  PAPER WRAP -->
-    <div class="wrap-fluid">
-        <div class="container-fluid paper-wrap bevel tlbr">
-            <div class="content-wrap">
-                <div class="row">
-                    <div class="col-sm-6" style="display: none ">
-                        <div class="chart-wrap">
-                            <div class="chart-dash">
-
-                                <div id="placeholder" style="width:100%;height:200px;"></div>
+        <div class="content">
+            <section>
+                <div class="row m-2">
+                    <div class="col-lg-4 col-md-6 my-2">
+                        <div class="card">
+                            <div class="d-flex justify-content-center text-light p-2 bg-primary">
+                                <i class="fas fa-walking me-2"></i> TOTAL VISITORS
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <span class="display-1 text-danger"><?php echo $fetch[0] ?></span>
+                            </div>
+                            <div class="note-dark p-2"><a href="php/active_users_0.php">
+                                <p class="display-7 text-light">Active Visitors: 
+                                    <span class="text-success fs-3" style="position:absolute;margin-left: 5px;"><?php echo $rowcount; ?></span>
+                                </p></a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- center page-->
-                    <div class="content-wrap">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="profit" id="profitClose">
-                                    <div class="headline ">
-                                        <h3>
-                                            <span>
-                                                <i class="maki-ferry"></i> Total Visitors</span>
-                                        </h3>
-                                        <div class="titleClose">
-
-                                        </div>
-                                    </div>
-
-                                    <div class="value">
-                                        <span class="pull-left"><i class="entypo-clock clock-position"></i>
-                                        </span>
-                                        <div id="getting-started">
-                                            <span><?php echo $fetch[0] ?></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="active_users">
-                                        <div class="bar">
-                                            <p class="au_title">Active Visitors: <span class="au_number"><?php echo $rowcount; ?></span></p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                    <div class="col-lg-4 col-md-6 my-2">
+                        <div class="card">
+                            <div class="d-flex justify-content-center text-light p-2 bg-primary">
+                            <i class="fa-solid fa-business-time me-2"></i> TOTAL EMPLOYEES
                             </div>
-
-                            <div class="col-sm-4">
-                                <div class="profit" id="profitClose">
-                                    <div class="headline ">
-                                        <h3>
-                                            <span>
-                                                <i class="maki-ferry"></i> Total Employees</span>
-                                        </h3>
-                                        <div class="titleClose">
-
-                                        </div>
-                                    </div>
-
-                                    <div class="value">
-                                        <span class="pull-left"><i class="entypo-clock clock-position"></i>
-                                        </span>
-                                        <div id="getting-started">
-                                            <span><?php echo $fetch1[0] ?></span>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="progress-tinny">
-                                        <div style="width: 50%" class="bar"></div>
-                                    </div>
-
-                                </div>
-
+                            <div class="d-flex justify-content-center">
+                                <span class="display-1 text-danger"><?php echo $fetch1[0] ?></span>
                             </div>
-
-                            <div class="col-sm-4">
-                                <div class="profit" id="profitClose">
-                                    <div class="headline ">
-                                        <h3>
-                                            <span>
-                                                <i class="maki-ferry"></i> Total Departments</span>
-                                        </h3>
-                                        <div class="titleClose">
-
-                                        </div>
-                                    </div>
-
-                                    <div class="value">
-                                        <span class="pull-left"><i class="entypo-clock clock-position"></i>
-                                        </span>
-                                        <div id="getting-started">
-                                            <span><?php echo $fetch2[0] ?></span>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="progress-tinny">
-                                        <div style="width: 50%" class="bar"></div>
-                                    </div>
-
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 my-2">
+                        <div class="card">
+                            <div class="d-flex justify-content-center text-light p-2 bg-primary">
+                            <i class="fa-solid fa-puzzle-piece me-2"></i> TOTAL DEPARTMENTS
+                            </div>  
+                            <div class="d-flex justify-content-center">
+                                <span class="display-1 text-danger"><?php echo $fetch2[0] ?></span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </section>
         </div>
-        <!-- FOOTER -->
-        <?php include('footer.php'); ?>
-        <!-- / END OF FOOTER -->
     </div>
+    <!-- FOOTER -->
+    <?php include('footer.php') ?>
+    <!--  END OF WRAP -->
 
-    <!-- /END OF CONTENT -->
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
-    <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
-    <script src="assets/js/progress-bar/number-pb.js"></script>
-    <script src="assets/js/progress-bar/progress-app.js"></script>
+    <!-- jQuery CDN - minified version  -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+    crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" 
     integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -199,76 +112,14 @@ if ($result = mysqli_query($db, $sql)) {
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
 
-    <!-- MAIN EFFECT -->
-    <script type="text/javascript" src="assets/js/preloader.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="assets/js/load.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
-
-    <!-- GAGE -->
-
-    <script src="assets/js/jhere-custom.js"></script>
-
-    <script>
-        var gauge4 = new Gauge("canvas4", {
-            'mode': 'needle',
-            'range': {
-                'min': 0,
-                'max': 90
-            }
-        });
-        gauge4.draw(Math.floor(Math.random() * 90));
-        var run = setInterval(function() {
-            gauge4.draw(Math.floor(Math.random() * 90));
-        }, 3500);
-    </script>
-
     <script type="text/javascript">
-        /* Javascript
-         *
-         * See http://jhere.net/docs.html for full documentation
-         */
-    </script>
-    <script type="text/javascript">
-        var output, started, duration, desired;
-
-        // Constants
-        duration = 5000;
-        desired = '50';
-
-        // Initial setup
-        output = $('#speed');
-        started = new Date().getTime();
-
-        // Animate!
-        animationTimer = setInterval(function() {
-            // If the value is what we want, stop animating
-            // or if the duration has been exceeded, stop animating
-            if (output.text().trim() === desired || new Date().getTime() - started > duration) {
-                console.log('animating');
-                // Generate a random string to use for the next animation step
-                output.text('' + Math.floor(Math.random() * 60)
-
-                );
-
-            } else {
-                console.log('animating');
-                // Generate a random string to use for the next animation step
-                output.text('' + Math.floor(Math.random() * 120)
-
-                );
-            }
-        }, 5000);
-    </script>
-    <script type="text/javascript">
-        $('#getting-started').countdown('2015/01/01', function(event) {
-            $(this).html(event.strftime(
-
-                '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+            });
         });
     </script>
-
 </body>
-
 </html>

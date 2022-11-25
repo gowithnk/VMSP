@@ -9,7 +9,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 
         <ul class="list-unstyled components">
             <li class="sidenav-item">
-                <a class="py-2 ripple" href="/vmsp/index_1.php" >
+                <a class="py-2 ripple tooltip-tip ajax-load" href="/vmsp/index_1.php" >
                     <i class="fa-solid fa-house me-2"></i>
                     <span>Home</span>
                 </a>

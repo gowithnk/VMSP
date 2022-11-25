@@ -1401,6 +1401,7 @@ ul.topnav li a:hover {
     padding-left: 28px;
     position: relative;
 }
+
 ul.topnav li a:hover:after {
     border-bottom:6px solid #ffffff;
     border-left:8px solid transparent;
