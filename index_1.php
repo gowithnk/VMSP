@@ -37,11 +37,12 @@ if ($result = mysqli_query($db, $sql)) {
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
     <!-- bootstrap 4 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
+    
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
@@ -55,19 +56,18 @@ if ($result = mysqli_query($db, $sql)) {
         <?php include('includes/sidebar-n.php'); ?>
 
         <div class="content">
-            <section>
                 <div class="row m-2">
                     <div class="col-lg-4 col-md-6 my-2">
                         <div class="card">
                             <div class="d-flex justify-content-center text-light p-2 bg-primary">
                                 <i class="fas fa-walking me-2"></i> TOTAL VISITORS
                             </div>
-                            <div class="d-flex justify-content-center">
+                            <div class="d-flex justify-content-center p-2">
                                 <span class="display-1 text-danger"><?php echo $fetch[0] ?></span>
                             </div>
-                            <div class="note-dark p-2"><a href="php/active_users_0.php">
+                            <div class="note-dark p-2"><a href="php/activevisitors.php">
                                 <p class="display-7 text-light">Active Visitors: 
-                                    <span class="text-success fs-3" style="position:absolute;margin-left: 5px;"><?php echo $rowcount; ?></span>
+                                <span class="badge badge-success fs-5" style="margin-left: 5px;"><?php echo $rowcount; ?></span>
                                 </p></a>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ if ($result = mysqli_query($db, $sql)) {
                             <div class="d-flex justify-content-center text-light p-2 bg-primary">
                             <i class="fa-solid fa-business-time me-2"></i> TOTAL EMPLOYEES
                             </div>
-                            <div class="d-flex justify-content-center">
+                            <div class="d-flex justify-content-center p-2">
                                 <span class="display-1 text-danger"><?php echo $fetch1[0] ?></span>
                             </div>
                         </div>
@@ -87,13 +87,12 @@ if ($result = mysqli_query($db, $sql)) {
                             <div class="d-flex justify-content-center text-light p-2 bg-primary">
                             <i class="fa-solid fa-puzzle-piece me-2"></i> TOTAL DEPARTMENTS
                             </div>  
-                            <div class="d-flex justify-content-center">
+                            <div class="d-flex justify-content-center p-2">
                                 <span class="display-1 text-danger"><?php echo $fetch2[0] ?></span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
         </div>
     </div>
     <!-- FOOTER -->

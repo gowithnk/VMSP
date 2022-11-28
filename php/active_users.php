@@ -34,7 +34,7 @@
 			echo "<tr>";
 			echo "<td> $fetch[Name] </td>";
 			echo "<td> $fetch[Phone] </td>";
-			echo "<td> <a class='btn btn-warning' href='checkout_0.php?phone=$fetch[3]'> Check Out</a> </td>";
+			echo "<td> <a class='btn btn-warning' href='out_time.php?phone=$fetch[3]'> Check Out</a> </td>";
 			echo "</tr>";
 		}
 	}

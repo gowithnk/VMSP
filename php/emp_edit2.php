@@ -11,33 +11,36 @@ $fetch = mysqli_fetch_array($query);
 	<h2 class="ml-2">Edit Employee Details</h1><br>
 		<div class="row">
 			<div class="col-12 py-1 px-4">
-				<div class="form-group">
-					<input class="form-control" type="text" name="name" placeholder="Enter New Name" value="<?php echo $fetch[1]; ?>" required>
+				<div class="form-outline mb-3">
+					<input class="form-control" type="text" id="name" name="name" value="<?php echo $fetch[1]; ?>" required>
+					<label class="form-label" for="name">Enter New Name</label>
 				</div>
 				<div class="form-group">
-					<label style="font-size: 18px;">Gender : </label>
-					<input <?php if ($fetch[3] == "Male") {
-								echo "checked";
-							} ?> type="radio" name="gender" value="Male" style="margin-left: 18px;">
-					<label style="font-size: 16px;">Male</label>
-					<input <?php if ($fetch[3] == "Female") {
-								echo "checked";
-							} ?> type="radio" name="gender" value="Female" style="margin-left: 10px;">
-					<label style="font-size: 16px;">Female</label>
+					<label class="me-2 mb-0">Gender : </label>
+					<input <?php if ($fetch[3] == "Male") { echo "checked"; } ?> 
+					type="radio" name="gender" class="me-1" value="Male">
+					<label class="mb-0 me-3">Male</label>
+					<input <?php if ($fetch[3] == "Female") { echo "checked"; } ?> 
+					type="radio" class="me-1" name="gender" value="Female">
+					<label class="mb-0">Female</label>
+				</div>
+				
+				<div class="form-outline mb-3">
+					<input class="form-control" type="text" id="phone" name="phone" value="<?php echo $fetch[2]; ?>" required>
+					<label class="form-label" for="phone">New Phone No</label>
+				</div>
+				<div class="form-outline mb-3">
+					<input class="form-control" type="text" name="code" value="<?php echo $fetch[4]; ?>" required>
+					<label class="form-label" for="phone">Employee Code</label>
+				</div>
+				<div class="form-outline mb-3">
+					<input class="form-control" type="email" name="email" placeholder="abc.domain.com(E-Mail)" 
+					value="<?php echo $fetch[5]; ?>" required>
+					<label class="form-label" for="phone">Email Address</label>
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="text" name="phone" placeholder="New Phone No" value="<?php echo $fetch[2]; ?>" required>
-				</div>
-				<div class="form-group">
-					<input class="form-control" type="text" name="code" placeholder="Employee Code" value="<?php echo $fetch[4]; ?>" required>
-				</div>
-				<div class="form-group">
-					<input class="form-control" type="email" name="email" placeholder="abc.domain.com(E-Mail)" value="<?php echo $fetch[5]; ?>" required>
-				</div>
-				<div class="form-group">
-					<label for="inputDepartment" class="col-sm-3 control-label">Department :</label>
-					<div class="col-sm-9">
-						<select class="form-control" name="department" value="<?php echo $fetch[6]; ?>" style="color: #000 !important;" id="inputDepartment">
+						<select class="form-control" name="department" value="<?php echo $fetch[6]; ?>" id="inputDepartment" required>
+						<option selected value="">Select Department</option>
 							<?php
 							include('dbconn.php');
 
@@ -54,11 +57,8 @@ $fetch = mysqli_fetch_array($query);
 
 							<?php } ?>
 						</select>
-					</div>
 				</div>
-			</div>
-			<div class="col-12 my-3 px-4">
-				<button class="btn btn-info btn-block mb-3" type="submit">Update</button>
+				<button class="btn btn-info btn-block btn-lg mb-3" type="submit">Update</button>
 			</div>
 		</div>
 </form>

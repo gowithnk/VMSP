@@ -27,16 +27,16 @@ $fetch2 = mysqli_fetch_array($query);
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <link rel="stylesheet" href="assets/css/loader-style.css">
-      <!-- Google Fonts -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
     <!-- bootstrap 4 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
+    
     <!-- databatle -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" />
@@ -44,26 +44,20 @@ $fetch2 = mysqli_fetch_array($query);
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css" />
     <!-- custom css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link rel="stylesheet" href="../assets/css/styles.nk.css"> -->
-    <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="shortcut icon" href="assets/ico/minus.png">
 </head>
 <body>
     <!-- Navbar -->
-    <?php  include('../topbar.php'); ?>
-    <!-- /END OF TOP NAVBAR -->
+    <?php  include('includes/header-n.php'); ?>
+   
+    <div class="wrapper">
 
     <!-- SIDE MENU -->
-    <?php include('../sidebar_1.php'); ?>
-    <!-- END OF SIDE MENU -->
+    <?php include('includes/sidebar-n.php'); ?>
 
-    <!--  PAPER WRAP -->
-    <div class="wrap-fluid">
-        <div class="container-fluid paper-wrap bevel tlbr">
-            <div class="content-wrap">
+        <div class="content">
                 <div class="row">
                     <div class="col-sm-12 ">
                         <div class="card py-3 px-3 mb-6 table-responsive" style='align-items: center;'>
@@ -71,21 +65,15 @@ $fetch2 = mysqli_fetch_array($query);
                         </div>
                     </div>
                 </div>
-            </div>
-             <!-- FOOTER -->
-            <?php include('../footer.php') ?>
-            <!-- / END OF FOOTER -->
+            
         </div>
     </div>
     <!--  END OF PAPER WRAP -->
+    <?php include('../footer.php') ?>
 
     <!-- jQuery CDN - minified version  -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
-    <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
-    <script src="assets/js/progress-bar/number-pb.js"></script>
-    <script src="assets/js/progress-bar/progress-app.js"></script>
     
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" 
@@ -103,7 +91,6 @@ $fetch2 = mysqli_fetch_array($query);
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.colVis.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -119,27 +106,22 @@ $fetch2 = mysqli_fetch_array($query);
             var table = $('#dtEmp').DataTable( {
                 dom: 'Bfrtip',
                 lengthChange: false,
-                buttons: [ 'copy', 'csv', 'excel', 'print', 'colvis' ],
+                buttons: [ 'copy', 'csv', 'excel', 'print' ],
                 responsive: true
             } );
         
             new $.fn.dataTable.FixedHeader( table );
         } );
     </script>
-
-    <!-- MAIN EFFECT -->
-    <script type="text/javascript" src="assets/js/preloader.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
     <script type="text/javascript" src="assets/js/load.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 
-    <!-- GAGE -->
-
-    <script src="assets/js/jhere-custom.js"></script>
-
-
-
-   
 </body>
 </html>

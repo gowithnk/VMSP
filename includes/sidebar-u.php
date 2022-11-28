@@ -26,7 +26,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             </li>
             <li class="sidenav-item <?= ($activePage == 'pass_phone') ? 'active' : ''; ?>">
                 <a class="py-2 ripple" href="/vmsp/php/pass_phone.php" >
-                    <i class="fa-regular fa-id-card me-2"></i>Create Pass New</a>
+                    <i class="fa-regular fa-id-card me-2"></i>Create Pass </a>
                 </a>
             </li>
             <li class="sidenav-item <?= ($activePage == 'activevisitors') ? 'active' : ''; ?>">
@@ -36,7 +36,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             </li>
             <li class="sidenav-item <?= ($activePage == 'checkout_0') ? 'active' : ''; ?>">
                 <a class="py-2 ripple" href="/vmsp/php/out_time.php" >
-                    <i class="fa-solid fa-right-from-bracket me-2"></i>Check Out</a>
+                    <i class="fa-solid fa-right-from-bracket me-2"></i>Out Time</a>
                 </a>
             </li>
         </ul>

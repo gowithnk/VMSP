@@ -1,14 +1,12 @@
 <div id="my_camera"></div>
 <br />
 
-<input name="image" class="image-tag" hidden>
-
 <script language="JavaScript">
     Webcam.set({
-        width: 320,
-        height: 240,
+        width: 280,
+        height: 210,
         image_format: 'jpeg',
-        jpeg_quality: 150
+        jpeg_quality: 300
     });
 
     Webcam.attach('#my_camera');

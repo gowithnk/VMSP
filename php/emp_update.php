@@ -22,5 +22,6 @@ $query=mysqli_query($db,$sql);
 		else
 		{
 			echo"<script>alert ('error');
+			location.href='emp_display_0.php';
 				</script>";
 		}

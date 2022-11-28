@@ -93,11 +93,14 @@ $fetch = mysqli_fetch_array($query);
 	<div class="row">
 			<div class="col-lg-5 col-md-6 ">
 				<?php include('livevideo.php'); ?>
-				<button class="btn btn-info btn-sm btn-block" style="width:100%" type="button" value="Take Snapshot" onClick="take_snapshot()">Take Snapshot</button>
+				<div  style="justify-content: center; text-align:center;">
+					<button class="btn btn-info btn-sm" type="button" value="Take Snapshot" 
+					onClick="take_snapshot()">Take Snapshot</button>
+				</div>
 			</div>
 			<div class="col-lg-5 col-md-6 col-sm-12">
 				<div id="results"></div>
-				<input type="hidden" id="image_input" name="image">
+				<input style="width: 100% !important;" type="hidden" id="image_input" name="image">
 			</div>
 			<div class="col-lg-2 col-md-3">
 				<?php include('qr.php');

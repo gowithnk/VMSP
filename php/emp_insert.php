@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-	<title>Insert details</title>
-	<link rel="stylesheet" type="text/css" href="../css/custom.css">
 	<script>
 		function phoneno() {
 			$('#phone').keypress(function(e) {
@@ -35,20 +30,10 @@
 			return true;
 		}
 	</script>
-	<style type="text/css">
-		body {
-			background-repeat: no-repeat;
-			background-size: cover;
-			margin: 0px;
-			background-attachment: fixed;
-		}
-	</style>
-</head>
 
-<body>
-	<form action="emp_insert_1.php" method="post">
+	<form class="card p-3" action="emp_insert_1.php" method="post">
 
-		<div class="py-3">
+		<div class="forn-inner">
 			<span style="font-size: 32px;">Employee Details</span>
 			<div class="admin_center">
 				<div class="form-group">
@@ -89,12 +74,9 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<button class="btn btn-info btn-block" type="submit" type="submit">Add New Employee</button>
+					<button class="btn btn-info btn-block btn-lg" type="submit" type="submit">Add New Employee</button>
 					<!-- <input class="form-control submit btn-info" type="submit" value="Add New Employee" style="color:#ffffff !important;"> -->
 				</div>
 			</div>
 		</div>
 	</form>
-</body>
-
-</html>

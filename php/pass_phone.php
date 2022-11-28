@@ -34,7 +34,7 @@
 
         <div class="content">
             <div class="col-12">
-                <div class="card py-2 px-2 my-3">
+                <div class="card p-2 mt-3">
                     <div class="text-center">
                         <!-- Pills navs -->
                         <ul class="nav nav-pills nav-justified mb-3 mt-3" id="ex1" role="tablist">

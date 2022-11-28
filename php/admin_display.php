@@ -1,17 +1,4 @@
-<head>
-	<title>Admin User</title>
 
-	<style>
-		body {
-			text-align: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-
-	</style>
-</head>
-
-<body>
 	<?php
 	include('dbconn.php');
 
@@ -41,16 +28,12 @@
 		echo "<td> $fetch[password]</td>";
 		echo "<td> $fetch[user]</td>";
 		echo "<td> <img src='../images/$fetch[image]' width='100' height='100'</td>";
-		echo "<td> <a class='btn btn-danger' href='admin_delete_1.php?id=$fetch[0]'>Delete</a></td>";
+		echo "<td> <a class='btn btn-danger' href='admin_delete_1.php?id=$fetch[0]'><i class='fa-solid fa-trash-can'></i></a></td>";
 		echo "</tr>";
 	}
 	echo "</table>";
 	?>
-	<form action="../index_1.php">
-		<!--<input type="button" id="p2" value="Print" onclick="print11()">
-<input type="submit" value="Back">  -->
-	</form>
-</body>
+
 <script type="text/javascript">
 	function print11() {
 		w = document.getElementById('p2');

@@ -81,7 +81,7 @@ button#sidebarCollapse {
 }
 .content{
     width: 100%;
-    padding: 5px;
+    padding: 15px;
 }
 #sidebar {
     min-width: 250px;
@@ -162,7 +162,7 @@ ul.CTAs a {
 ----------------------------------------------------- */
 
 #content {
-    width: 100%;
+    width: 95%;
     min-height: 100vh;
     transition: all 0.3s;
 }
@@ -193,5 +193,8 @@ ul.CTAs a {
     border-radius: 50%;
 }
 .btn{
-    padding: 0.2rem 0.5rem;
+    padding: 0.25rem 0.55rem;
+}
+.fa-solid, .fas {
+    margin-top: 4px;
 }

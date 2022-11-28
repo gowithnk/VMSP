@@ -19,14 +19,9 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                     <i class="fas fa-tachometer-alt fa-fw me-2"></i>Dashboard</a>
                 </a>
             </li>
-            <li class="sidenav-item <?= ($activePage == 'pass_generator') ? 'active':''; ?>">
-                <a class="py-2 ripple" href="/vmsp/php/pass_generator.php" >
-                    <i class="fa-regular fa-id-card me-2"></i>Create Pass New</a>
-                </a>
-            </li>
             <li class="sidenav-item <?= ($activePage == 'pass_phone') ? 'active':''; ?>">
                 <a class="py-2 ripple" href="/vmsp/php/pass_phone.php" >
-                    <i class="fa-regular fa-id-card me-2"></i>Create Pass New</a>
+                    <i class="fa-regular fa-id-card me-2"></i>Create Pass </a>
                 </a>
             </li>
             <li class="dp1">

@@ -38,8 +38,7 @@ if ($result = mysqli_query($db, $sql)) {
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
     <!-- bootstrap 4 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
     <!-- databatle -->
@@ -48,7 +47,7 @@ if ($result = mysqli_query($db, $sql)) {
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css" />
-    
+
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
@@ -64,62 +63,60 @@ if ($result = mysqli_query($db, $sql)) {
         <!-- /END OF TOP NAVBAR -->
 
         <div class="content p-3">
-            <section>
-                <div class="row mb-2">
-                    <div class="col-lg-4 col-md-6 my-2">
-                        <div class="card">
-                            <div class="d-flex justify-content-center text-light p-2 bg-primary">
-                                <i class="fas fa-walking me-2"></i> TOTAL VISITORS
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <span class="display-1 text-danger"><?php echo $fetch[0] ?></span>
-                            </div>
-                            <div class="note-dark p-2"><a href="php/activevisitors.php">
-                                <p class="display-7 text-light">Active Visitors: 
-                                    <span class="badge badge-success fs-4" style="margin-left: 5px;"><?php echo $rowcount; ?></span>
-                                </p></a>
-                            </div>
+            <div class="row mb-2">
+                <div class="col-lg-4 col-md-6 my-2">
+                    <div class="card">
+                        <div class="d-flex justify-content-center text-light p-2 bg-primary">
+                            <i class="fas fa-walking me-2"></i> TOTAL VISITORS
+                        </div>
+                        <div class="d-flex justify-content-center p-2">
+                            <span class="display-1 text-danger"><?php echo $fetch[0] ?></span>
+                        </div>
+                        <div class="note-dark p-2"><a href="php/activevisitors.php">
+                                <p class="display-7 text-light">Active Visitors:
+                                    <span class="badge badge-success fs-5" style="margin-left: 5px;"><?php echo $rowcount; ?></span>
+                                </p>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 my-2">
-                        <div class="card">
-                            <div class="d-flex justify-content-center text-light p-2 bg-primary">
+                </div>
+                <div class="col-lg-4 col-md-6 my-2">
+                    <div class="card">
+                        <div class="d-flex justify-content-center text-light p-2 bg-primary">
                             <i class="fa-solid fa-business-time me-2"></i> TOTAL EMPLOYEES
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <span class="display-1 text-danger"><?php echo $fetch1[0] ?></span>
-                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center p-2">
+                            <span class="display-1 text-danger"><?php echo $fetch1[0] ?></span>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 my-2">
-                        <div class="card">
-                            <div class="d-flex justify-content-center text-light p-2 bg-primary">
+                </div>
+                <div class="col-lg-4 col-md-6 my-2">
+                    <div class="card">
+                        <div class="d-flex justify-content-center text-light p-2 bg-primary">
                             <i class="fa-solid fa-puzzle-piece me-2"></i> TOTAL DEPARTMENTS
-                            </div>  
-                            <div class="d-flex justify-content-center">
-                                <span class="display-1 text-danger"><?php echo $fetch2[0] ?></span>
-                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center p-2">
+                            <span class="display-1 text-danger"><?php echo $fetch2[0] ?></span>
                         </div>
                     </div>
                 </div>
-                 <!-- Active visitors -->
-                 <div class="active_visitors">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                            <?php include('php/active_visitors.php') ?>
-                        </div>
+            </div>
+            <!-- Active visitors -->
+            <div class="active_visitors">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <?php include('php/active_visitors.php') ?>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </div>
     <!-- FOOTER -->
     <?php include('footer.php') ?>
-            <!-- / END OF FOOTER -->
-    <!--  END OF WRAP -->
+    <!-- / END OF FOOTER -->
 
     <!-- jQuery CDN - minified version  -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" .
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" 
@@ -129,8 +126,8 @@ if ($result = mysqli_query($db, $sql)) {
     integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
-     <!-- Datatable -->
-     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- Datatable -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.bootstrap4.min.js"></script>
@@ -147,6 +144,17 @@ if ($result = mysqli_query($db, $sql)) {
         $(document).ready(function() {
             $('#sidebarCollapse').on('click', function() {
                 $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#dtDash').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'print'
+                ]
+                // ,"lengthMenu": [ 10, 25, 50, 75, 100 ]
             });
         });
     </script>

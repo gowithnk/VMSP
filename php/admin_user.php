@@ -58,12 +58,12 @@
 	<div class="col-lg-6 col-md-6 col-sm-12">
 		<div class="d-md-flex justify-content-start align-items-center">
 			<label class="me-4 mb-0 control-label">Gender: </label>
-			<div class="form-check form-check-inline mb-0 me-4">
-				<input class="form-check-input mb-0 mt-2" type="radio" name="gender" id="femaleGender" value="Male" required />
+			<div class="form-check form-check-inline mb-0 pl-1">
+				<input class="mb-0" type="radio" name="gender" id="femaleGender" value="Male" required />
 				<label class="form-check-label" for="femaleGender">Male</label>
 			</div>
-			<div class="form-check form-check-inline mb-0 me-4">
-				<input class="form-check-input mb-0 mt-2" type="radio" name="gender" id="maleGender" value="Female" required />
+			<div class="form-check form-check-inline mb-0 pl-1">
+				<input class="mb-0" type="radio" name="gender" id="maleGender" value="Female" required />
 				<label class="form-check-label" for="maleGender">Female</label>
 			</div>
 		</div>
@@ -97,7 +97,7 @@
 		</div>
 	</div> -->
 		<div class="col-lg-12">
-			<button class="btn btn-primary btn-block" name="submit" type="submit">Add New User</button>
+			<button class="btn btn-primary btn-block btn-lg" name="submit" type="submit">Add New User</button>
 		</div>
 </form>
 <script src="../javascript/custom-file-input.js"></script>
