@@ -72,7 +72,7 @@ $fetch4 = mysqli_num_rows($query);
                     }
                     while ($fetch4 = mysqli_fetch_array($query)) {
                     ?>
-                        <li><a class="dropdown-item" href="/vmsp/php/slip.php?id=<?php echo $fetch4[0];?>">
+                        <li><a class="dropdown-item" href="#">
                                 <?php echo 'New visitor Added ' . '<span class="badge badge-success py-1 px-2">'
                                  . $fetch4[1] . '</span>'; ?>
                             </a></li>

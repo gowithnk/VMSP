@@ -88,7 +88,7 @@ button#sidebarCollapse {
     max-width: 250px;
     color: #fff;
     transition: all 0.3s;
-    min-height: 86vh;
+    min-height: 84vh;
 }
 
 #sidebar.active {
@@ -135,7 +135,7 @@ a[data-toggle="collapse"] {
     display: block;
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 5px;
     transform: translateY(-50%);
 }
 
@@ -193,8 +193,37 @@ ul.CTAs a {
     border-radius: 50%;
 }
 .btn{
-    padding: 0.25rem 0.55rem;
+    padding: 0.35rem 0.70rem;
 }
 .fa-solid, .fas {
     margin-top: 4px;
+}
+.input-group>.form-control, .input-group>.form-floating, .input-group>.form-select {
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+}
+.footer-wrapper{
+    background-color: #000c2c;
+    padding: 10px;
+    color: #fff;
+}
+.feedback{
+    margin-top: -25px;
+    font-size: 10px;
+    background-color: #fff !important;
+    left: 10px;
+    z-index: 2;
+    padding: 0px 5px;
+}
+input[type="search"] {
+    width: 150px !important;
+    transition: all 0.3s;
+}
+input[type="search"]:focus {
+    width: 200px !important;
+    transition: all 0.3s;
+}
+.search {
+    width:100%;
 }

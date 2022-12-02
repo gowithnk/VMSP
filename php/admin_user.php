@@ -35,7 +35,7 @@
 		return true;
 	}
 </script>
-<form class="row g-3 needs-validation" action="admin_user_insert.php" method="post" enctype="multipart/form-data">
+<form class="row g-3 needs-validation" novalidate action="admin_user_insert.php" method="post" enctype="multipart/form-data">
 	<h2 class="text-center">Admin Account</h2>
 	<div class="col-lg-6 col-md-6 col-sm-12">
 		<div class="form-outline">
@@ -51,21 +51,18 @@
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-12">
 		<div class="form-outline">
-			<input id="Password" name="password" type="password" class="form-control" required />
+			<input id="Password" name="password" minlength="6" type="password" class="form-control" required />
 			<label for="Password" class="form-label">Password</label>
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-12">
-		<div class="d-md-flex justify-content-start align-items-center">
+		<div class="form-group mb-0">
 			<label class="me-4 mb-0 control-label">Gender: </label>
-			<div class="form-check form-check-inline mb-0 pl-1">
-				<input class="mb-0" type="radio" name="gender" id="femaleGender" value="Male" required />
-				<label class="form-check-label" for="femaleGender">Male</label>
-			</div>
-			<div class="form-check form-check-inline mb-0 pl-1">
-				<input class="mb-0" type="radio" name="gender" id="maleGender" value="Female" required />
-				<label class="form-check-label" for="maleGender">Female</label>
-			</div>
+			<input class="mb-0 form-check-input" type="radio" name="gender" id="femaleGender" value="Male" required />
+			<label class="form-check-label" for="femaleGender">Male</label>
+		
+			<input class="mb-0 ml-3 form-check-input" type="radio" name="gender" id="maleGender" value="Female" required />
+			<label class="form-check-label" for="maleGender">Female</label>
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-12">
@@ -100,4 +97,4 @@
 			<button class="btn btn-primary btn-block btn-lg" name="submit" type="submit">Add New User</button>
 		</div>
 </form>
-<script src="../javascript/custom-file-input.js"></script>
+<script src="../assets/js/form-validation.js"></script>

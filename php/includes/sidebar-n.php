@@ -24,6 +24,11 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                     <i class="fa-regular fa-id-card me-2"></i>Create Pass</a>
                 </a>
             </li>
+            <li class="sidenav-item <?= ($activePage == 'pass_phone') ? 'active':''; ?>">
+                <a class="py-2 ripple" href="/vmsp/php/material_pass_display.php" >
+                    <i class="fa-regular fa-id-card me-2"></i>View Material Passes</a>
+                </a>
+            </li>
             <li class="dp1">
                 <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle py-2 ripple">
                     <i class="fa-solid fa-users me-2"></i>Employee</a>

@@ -3,8 +3,7 @@ include('dbconn.php');
 
 session_start();
 $phone = $_SESSION['phone'];
-$id=$_GET['id'];
-$sql = "SELECT * FROM inquery WHERE id='$id' OR Phone='$phone' ";
+$sql = "SELECT * FROM inquery WHERE Phone='$phone' ";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
 ?>

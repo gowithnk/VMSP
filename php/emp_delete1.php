@@ -26,8 +26,7 @@
 		echo "<td> $fetch[phone]</td>";
 		echo "<td> $fetch[email_id]</td>";
 		echo "<td> $fetch[department_name]</td>";
-		echo "<td> <a class='btn btn-danger' href='emp_delete2.php?id=$fetch[0]'>Delet</a></td>";
-
+		echo "<td> <a id='del' class='btn btn-danger' href='emp_delete2.php?id=$fetch[0]'>Delet</a></td>";
 		echo "</tr>";
 	}
 	echo "</table>";

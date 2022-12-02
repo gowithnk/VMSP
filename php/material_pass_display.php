@@ -48,7 +48,11 @@ $fetch2 = mysqli_fetch_array($query);
     <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="shortcut icon" href="assets/ico/minus.png">
-    
+    <style>
+    #dtMaterial_wrapper{
+        max-width: 800px;
+    }
+</style>
 </head>
 
 <body>
@@ -63,8 +67,8 @@ $fetch2 = mysqli_fetch_array($query);
         <div class="content">
             <div class="row">
                 <div class="col-sm-12 ">
-                    <div class="card py-3 px-3 mb-6 ">
-                        <?php include('emp_display.php') ?>
+                    <div class="card p-2 mb-6 table-responsive" style='align-items: center;'>
+                        <?php include('material_display.php') ?>
                     </div>
                 </div>
             </div>
@@ -75,12 +79,15 @@ $fetch2 = mysqli_fetch_array($query);
     <?php include('../footer.php') ?>
 
     <!-- jQuery CDN - minified version  -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
     <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" 
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" 
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
     <!-- Datatable -->
@@ -103,7 +110,7 @@ $fetch2 = mysqli_fetch_array($query);
         //     } );
         // } );
         $(document).ready(function() {
-            var table = $('#dtEmp').DataTable({
+            var table = $('#dtMaterial').DataTable({
                 dom: 'Bfrtip',
                 lengthChange: false,
                 buttons: ['copy', 'csv', 'excel', 'print'],

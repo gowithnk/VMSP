@@ -24,6 +24,11 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                     <i class="fa-regular fa-id-card me-2"></i>Create Pass </a>
                 </a>
             </li>
+            <li class="sidenav-item <?= ($activePage == 'pass_phone') ? 'active':''; ?>">
+                <a class="py-2 ripple" href="/vmsp/php/material_pass_display.php" >
+                    <i class="fa-regular fa-id-card me-2"></i>View Material Passes</a>
+                </a>
+            </li>
             <li class="dp1">
                 <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle py-2 ripple">
                     <i class="fa-solid fa-users me-2"></i>Employee</a>
@@ -36,14 +41,6 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/emp_display_0.php" title="View">
                             <i class="fa-solid fa-users-viewfinder me-2"></i>View All</a>
                     </li>
-                    <!-- <li>
-                        <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/emp_edit1_0.php" title="Edit">
-                            <i class="fa-solid fa-user-pen me-2"></i>Edit</a>
-                    </li>
-                    <li>
-                        <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/emp_delete1_0.php" title="Delete">
-                            <i class="fa-solid fa-trash-can me-2"></i>Delete</a>
-                    </li> -->
                 </ul>
             </li>
             <li class="dp2">
@@ -58,10 +55,6 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/department_display_0.php" title="View">
                             <i class="fa-solid fa-users-viewfinder me-2"></i>View All</a>
                     </li>
-                    <!-- <li>
-                        <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/department_delete_0.php" title="Delete">
-                            <i class="fa-solid fa-trash-can me-2"></i>Delete</a>
-                    </li> -->
                 </ul>
             </li>
             <li class="dp3">
@@ -76,10 +69,6 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/admin_display_0.php" title="View">
                             <i class="fa-solid fa-users-viewfinder me-2"></i>View All</a>
                     </li>
-                    <!-- <li>
-                        <a class="list-group-item list-group-item-action py-2 ripple" href="/vmsp/php/admin_delete_0.php" title="Delete">
-                            <i class="fa-solid fa-trash-can me-2"></i>Delete</a>
-                    </li> -->
                 </ul>
             </li>
             <li class="sidenav-item<?= ($activePage == 'report_display') ? 'active':''; ?>">

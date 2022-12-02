@@ -31,33 +31,44 @@
 		}
 	</script>
 
-	<form class="card p-3" action="emp_insert_1.php" method="post">
+	<form class="card p-3 needs-validation" action="emp_insert_1.php" method="post" novalidate>
 
 		<div class="forn-inner">
-			<span style="font-size: 32px;">Employee Details</span>
+			<h2 class="mb-3 mt-1">Employee Details</h2>
 			<div class="admin_center">
-				<div class="form-group">
-					<input class="form-control" type="text" onkeypress="return onlyAlphabets(event);" name="name" placeholder="Enter your Name" required>
+				<div class="form-outline mb-3">
+					<input class="form-control" type="text" onkeypress="return onlyAlphabets(event);" name="name" required>
+					<label class="form-label" for="reason">Enter your Name</label>
 				</div>				
-				<div class="form-group">
+				<div class="form-group mb-2">
 					<label style="font-size: 18px;">Gender : </label>
-					<input type="radio" name="gender" value="Male" style="margin-left: 18px;">
+					<input class="form-check-input" type="radio" name="gender" value="Male" style="margin-left: 18px;" required>
 					<label>Male</label>
-					<input style=" margin-left:20px;" type="radio" name="gender" value="Female">
+					<input class="form-check-input" style=" margin-left:20px;" type="radio" name="gender" value="Female" required>
 					<label>Female</label>
 				</div>
-				<div class="form-group">
-					<input class="form-control" id="phone" type="text" pattern="\d{10}" title="Please enter exactly 10 digits" onkeypress="phoneno()" maxlength="10" 
-					name="phone" placeholder="Phone No" required>
+				<div class="form-outline mb-3">
+					<input class="form-control" id="phone" type="text" pattern="\d{10}" title="Please enter exactly 10 digits" 
+					onkeypress="phoneno()" maxlength="10" name="phone" required>
+					<label class="form-label" for="reason">Phone No</label>
+				</div>
+				<div class="form-outline mb-3">
+				
+					<input class="form-control" type="text" name="code" pattern="[0-9]{4}" maxlength="4" required>
+					<div class="feedback invalid-feedback">
+					Please enter a 4 digit number
+					</div>
+					<label class="form-label" for="reason">Employee Code</label>
+					
+				</div>
+				<div class="form-outline mb-3">
+					<input class="form-control" type="email" name="email" placeholder="abc.domain.com (E-Mail)" 
+					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+					<label class="form-label" for="reason">Email Address</label>
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="text" name="code" placeholder="Employee Code" required>
-				</div>
-				<div class="form-group">
-					<input class="form-control" type="email" name="email" placeholder="abc.domain.com (E-Mail)" required>
-				</div>
-				<div class="form-group">
-					<select class="form-control" name="department">	
+					<select class="form-control" name="department" required>	
+					<option value="">Select Department</option>
 						<?php
 						include('dbconn.php');
 						$sql = "Select * from department";
@@ -66,7 +77,6 @@
 						while ($fetch = mysqli_fetch_array($query)) {
 						?>
 							<option value="<?php echo $fetch[1] ?>"><?php echo $fetch[1] ?></option>
-
 						<?php
 						}
 						?>
@@ -80,3 +90,4 @@
 			</div>
 		</div>
 	</form>
+	<script type="text/javascript" src="../assets//js/form-validation.js"></script>

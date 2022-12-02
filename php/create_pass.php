@@ -32,7 +32,7 @@
         <!-- /END OF TOP NAVBAR -->
 
         <div class="content">
-            <div class="card p-3 m-3">
+            <div class="card p-3 m-1">
                 <?php include('createpass.php'); ?>
             </div>
         </div>
@@ -51,8 +51,8 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
 
-    <script type="text/javascript" src="assets/js/load.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="../assets/js/load.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#sidebarCollapse').on('click', function() {
@@ -60,15 +60,7 @@
             });
         });
     </script>
-    <script>
-        function validateform() {
-            var x = document.forms["myform"]["name1"].value;
-            if (x == "") {
-                alert("Name must be filled out");
-                return false;
-            }
-        }
-    </script>
+
 </body>
 
 </html>

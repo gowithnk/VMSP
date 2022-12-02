@@ -4,7 +4,7 @@
 <script language="JavaScript">
     Webcam.set({
         width: 280,
-        height: 210,
+        height: 220,
         image_format: 'jpeg',
         jpeg_quality: 300
     });

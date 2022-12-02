@@ -10,26 +10,28 @@ $query=mysqli_query($db,$sql);
 $fetch=mysqli_fetch_array($query);
 $count=mysqli_num_rows($query);
 
-if($count>0)
-{	
+if($count>0){
+	
 	if($fetch[8]=="")
 	{
 		echo"<script>alert('Visitor already logged in'); 
-		location.href='../dashboard.php';
+		location.href='../php/pass_phone.php';
 		</script>";
 	}	
-	else
+	
+}
+elseif($phone =='')
 	{
 		$_SESSION['phone']=$phone;
-		echo"<script>alert('Phone number already exist'); 
-		location.href='create_pass.php';
+		echo"<script>
+		alert('Please Enter phone first'); 
+		location.href='../php/pass_phone.php';
 		</script>";
 	}
-}
 else
 {
 		$_SESSION['phone']=$phone;
 		echo "<script>
 			location.href='create_pass.php';	
-				</script>";
+			</script>";
 }

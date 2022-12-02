@@ -1,18 +1,20 @@
 <?php
+
 include('dbconn.php');
 $id=$_GET['id'];
 
-$sql="delete from login_user where id='$id'";
+$sql="DELETE FROM material_pass WHERE id='$id'";
 $query=mysqli_query($db,$sql);
 
 if($query)
 {
 	echo "<script>
 		alert('data deleted');
-		location.href='admin_display_0.php';
+		location.href='material_pass_display.php';
 			</script>";
 }
 else
 {
 	echo "Error";
 }
+?>

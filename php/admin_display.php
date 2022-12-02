@@ -28,18 +28,19 @@
 		echo "<td> $fetch[password]</td>";
 		echo "<td> $fetch[user]</td>";
 		echo "<td> <img src='../images/$fetch[image]' width='100' height='100'</td>";
-		echo "<td> <a class='btn btn-danger' href='admin_delete_1.php?id=$fetch[0]'><i class='fa-solid fa-trash-can'></i></a></td>";
+		echo "<td> <a class='btn btn-danger deleteID' href='admin_delete_1.php?id=$fetch[0]'><i class='fa-solid fa-trash-can'></i></a></td>";
 		echo "</tr>";
 	}
 	echo "</table>";
 	?>
 
 <script type="text/javascript">
-	function print11() {
-		w = document.getElementById('p2');
-		w.style.display = 'none';
-		window.print();
-		w.style.display = 'block';
-
-	}
+	// confirm delete data
+	jQuery(document).ready(function() {
+		jQuery(".deleteID").click(function() {
+			if (!confirm('Are you sure you want to delete this record?')) {
+				return false;
+			}
+		});
+	});
 </script>

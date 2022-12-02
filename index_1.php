@@ -56,7 +56,7 @@ if ($result = mysqli_query($db, $sql)) {
         <?php include('includes/sidebar-n.php'); ?>
 
         <div class="content">
-                <div class="row m-2">
+                <div class="row m-1">
                     <div class="col-lg-4 col-md-6 my-2">
                         <div class="card">
                             <div class="d-flex justify-content-center text-light p-2 bg-primary">

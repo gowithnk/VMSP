@@ -7,8 +7,8 @@ $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
 ?>
 
-<form action="emp_update.php" method="post">
-	<h2 class="ml-2">Edit Employee Details</h1><br>
+<form action="emp_update.php" method="post" class="needs-validation" novalidate>
+	<h2 class="ml-2 mt-2">Edit Employee Details</h2>
 		<div class="row">
 			<div class="col-12 py-1 px-4">
 				<div class="form-outline mb-3">
@@ -62,3 +62,4 @@ $fetch = mysqli_fetch_array($query);
 			</div>
 		</div>
 </form>
+<script type="text/javascript" src="../assets/js/form-validation.js"></script>

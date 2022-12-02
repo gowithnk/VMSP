@@ -1,5 +1,4 @@
 <?php
-echo "<script> alert('Are you sure you want to delete?');</script>";
 
 include('dbconn.php');
 $id=$_GET['id'];
@@ -18,3 +17,4 @@ else
 {
 	echo "Error";
 }
+?>
