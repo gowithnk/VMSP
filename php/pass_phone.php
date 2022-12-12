@@ -1,3 +1,9 @@
+<?php
+    include('dbconn.php');
+    $sql = "Select count(*) from inquery";
+    $query = mysqli_query($db, $sql);
+    $fetch = mysqli_fetch_array($query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,12 +28,10 @@
     <style>
         @media only screen and (min-width: 992px) {
             .input-group {
-                width: 50%;
+                width: 100%;
             }
         }
-.qty{
-    width: 200px;
-}
+       
     </style>
 </head>
 
@@ -41,8 +45,8 @@
         <!-- /END OF TOP NAVBAR -->
 
         <div class="content">
-            <div class="col-12">
-                <div class="card p-2 mt-3">
+            <div class="p-1">
+                <div class="card p-2 mt-2">
                     <div class="text-center">
                         <!-- Tabs navs -->
                         <ul class="nav nav-pills nav-justified mb-3 mt-3" id="ex1" role="tablist">
@@ -64,8 +68,7 @@
                             <div class="tab-pane fade show active px-2" id="pills-visitor" role="tabpanel" aria-labelledby="tab-visitor">
                                 <form method="post" action="pass.php" class="needs-validation" novalidate>
                                     <div class="form-outline mb-2">
-                                        <input required type="tel" id="phone" name="phone" title="Please enter exactly 10 digits" 
-                                        onkeypress="phoneno()" pattern=".{10}" maxlength="10" class="form-control" required />
+                                        <input required type="tel" id="phone" name="phone" title="Please enter exactly 10 digits" onkeypress="phoneno()" pattern=".{10}" maxlength="10" class="form-control" required />
                                         <label class="form-label" for="phone">Phone Number</label>
                                     </div>
                                     <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg my-3">Next</button>
@@ -77,8 +80,15 @@
                                 <form action="material_insert.php" method="post" class="needs-validation" novalidate>
                                     <div class="row g-2">
                                         <div class="col-lg-6">
-                                            <select name="fromLocation" class="form-select mb-2" aria-label=".form-select-lg example" required>
-                                                <option value="" selected>From Location</option>
+                                            <select name="materialPass" class="form-select mb-2" required>
+                                                <option value="" >Material Pass</option>
+                                                <option value="PLANT TO PLANT">PLANT TO PLANT</option>
+                                                <option value="PLANT TO OTHERS">PLANT TO OTHERS</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select name="fromLocation" class="form-select mb-2" required>
+                                                <option value="" >From Location</option>
                                                 <option value="Corporate Office">Corporate Office</option>
                                                 <option value="Registered Office">Registered Office</option>
                                                 <option value="Plant I">Plant I</option>
@@ -86,9 +96,9 @@
                                                 <option value="Plant III">Plant III</option>
                                             </select>
                                         </div>
-                                        <div class="col-lg-6 input-group">
-                                            <select name="toLocation" id="slt" class="form-select mb-2" aria-label=".form-select-lg example" required>
-                                                <option value="" selected>To Location</option>
+                                        <div class="col-lg-6">
+                                            <select name="toLocation" id="slt" class="form-select mb-2" required>
+                                                <option value="" >To Location (Address)</option>
                                                 <option value="Corporate Office">Corporate Office</option>
                                                 <option value="Registered Office">Registered Office</option>
                                                 <option value="Plant I">Plant I</option>
@@ -96,87 +106,199 @@
                                                 <option value="Plant III">Plant III</option>
                                             </select>
                                             <div style="display: none;" id="otherLocation1" class="form-outline mb-2">
-                                                <input name="toLocation" disabled type="otherLocation" id="otherLocation" class="form-control" required/>
+                                                <input id="otherLocation" style="display: none;" type="text" 
+                                                class="form-control" />
                                                 <label class="form-label" for="otherLocation">Other Location</label>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 d-lg-none d-xl-none">
                                             <small id="passwordHelpBlock" class="form-text text-muted">
-                                                <input class="form-check-input mb-2" checked name="group1" id="dummy" type="radio" 
+                                                <input class="form-check-input mb-2" checked name="OL" id="dummy" type="radio" 
                                                 onclick="toggleRadio(false)" />Select Location
-                                                <input class="form-check-input ml-2 mb-2" name="group1" id="customMessageRadioButton" 
+                                                <input class="form-check-input ml-2 mb-2" name="OL" id="customMessageRadioButton" 
                                                 onclick="toggleRadio(true)" type="radio" />Other Location
                                             </small>
                                         </div>
                                         <div class="col-lg-6">
-                                            <select name="department" class="form-select mb-2" aria-label=".form-select-lg example" required>
-                                                <option value="" selected>Select Department</option>
-                                                <option value="IT">IT</option>
-                                                <option value="HR">HR</option>
-                                                <option value="EXPORTS">EXPORTS</option>
-                                                <option value="P2P">P2P</option>
-                                                <option value="PPIC">PPIC</option>
+                                            <select class="form-select mb-2" name="department" required>	
+                                                <option value="">Select Department</option>
+                                                <?php
+                                                include('dbconn.php');
+                                                $sql = "Select * from department";
+                                                $query = mysqli_query($db, $sql);
+
+                                                while ($fetch = mysqli_fetch_array($query)) {
+                                                ?>
+                                                    <option value="<?php echo $fetch[1] ?>"><?php echo $fetch[1] ?></option>
+                                                <?php
+                                                }
+                                                ?>
                                             </select>
                                         </div>
                                         <div class="col-lg-6 d-none d-sm-none d-md-none d-lg-block ">
                                             <small id="passwordHelpBlock" class="form-text text-muted">
-                                                <input class="form-check-input mb-2" checked name="group1" id="dummy" type="radio" 
+                                                <input class="form-check-input mb-2" checked name="OL" id="dummy" type="radio" 
                                                 onclick="toggleRadio(false)" />Select Location
-                                                <input class="form-check-input ml-2 mb-2" name="group1" id="customMessageRadioButton" 
+                                                <input class="form-check-input ml-2 mb-2" name="OL" id="customMessageRadioButton" 
                                                 onclick="toggleRadio(true)" type="radio" />Other Location
                                             </small>
                                         </div>
                                         <div class="col-lg-6">
-                                            <select name="itemCategory" class="form-select mb-2" aria-label=".form-select-lg example" required>
-                                                <option value="" selected>Item Category</option>
-                                                <option value="Desktop">Desktop</option>
+                                            <select name="itemCategory" class="form-select mb-2" required>
+                                                <option value="">Item Category</option>
+                                                <option value="OUTWARD">OUTWARD</option>
                                                 <option value="Monitor">Monitor</option>
                                                 <option value="Laptop">Laptop</option>
                                                 <option value="Mouse">Mouse</option>
                                             </select>
                                         </div>
-                                        <div class="col-lg-6 input-group">
-                                            <div class="form-outline mb-2">
-                                                <input name="itemDescription" required type="text" id="itemDesc" class="form-control" required />
-                                                <label class="form-label" for="itemDesc">Item Description</label>
-                                            </div>
-                                            <div class="form-outline mb-2 qty">
-                                                <input name="itemQuantity" type="number" id="quantity" class="form-control" required/>
-                                                <label class="form-label" for="quantity">Quantity</label>
-                                            </div>
+                                        <div class="col-lg-6">
+                                            <select name="itemSubCategory" class="form-select mb-2"  required>
+                                                <option value="" >Item Sub Category</option>
+                                                <option value="Desktop1">Desktop Size</option>
+                                                <option value="Monitor1">Monitor Size</option>
+                                                <option value="Laptop1">Laptop Model</option>
+                                                <option value="Mouse1">Mouse </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select class="form-select mb-2" name="empId" required>	
+                                                <option value="">Select Employee ID</option>
+                                                <?php
+                                                include('dbconn.php');
+                                                $sql = "Select * from emp_table";
+                                                $query = mysqli_query($db, $sql);
+
+                                                while ($fetch = mysqli_fetch_array($query)) {
+                                                ?>
+                                                    <option value="<?php echo $fetch[1] ?>"><?php echo $fetch[4] .' (' . $fetch[1] .')' ?></option>
+                                                <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                        <select class="form-select mb-2" name="approvedBy" required>	
+                                                <option value="">Approved By</option>
+                                                <?php
+                                                include('dbconn.php');
+                                                $sql = "Select * from emp_table";
+                                                $query = mysqli_query($db, $sql);
+
+                                                while ($fetch = mysqli_fetch_array($query)) {
+                                                ?>
+                                                    <option value="<?php echo $fetch[1] ?>"><?php echo$fetch[1] ?></option>
+                                                <?php
+                                                }
+                                                ?>
+                                            </select>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-outline mb-2">
                                                 <input name="reason" required type="text" id="reason" class="form-control" required />
-                                                <label class="form-label" for="reason">Reason</label>
+                                                <label class="form-label" for="reason">Material Purpose</label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 input-group">
-                                            <div class="form-outline mb-2 amount">
-                                                <input name="amount" type="number" id="amount" class="form-control" required/>
-                                                <label class="form-label" for="amount">
-                                                    <i class="fa-solid fa-indian-rupee-sign"></i> Amount</label>
+                                        <div class="col-lg-6">
+                                            <div class="form-outline mb-2">
+                                                <input name="personName" required type="text" id="personName" class="form-control" required />
+                                                <label class="form-label" for="personName">Person Name</label>
                                             </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-outline mb-1">
+                                                <input name="companyName" required type="text" id="companyName" class="form-control" required />
+                                                <label class="form-label" for="companyName">Company Name</label>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-lg-6 mb-1">
                                             <select name="passType" class="form-select mb-2" aria-label=".form-select-lg example" required>
-                                                <option value="" selected>Select Type</option>
+                                                <option value="" selected>Select Type (NRGP/RGP)</option>
                                                 <option value="NRGP">NRGP</option>
                                                 <option value="RGP">RGP</option>
                                             </select>
+                                        </div> -->
+                                        <div class="col-lg-4">
+                                            <small id="passwordHelpBlock" class="form-text text-muted mb-2 mt-2">
+                                                <label class="form-label me-4 fw-bold">Challan Type</label>
+                                                <input class="form-check-input mb-2" checked name="returnType" id="dummy" type="radio" 
+                                                onclick="toggleRadioRD(false)" value="NRGP" required/>NRGP
+                                                <input class="form-check-input ml-2 mb-2" name="returnType" id="customMessageRadioButton" 
+                                                onclick="toggleRadioRD(true)" value="RGP" type="radio" required/>RGP
+                                            </small>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-outline mt-0">
-                                                <textarea name="remark" class="form-control" id="remark" rows="2" required></textarea>
-                                                <label class="form-label" for="remark">Remark</label>
+                                        <div class="col-lg-2">
+                                            <div style="display: none;" id="ERD" class="form-outline mb-2">
+                                                <input name="estimatedReturnDate" type="date" placeholder="Please select Date" 
+                                                id="ERD1" class="form-control"  />
+                                                <label class="form-label" for="ERD">Return Date</label>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <!-- Item 1 -->
+                                        <div class="row g-2 px-1" style="margin-left: 2px;">
+                                            <div class="col-lg-5">
+                                                <div class="form-outline mb-2">
+                                                    <input name="itemDescription" required type="text" id="itemDesc" class="form-control" required />
+                                                    <label class="form-label" for="itemDesc">Item Description</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="form-outline mb-2 qty">
+                                                    <input name="itemQuantity" type="number" id="quantity" class="form-control" required />
+                                                    <label class="form-label" for="quantity">Quantity</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="form-outline mb-2 amount">
+                                                    <input name="amount" type="number" id="amount" class="form-control" required />
+                                                    <label class="form-label" for="amount">
+                                                        <i class="fa-solid fa-indian-rupee-sign"></i> Amount</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="form-outline mb-2">
+                                                    <textarea name="remark" class="form-control" id="remark" rows="1" required></textarea>
+                                                    <label class="form-label" for="remark">Remark</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Item 2 -->
+                                        <div class="row g-2 px-1 mt-2" style="margin-left: 2px;">
+                                            <div class="col-lg-5">
+                                                <div class="form-outline mb-2">
+                                                    <input name="itemDescription2" type="text" id="itemDesc2" class="form-control" />
+                                                    <label class="form-label" for="itemDesc2">Item 2 Description</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="form-outline mb-2 qty2">
+                                                    <input name="itemQuantity2" type="number" id="quantity" class="form-control" />
+                                                    <label class="form-label" for="quantity">Quantity</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="form-outline mb-2 amount2">
+                                                    <input name="amount2" type="number" id="amount2" class="form-control" />
+                                                    <label class="form-label" for="amount2">
+                                                        <i class="fa-solid fa-indian-rupee-sign"></i> Amount</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="form-outline mb-2">
+                                                    <textarea name="remark2" class="form-control" id="remark2" rows="1" ></textarea>
+                                                    <label class="form-label" for="remark2">Remark</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg my-3">Submit</button>
+                                    <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg my-3" style="font-size: 18px;">Submit</button>
                                 </form>
                             </div>
                             <!-- Material entry end -->
                             <!-- Employee Pass -->
                             <div class="tab-pane fade px-2" id="pills-Emp" role="tabpanel" aria-labelledby="tab-Emp">
-                                <form  class="needs-validation" novalidate>
+                                <form class="needs-validation" novalidate>
                                     <div class="form-outline mb-2">
                                         <input required type="tel" id="mobile" class="form-control" required />
                                         <label class="form-label" for="mobile">Phone Number 2</label>
@@ -216,18 +338,38 @@
         });
     </script>
     <script>
-        
+
     </script>
     <script>
         function toggleRadio(flag) {
             if (!flag) {
                 document.getElementById('otherLocation1').style.display = "none";
+                document.getElementById('otherLocation').style.display = "none";
+                document.getElementById('otherLocation').removeAttribute("required", "required");
                 document.getElementById('slt').style.display = "block";
+                document.getElementById('slt').setAttribute("required", "required");
+                document.getElementById('slt').setAttribute("name", "toLocation");
+                document.getElementById('otherLocation').removeAttribute("name", "toLocation");
             } else {
-                document.getElementById('otherLocation').removeAttribute("disabled");
                 document.getElementById('slt').style.display = "none";
+                document.getElementById('slt').removeAttribute("required", "required");
                 document.getElementById('otherLocation1').style.display = "block";
+                document.getElementById('otherLocation').style.display = "block";
                 document.getElementById('otherLocation').focus();
+                document.getElementById('otherLocation').setAttribute("required", "required");
+                document.getElementById('otherLocation').setAttribute("name", "toLocation");
+                document.getElementById('slt').removeAttribute("name", "toLocation");
+                
+            }
+        }
+        function toggleRadioRD(flag) {
+            if (!flag) {
+                document.getElementById('ERD').style.display = "none";
+                document.getElementById('ERD1').removeAttribute("required", "required");
+            } else {
+                document.getElementById('ERD').style.display = "block";
+                document.getElementById('ERD1').setAttribute("required", "required");
+                document.getElementById('ERD1').focus();
             }
         }
     </script>

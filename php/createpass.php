@@ -1,5 +1,6 @@
 <?php
 $phone1 = $_SESSION['phone'];
+
 include('dbconn.php');
 $sql = "Select * from inquery where Phone='$phone1'";
 $query = mysqli_query($db, $sql);
@@ -40,19 +41,15 @@ $fetch = mysqli_fetch_array($query);
 	<div class="col-lg-6 col-md-6 mb-0">
 		<div class="my-2">
 			<label class="me-4 fw-bolder" for="gender">Gender</label>
-			<input required <?php if ($fetch == "male") {
-								echo "checked";
-							} ?> type="radio" name="gender" value="male" class="form-check-input" id="gender">
+			<input required type="radio" name="gender" value="male" class="form-check-input" id="gender">
 			<label style="margin-left: 5px;">Male</label>
-			<input style="margin-left: 5px;" <?php if ($fetch == "female") {
-													"checked";
-												} ?> type="radio" name="gender" class="form-check-input" value="female" id="gender">
+			<input style="margin-left: 5px;" type="radio" name="gender" class="form-check-input" value="female" id="gender">
 			<label style="margin-left: 5px;">Female</label>
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6">
 		<div class=" mb-2">
-			<select class="form-control" name="person_meet_id" style="color: #000 !important;" id="inputHTM" required>
+			<select class="form-select" name="person_meet_id" style="color: #000 !important;" id="inputHTM" required>
 				<option value="">Please select whom to meet</option>
 				<?php
 				include('dbconn.php');
@@ -66,8 +63,8 @@ $fetch = mysqli_fetch_array($query);
 	</div>
 	<div class="col-lg-6 col-md-6">
 		<div class=" mb-2">
-			<select class="form-control" name="department" style="color: #000 !important;" id="dept" required>
-				<option value="">Please Department</option>
+			<select class="form-select" name="department" style="color: #000 !important;" id="dept" required>
+				<option value="">Please Select Department</option>
 				<?php
 				include('dbconn.php');
 				$sql = "Select * from department";
@@ -98,7 +95,7 @@ $fetch = mysqli_fetch_array($query);
 	</div>
 	<div class="col-lg-6 col-md-6">
 		<div class="form-outline mb-2">
-			<input required type="text" name="city" placeholder="City" value="" class="form-control" id="inputCity">
+			<input required type="text" name="city" placeholder="Delhi" value="" class="form-control" id="inputCity">
 			<label class="form-label" for="inputCity">City </label>
 		</div>
 	</div>

@@ -3,6 +3,7 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import "https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css";
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -203,6 +204,9 @@ ul.CTAs a {
     flex: 1 1 auto;
     width: 100%;
 }
+.form-select {
+    padding: 0.37rem 2.25rem 0.37rem 0.75rem;
+}
 .footer-wrapper{
     background-color: #000c2c;
     padding: 10px;
@@ -226,4 +230,26 @@ input[type="search"]:focus {
 }
 .search {
     width:100%;
+}
+b{
+    font-style: 600px !important;
+}
+hr {
+    margin: 0.1rem 0rem;
+    color: lightgray;
+}
+/* Material pdf */
+.print_area{
+    border: 1px solid lightgray;
+}
+.wrapper_area{
+    width: 100%;
+}
+.wrapper_area > p, .data_row{
+    width: 50%;
+    float: right;
+}
+.wrapper_area > p:last-child, .data_row{
+    width: 50%;
+    float: left;
 }

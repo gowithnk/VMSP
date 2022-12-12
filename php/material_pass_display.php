@@ -50,8 +50,13 @@ $fetch2 = mysqli_fetch_array($query);
     <link rel="shortcut icon" href="assets/ico/minus.png">
     <style>
     #dtMaterial_wrapper{
-        max-width: 800px;
+        max-width: 78vw;
     }
+    @media only screen and (max-width: 600px) {
+        #dtMaterial_wrapper{
+        max-width: 90vw;
+    }
+}
 </style>
 </head>
 

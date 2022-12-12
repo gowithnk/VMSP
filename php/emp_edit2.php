@@ -8,14 +8,14 @@ $fetch = mysqli_fetch_array($query);
 ?>
 
 <form action="emp_update.php" method="post" class="needs-validation" novalidate>
-	<h2 class="ml-2 mt-2">Edit Employee Details</h2>
+	<h2 class="ml-3 mt-2" style="margin-left: 15px;">Edit Employee Details</h2>
 		<div class="row">
 			<div class="col-12 py-1 px-4">
 				<div class="form-outline mb-3">
 					<input class="form-control" type="text" id="name" name="name" value="<?php echo $fetch[1]; ?>" required>
 					<label class="form-label" for="name">Enter New Name</label>
 				</div>
-				<div class="form-group">
+				<div class="form-group mb-3">
 					<label class="me-2 mb-0">Gender : </label>
 					<input <?php if ($fetch[3] == "Male") { echo "checked"; } ?> 
 					type="radio" name="gender" class="me-1" value="Male">
@@ -58,7 +58,7 @@ $fetch = mysqli_fetch_array($query);
 							<?php } ?>
 						</select>
 				</div>
-				<button class="btn btn-info btn-block btn-lg mb-3" type="submit">Update</button>
+				<button class="btn btn-info btn-block btn-lg mb-3 mt-2" type="submit">Update</button>
 			</div>
 		</div>
 </form>

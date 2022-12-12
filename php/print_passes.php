@@ -2,12 +2,12 @@
 
 // Require composer autoload
 require_once( '../vendor/autoload.php');
-
+session_start();
 include('dbconn.php');
 $id = $_GET['id'];
 // $id = 95;
 
-$sql = "select * from inquery where id='$id'";
+$sql = "SELECT * FROM inquery WHERE id='$id'";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
 

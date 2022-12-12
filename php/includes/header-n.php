@@ -1,13 +1,14 @@
 <?php
 session_start();
-if ($_SESSION['user'] == "") {
+if(!isset($_SESSION['IS_LOGIN'])){
     header('location:/vmsp/index.html');
+    die();
 }
 
 include('dbconn.php');
-$user = $_SESSION['user'];
+$user = $_SESSION['ROLE'];
 
-$sql = "SELECT * FROM login_user WHERE username='$user'";
+$sql = "SELECT * FROM login_user WHERE user='$user'";
 $query = mysqli_query($db, $sql);
 $fetch5 = mysqli_fetch_array($query);
 // user avatar
@@ -40,7 +41,7 @@ $fetch4 = mysqli_num_rows($query);
             <?php
             // echo ($notif_time);
             ?>
-            <ul class="navbar-nav ml-auto mb-2 mb-lg-0 mr-3">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0 me-3">
                 <li class="nav-item">
                     <div class="date-top" style="font-size:12px;">
                         <span class="entypo-calendar" style="margin-right:5px"></span>
@@ -85,7 +86,7 @@ $fetch4 = mysqli_num_rows($query);
             <div class="dropdown">
                 <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" 
                 role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <img alt="" class="admin-pic img-circle" src="<?php echo '/vms/images/' . $avatar; ?>">
+                    <img alt="" class="admin-pic img-circle" src="<?php echo '/vmsp/images/' . $avatar; ?>">
 
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">

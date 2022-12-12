@@ -3,14 +3,16 @@ include('dbconn.php');
 
 $sql = "SELECT * FROM material_pass order by id DESC";
 $query = mysqli_query($db, $sql);
-echo "<div class='table-responsive'>";  
-echo "<table style='width:1000px !important;' id='dtMaterial' class='table text-wrap align-middle mb-0 bg-white table-bordered table-hover table-striped'>";
+echo "<div class='table-responsive mt-2'>";  
+echo "<table style='width:100% !important;' id='dtMaterial' class='table text-wrap align-middle mb-0 bg-white table-bordered table-hover table-striped'>";
 echo "<thead class='table-dark'>";
 echo "<tr>";
+echo "<th> Id</th>";
 echo "<th> From Location</th>";
 echo "<th> To Location</th>";
 echo "<th> Department</th>";
 echo "<th> Item Category</th>";
+echo "<th> Item Sub Category</th>";
 echo "<th> Item Description</th>";
 echo "<th> Quantity</th>";
 echo "<th> Reason</th>";
@@ -27,15 +29,17 @@ echo "</tbody>";
 
 while ($row = mysqli_fetch_array($query)) {
     echo "<tr>";
+    echo "<td> $row[id]</td>";
     echo "<td> $row[FromLocation]</td>";
     echo "<td> $row[ToLocation]</td>";
     echo "<td> $row[Department]</td>";
     echo "<td> $row[ItemCategory]</td>";
+    echo "<td> $row[ItemSubCategory]</td>";
     echo "<td> $row[ItemDescription]</td>";
     echo "<td> $row[ItemQuantity]</td>";
     echo "<td> $row[Reason]</td>";
     echo "<td> $row[Amount]</td>";
-    echo "<td> $row[PassType]</td>";
+    echo "<td> $row[ReturnType]</td>";
     echo "<td> $row[Remark]</td>";
     echo "<td> $row[Date]</td>";
     echo "<td> $row[OutTime]</td>";

@@ -1,7 +1,10 @@
-<?php
-// if( isset($_SESSION["user"]) && $_SESSION["user"] != 'niranjan' ){  
-//     header('location:dashboard.php'); 
-//     } 
+<?php 
+if(isset($_SESSION['ROLE']) && $_SESSION['ROLE'] !== 'admin'){
+    echo "<script>
+            location.href='../dashboard.php';
+        </script>";
+        die();
+}
 include('php/dbconn.php');
 
 $sql = "Select count(*) from inquery";
@@ -16,12 +19,24 @@ $sql = "Select count(*) from department";
 $query = mysqli_query($db, $sql);
 $fetch2 = mysqli_fetch_array($query);
 
+$sql = "Select count(*) from material_pass";
+$query = mysqli_query($db, $sql);
+$totalM = mysqli_fetch_array($query);
+
+
 // Active Visitors 
 $sql = "SELECT * FROM inquery WHERE Out_Time IS NULL OR Out_Time = '' ";
 if ($result = mysqli_query($db, $sql)) {
     // Return the number of rows in result set
-    $rowcount = mysqli_num_rows($result);
-    // Display result
+    $rowcountV = mysqli_num_rows($result);
+}
+// Todays Material Passses 
+date_default_timezone_set('Asia/Kolkata');
+$date=date("Y-m-d");
+$sql = "SELECT * FROM material_pass WHERE date='$date' ";
+if ($result2 = mysqli_query($db, $sql)) {
+    // Return the number of rows in result set
+    $rowcountM = mysqli_num_rows($result2);
 }
 ?>
 <!DOCTYPE html>
@@ -53,6 +68,12 @@ if ($result = mysqli_query($db, $sql)) {
     <?php include('includes/header-n.php'); ?>
     <div class="wrapper">
         <!-- Navbar -->
+        <?php if(isset($_SESSION['ROLE']) && $_SESSION['ROLE'] !== 'admin'){
+    echo "<script>
+            location.href='/vmsp/dashboard.php';
+        </script>";
+        die();
+} ?>
         <?php include('includes/sidebar-n.php'); ?>
 
         <div class="content">
@@ -67,7 +88,7 @@ if ($result = mysqli_query($db, $sql)) {
                             </div>
                             <div class="note-dark p-2"><a href="php/activevisitors.php">
                                 <p class="display-7 text-light">Active Visitors: 
-                                <span class="badge badge-success fs-5" style="margin-left: 5px;"><?php echo $rowcount; ?></span>
+                                <span class="badge badge-success fs-5" style="margin-left: 5px;"><?php echo $rowcountV; ?></span>
                                 </p></a>
                             </div>
                         </div>
@@ -89,6 +110,21 @@ if ($result = mysqli_query($db, $sql)) {
                             </div>  
                             <div class="d-flex justify-content-center p-2">
                                 <span class="display-1 text-danger"><?php echo $fetch2[0] ?></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 my-2">
+                        <div class="card">
+                            <div class="d-flex justify-content-center text-light p-2 bg-primary">
+                            <i class="fa-solid fa-business-time me-2"></i> TOTAL MATERIAL PASSES
+                            </div>
+                            <div class="d-flex justify-content-center p-2">
+                                <span class="display-1 text-danger"><?php echo $totalM[0] ?></span>
+                            </div>
+                            <div class="note-dark p-2"><a href="/vmsp/php/material_pass_display.php">
+                                <p class="display-7 text-light">Tadays Material passes: 
+                                <span class="badge badge-success fs-5" style="margin-left: 5px;"><?php echo $rowcountM; ?></span>
+                                </p></a>
                             </div>
                         </div>
                     </div>

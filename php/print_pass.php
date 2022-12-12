@@ -7,7 +7,7 @@ include('dbconn.php');
 session_start();
 $phone = $_SESSION['phone'];
 
-$sql = "SELECT * FROM inquery WHERE id='$id' OR Phone='$phone'";
+$sql = "SELECT * FROM inquery WHERE id='$id' OR Phone='$phone' ORDER BY id DESC LIMIT 1";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
 

@@ -3,7 +3,8 @@ include('dbconn.php');
 
 session_start();
 $phone = $_SESSION['phone'];
-$sql = "SELECT * FROM inquery WHERE Phone='$phone' ";
+
+$sql = "SELECT * FROM inquery WHERE Phone='$phone' ORDER BY id DESC LIMIT 1";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
 ?>
@@ -68,23 +69,12 @@ $fetch = mysqli_fetch_array($query);
 				<div class="slip_left">
 					<div class="slip_btn">
 						<!-- <button class="btn btn-primary" id="p1" onclick="print1()" style="margin-right: 20px;">Print</button> -->
-						<a href="print_pass.php?id=<?php echo $id?>" target="_blank" class="btn btn-primary" id="p1" style="margin-right: 20px;">Print</a>
+						<a href="print_pass.php" target="_blank" class="btn btn-primary" id="p1" style="margin-right: 20px;">Print</a>
 						<a id="p2" class="btn btn-info" href="../dashboard.php">Back</a><br>
 					</div>
 				</div>
 			</div>
 		</div>
-	<script type="text/javascript">
-		function print1() {
-			w = document.getElementById('p1');
-			w.style.display = 'none';
-			w1 = document.getElementById('p2');
-			w1.style.display = 'none';
-			window.print();
-			w.style.display = 'block';
-			w1.style.display = 'block';
-		}
-	</script>
 </body>
 
 </html>

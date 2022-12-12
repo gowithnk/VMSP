@@ -102,7 +102,7 @@ if ($result = mysqli_query($db, $sql)) {
             <div class="active_visitors">
                 <div class="row">
                     <div class="col-lg-8 col-md-12">
-                        <?php include('php/active_visitors.php') ?>
+                        <?php //include('php/active_visitors.php') ?>
                     </div>
                 </div>
             </div>

@@ -11,78 +11,81 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-    <!-- bootstrap 4 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- custom css -->
-    <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/styles.css" />
 </head>
 
 <body>
     <!-- TOP MENU -->
-    <?php include('includes/header-n.php'); ?>
+    <?php include('../includes/header-n.php'); ?>
     <!-- END OF TOP MENU -->
     <div class="wrapper">
         <!-- Navbar -->
-        <?php include('includes/sidebar-u.php'); ?>
+        <?php include('../includes/sidebar-n.php'); ?>
         <!-- /END OF TOP NAVBAR -->
 
         <div class="content">
             <div class="col-12">
-                <div class="card py-3 px-3 my-3">
+                <div class="card py-3 px-2 my-3">
                     <h2>Visitor details</h2>
                     <form>
+
                         <!-- Name input -->
                         <div class="form-outline mb-2">
                             <input type="text" id="registerName" class="form-control" required />
                             <label class="form-label" for="registerName">Name</label>
                         </div>
+
                         <!-- Username input -->
                         <div class="form-outline mb-2">
                             <input type="text" id="registerUsername" class="form-control" />
                             <label class="form-label" for="registerUsername">Username</label>
                         </div>
+
                         <!-- Email input -->
                         <div class="form-outline mb-2">
                             <input type="email" id="registerEmail" class="form-control" required />
                             <label class="form-label" for="registerEmail">Email</label>
                         </div>
+
                         <!-- Password input -->
                         <div class="form-outline mb-2">
                             <input type="password" id="registerPassword" class="form-control" />
                             <label class="form-label" for="registerPassword">Password</label>
                         </div>
+
                         <!-- Repeat Password input -->
                         <div class="form-outline mb-4">
                             <input type="password" id="registerRepeatPassword" class="form-control" />
                             <label class="form-label" for="registerRepeatPassword">Repeat password</label>
                         </div>
+
                         <!-- Submit button -->
-                        <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg my-2">Submit</button>
+                        <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg my-3">Submit</button>
                     </form>
                 </div>
             </div>
-            
+            <!-- FOOTER -->
+    <?php include('../footer.php') ?>
+    <!-- / END OF FOOTER -->
         </div>
     </div>
-<!-- FOOTER -->
-<?php include('../footer.php') ?>
+    <!--  END OF WRAP -->
+
+    
 
     <!-- jQuery CDN - minified version  -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" 
-    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" 
-    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
-
     <script type="text/javascript" src="assets/js/load.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript">

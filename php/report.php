@@ -4,7 +4,7 @@
 	include('dbconn.php');
 	$from = $_POST['from'];
 	$to = $_POST['to'];
-	$sql = "Select * from inquery where Date between '$from' and '$to'";
+	$sql = "SELECT * FROM inquery WHERE Date between '$from' and '$to' order by id DESC";
 	$query = mysqli_query($db, $sql);
 	echo "<table id='dt' align='center' class='table text-wrap align-middle mb-0 bg-white table-bordered table-hover table-striped'>";
 	echo "<thead class='table-dark'>";
