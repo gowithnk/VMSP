@@ -1,7 +1,7 @@
 <div id="skin-select">
     <div id="logo">
         <h1 style="text-align:left;">
-            <a href="/vmsp/dashboard.php" style="color:#ffffff;"><img src="/vmsp/images/synokem-logo.png" style="margin-right: 5px; margin-top: -8px;" width="30" alt="logo"> vmsp </a>
+            <a href="/gpms/dashboard.php" style="color:#ffffff;"><img src="/gpms/images/synokem-logo.png" style="margin-right: 5px; margin-top: -8px;" width="30" alt="logo"> gpms </a>
         </h1>
     </div>
     <a id="toggle">
@@ -18,32 +18,32 @@
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vmsp/dashboard.php" title="Create Pass">
+                        <a class="tooltip-tip ajax-load" href="/gpms/dashboard.php" title="Create Pass">
                             <i class="icon-home"></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vmsp/php/phone_0.php" title="Create Pass">
+                        <a class="tooltip-tip ajax-load" href="/gpms/php/phone_0.php" title="Create Pass">
                             <i class="icon-document"></i>
                             <span>Create Pass</span>
 
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vmsp/php/active_users_0.php" title="Active Visitors">
+                        <a class="tooltip-tip ajax-load" href="/gpms/php/active_users_0.php" title="Active Visitors">
                             <i class="icon-user"></i>
                             <span>Active Visitors</span>
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vmsp/php/checkout_0.php" title="Check Out">
+                        <a class="tooltip-tip ajax-load" href="/gpms/php/checkout_0.php" title="Check Out">
                             <i class="icon-arrow-right"></i>
                             <span>Check Out</span>
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vmsp/php/logout.php?log" title="Log out">
+                        <a class="tooltip-tip ajax-load" href="/gpms/php/logout.php?log" title="Log out">
                             <i class="icon-chevron-right"></i>
                             <span>Log Out</span>
                         </a>

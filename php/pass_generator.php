@@ -1,9 +1,22 @@
+<?php 
+   // $sql = "SELECT * FROM material_pass, ItemDescription.material_item where ";
+   include('dbconn.php');
+
+
+$sql = "SELECT * FROM material_pass 
+INNER JOIN material_items ON material_pass.id = 37 AND material_items.id = 37";
+$query = mysqli_query($db, $sql);
+$row = mysqli_fetch_array($query);
+print_r($row);
+echo $row['ItemDescription'];
+echo $row['FromLocation'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>VMSP</title>
+    <title>gpms</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -14,23 +27,24 @@
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
     <!-- bootstrap 4 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- custom css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/styles.css" />
 </head>
 
 <body>
     <!-- TOP MENU -->
-    <?php include('../includes/header-n.php'); ?>
+    <?php include('includes/header-n.php'); ?>
     <!-- END OF TOP MENU -->
     <div class="wrapper">
         <!-- Navbar -->
-        <?php include('../includes/sidebar-n.php'); ?>
+        <?php include('includes/sidebar-n.php'); ?>
         <!-- /END OF TOP NAVBAR -->
 
         <div class="content">
             <div class="col-12">
-                <div class="card py-3 px-2 my-3">
+                <div class="card p-2 my-3">
                     <h2>Visitor details</h2>
                     <form>
 
@@ -69,11 +83,10 @@
                     </form>
                 </div>
             </div>
-            <!-- FOOTER -->
-    <?php include('../footer.php') ?>
-    <!-- / END OF FOOTER -->
         </div>
     </div>
+    <!-- FOOTER -->
+    <?php include('../footer.php') ?>
     <!--  END OF WRAP -->
 
     

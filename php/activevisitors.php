@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>VMSP - Active visitors</title>
+    <title>gpms - Active visitors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">

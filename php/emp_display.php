@@ -28,7 +28,7 @@ while ($fetch = mysqli_fetch_array($query)) {
     echo "<td> $fetch[department_name]</td>";
     echo "<td> 
     <a class='btn btn-warning' href='emp_edit2_0.php?id=$fetch[0]'><i class='fa-solid fa-pen-to-square'></i></a>
-    <a class='btn btn-danger deleteID' href='emp_delete2.php?id=$fetch[0]'><i class='fa-solid fa-trash-can'></i></a>
+    <a id='deleteID' class='btn btn-danger' href='emp_delete2.php?id=$fetch[0]'><i class='fa-solid fa-trash-can'></i></a>
     </td>";
 
     echo "</tr>";
@@ -42,7 +42,7 @@ echo "</div>";
 <script type="text/javascript">
     // confirm delete data
     jQuery(document).ready(function() {
-        jQuery(".deleteID").click(function() {
+        jQuery("#deleteID").click(function() {
             if (!confirm('Are you sure you want to delete this record?')) {
                 return false;
             }

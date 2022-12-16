@@ -3,99 +3,98 @@
 
 <head>
     <meta charset="utf-8">
-    <title>VMSP</title>
+    <title>gpms</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
 
-    <!--  <link rel="stylesheet" href="assets/css/style.css"> -->
+    <!-- custom css -->
     <link rel="stylesheet" href="assets/css/loader-style.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/signin.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/minus.png">
 </head>
 
 <body>
-    <!-- Preloader -->
-    <form action="php/login_1.php" method="post">
-        <div id="preloader">
-            <div id="status">&nbsp;</div>
-        </div>
-        <div class="container">
-
-            <div class="" id="login-wrapper">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div id="logo-login">
-                            <h1>Visitor Management System
-                            </h1>
+        <div class="container d-flex justify-content-center ">
+            <div class="card p-3 mt-3">
+                <div class="row bg-info">
+                    <div class="col-md-4 ">
+                        <div class="p-3" id="logo-login">
+                            <img class="me-3 mt-1" src="images/logo.png" width="150" height="100%" alt="" srcset="">
                         </div>
                     </div>
-
+                    <div class="col-md-8 ">
+                        <div class="bg-info text-white p-3" id="logo-login">
+                            <h5>Visitor Management System </h5>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
+                    <div class="col-md-12 ">
                         <div class="account-box">
-
-                            <form role="form">
+                            <form  action="php/login_1.php" method="post" role="form">
                                 <div class="form-group">
-                                    <label for="inputUsernameEmail">Username or email</label>
-                                    <input type="text" name="username" id="inputUsernameEmail" class="form-control"
-                                        required>
+                                    <label for="inputUsernameEmail">Username or email  <span class="text-danger">*</span></label>
+                                    <input type="text" name="username" id="inputUsernameEmail" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <!-- <a href="php/forgot_pass.php" class="pull-right label-forgot">Forgot password?</a> -->
-                                    <label for="inputPassword">Password</label>
+                                    <label for="inputPassword">Password  <span class="text-danger">*</span></label>
                                     <input type="password" name="password" id="inputPassword" class="form-control"
                                         required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Type</label>
+                                    <label>User Type <span class="text-danger">*</span></label>
                                     <select name="user" class="form-control" id="inputPassword" required>
+                                        <option value="">Please select user Type</option>
                                         <option value="guard">Guard</option>
                                         <option value="admin">Admin</option>
                                     </select>
                                 </div>
 
-                                <button name="submit" class="btn btn btn-primary pull-right" type="submit">
+                                <button name="submit" class="btn btn btn-primary pull-right btn-lg" type="submit">
                                     Log In
                                 </button>
                             </form>
                             <!-- <a class="forgotLnk" href="index.html">Forgot Password</a> -->
-
                             <hr>
-
                         </div>
+                    </div>
+                    <div style="text-align:center;">
+                        <h6 >Designed & Developed By Synokem</h6>
                     </div>
                 </div>
             </div>
-
-            <div style="text-align:center;margin:0 auto;">
-                <h6 style="color:#fff;">Designed & Developed By Synokem</h6>
-            </div>
-
+            
         </div>
-        <div id="test1" class="gmap3"></div>
-
-        <!--  END OF PAPER WRAP -->
-
-        <!-- MAIN EFFECT -->
-        <script type="text/javascript" src="assets/js/preloader.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-        <script type="text/javascript" src="assets/js/app.js"></script>
-        <script type="text/javascript" src="assets/js/load.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
-    </form>
+       
+    <!--  END OF PAPER WRAP -->
+    <!-- jQuery CDN - minified version  -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+    <script type="text/javascript" src="assets/js/load.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
 </body>
 

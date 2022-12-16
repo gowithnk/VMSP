@@ -8,20 +8,17 @@ echo "<table style='width:100% !important;' id='dtMaterial' class='table text-wr
 echo "<thead class='table-dark'>";
 echo "<tr>";
 echo "<th> Id</th>";
-echo "<th> From Location</th>";
-echo "<th> To Location</th>";
-echo "<th> Department</th>";
-echo "<th> Item Category</th>";
-echo "<th> Item Sub Category</th>";
-echo "<th> Item Description</th>";
-echo "<th> Quantity</th>";
-echo "<th> Reason</th>";
-echo "<th> Amount</th>";
-echo "<th> Pass Type</th>";
-echo "<th> Remark</th>";
+echo "<th> Material Pass</th>";
+echo "<th> Material Type</th>";
+echo "<th> Challan Type</th>";
+echo "<th> Purpose</th>";
+echo "<th> Person Name</th>";
+echo "<th> Company Name</th>";
+echo "<th> Address</th>";
+echo "<th> Employee Name</th>";
+echo "<th> Approved By</th>";
 echo "<th> Date</th>";
 echo "<th> Out Time</th>";
-echo "<th> In Time</th>";
 echo "<th> Actions</th>";
 echo "</tr>";
 echo "</thead>";
@@ -30,25 +27,21 @@ echo "</tbody>";
 while ($row = mysqli_fetch_array($query)) {
     echo "<tr>";
     echo "<td> $row[id]</td>";
-    echo "<td> $row[FromLocation]</td>";
-    echo "<td> $row[ToLocation]</td>";
-    echo "<td> $row[Department]</td>";
+    echo "<td> $row[MaterialPass]</td>";
     echo "<td> $row[ItemCategory]</td>";
-    echo "<td> $row[ItemSubCategory]</td>";
-    echo "<td> $row[ItemDescription]</td>";
-    echo "<td> $row[ItemQuantity]</td>";
-    echo "<td> $row[Reason]</td>";
-    echo "<td> $row[Amount]</td>";
     echo "<td> $row[ReturnType]</td>";
-    echo "<td> $row[Remark]</td>";
+    echo "<td> $row[Reason]</td>";
+    echo "<td> $row[PersonName]</td>";
+    echo "<td> $row[CompanyName]</td>";
+    echo "<td> $row[ToLocation]</td>";
+    echo "<td> $row[EmpId]</td>";
+    echo "<td> $row[ApprovedBy]</td>";
     echo "<td> $row[Date]</td>";
     echo "<td> $row[OutTime]</td>";
-    echo "<td> $row[InTime]</td>";
     echo "<td> 
-    <a class='btn btn-warning' href='emp_edit2_0.php?id=$row[0]'><i class='fa-solid fa-pen-to-square'></i></a>
+    <a class='btn btn-info' href='material_all_print_pdf.php?id=$row[0]' target='_blank'><i class='fa-regular fa-eye'></i></a>
     <a class='btn btn-danger deleteIDM' href='material_delete.php?id=$row[0]'><i class='fa-solid fa-trash-can'></i></a>
     </td>";
-
     echo "</tr>";
 }
 echo "</tbody>";

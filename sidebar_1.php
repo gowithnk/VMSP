@@ -10,7 +10,7 @@ $user = $fetch['username'];
 <div id="skin-select">
     <div id="logo">
         <h1 style="text-align:left;">
-            <a href="/vmsp/index_1.php" style="color:#ffffff;"><img src="/vmsp/images/synokem-logo.png" style="margin-right: 5px; margin-top: -8px;" width="30" alt="logo"> vmsp </a>
+            <a href="/gpms/index_1.php" style="color:#ffffff;"><img src="/gpms/images/synokem-logo.png" style="margin-right: 5px; margin-top: -8px;" width="30" alt="logo"> gpms </a>
         </h1>
     </div>
 
@@ -29,13 +29,13 @@ $user = $fetch['username'];
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vmsp/index_1.php" title="Home">
+                        <a class="tooltip-tip ajax-load" href="/gpms/index_1.php" title="Home">
                             <i class="icon-home"></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vmsp/dashboard.php" title="Creatpass Home">
+                        <a class="tooltip-tip ajax-load" href="/gpms/dashboard.php" title="Creatpass Home">
                             <i class="icon-home"></i>
                             <span>Dashboard</span>
                         </a>
@@ -48,22 +48,22 @@ $user = $fetch['username'];
                         </a>
                         <ul>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_insert_0.php" title="Add"><i class="entypo-doc-text">
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/emp_insert_0.php" title="Add"><i class="entypo-doc-text">
 
                                     </i><span>Add</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_display_0.php" title="View"><i class="entypo-doc-text">
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/emp_display_0.php" title="View"><i class="entypo-doc-text">
 
                                     </i><span>View All</span></a>
                             </li>
                             <!-- <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_edit1_0.php" title="Edit"><i class="entypo-doc-text">
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/emp_edit1_0.php" title="Edit"><i class="entypo-doc-text">
 
                                     </i><span>Edit</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/emp_delete1_0.php" title="Delete"><i class="entypo-doc-text">
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/emp_delete1_0.php" title="Delete"><i class="entypo-doc-text">
 
                                     </i><span>Delete</span></a>
                             </li> -->
@@ -76,16 +76,16 @@ $user = $fetch['username'];
                         </a>
                         <ul>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_0.php" title="Add"><i class="entypo-doc-text">
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/department_0.php" title="Add"><i class="entypo-doc-text">
 
                                     </i><span>Add</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_display_0.php" title="View">
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/department_display_0.php" title="View">
                                     <i class="entypo-doc-text"></i><span>View</span></a>
                             </li>
                             <!-- <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/department_delete_0.php" title="Delete">
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/department_delete_0.php" title="Delete">
                                     <i class="entypo-doc-text"></i><span>Delete</span></a>
                             </li> -->
                         </ul>
@@ -98,24 +98,24 @@ $user = $fetch['username'];
                         </a>
                         <ul>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/admin_user_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/admin_user_0.php" title="Add"><i class="entypo-doc-text"></i><span>Add</span></a>
                             </li>
                             <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/admin_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/admin_display_0.php" title="View"><i class="entypo-doc-text"></i><span>View</span></a>
                             </li>
                             <!-- <li>
-                                <a class="tooltip-tip2 ajax-load" href="/vmsp/php/admin_delete_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
+                                <a class="tooltip-tip2 ajax-load" href="/gpms/php/admin_delete_0.php" title="Delete"><i class="entypo-doc-text"></i><span>Delete</span></a>
                             </li> -->
                         </ul>
                     </li>
                     <li class="hide1">
-                        <a class="tooltip-tip ajax-load" href="/vmsp/php/report_0.php" title="Report">
+                        <a class="tooltip-tip ajax-load" href="/gpms/php/report_0.php" title="Report">
                             <i class="icon-camera"></i>
                             <span>Report</span>
                         </a>
                     </li>
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/vmsp/php/logout.php?log" title="Log out">
+                        <a class="tooltip-tip ajax-load" href="/gpms/php/logout.php?log" title="Log out">
                             <i class="icon-chevron-right"></i>
                             <span>Log Out</span>
                         </a>

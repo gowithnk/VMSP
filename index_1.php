@@ -44,7 +44,7 @@ if ($result2 = mysqli_query($db, $sql)) {
 
 <head>
     <meta charset="utf-8">
-    <title>VMSP</title>
+    <title>gpms</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -70,7 +70,7 @@ if ($result2 = mysqli_query($db, $sql)) {
         <!-- Navbar -->
         <?php if(isset($_SESSION['ROLE']) && $_SESSION['ROLE'] !== 'admin'){
     echo "<script>
-            location.href='/vmsp/dashboard.php';
+            location.href='/gpms/dashboard.php';
         </script>";
         die();
 } ?>
@@ -121,8 +121,8 @@ if ($result2 = mysqli_query($db, $sql)) {
                             <div class="d-flex justify-content-center p-2">
                                 <span class="display-1 text-danger"><?php echo $totalM[0] ?></span>
                             </div>
-                            <div class="note-dark p-2"><a href="/vmsp/php/material_pass_display.php">
-                                <p class="display-7 text-light">Tadays Material passes: 
+                            <div class="note-dark p-2"><a href="/gpms/php/material_pass_display.php">
+                                <p class="display-7 text-light">Todays Material passes: 
                                 <span class="badge badge-success fs-5" style="margin-left: 5px;"><?php echo $rowcountM; ?></span>
                                 </p></a>
                             </div>

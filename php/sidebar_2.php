@@ -1,6 +1,6 @@
 <div id="skin-select">
     <div id="logo">
-        <h1>VMSP</h1>
+        <h1>gpms</h1>
     </div>
 
     <a id="toggle">

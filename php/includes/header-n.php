@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['IS_LOGIN'])){
-    header('location:/vmsp/index.html');
+    header('location:/gpms/index.html');
     die();
 }
 
@@ -86,7 +86,7 @@ $fetch4 = mysqli_num_rows($query);
             <div class="dropdown">
                 <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" 
                 role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <img alt="" class="admin-pic img-circle" src="<?php echo '/vmsp/images/' . $avatar; ?>">
+                    <img alt="" class="admin-pic img-circle" src="<?php echo '/gpms/images/' . $avatar; ?>">
 
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
@@ -97,7 +97,7 @@ $fetch4 = mysqli_num_rows($query);
                         <a class="dropdown-item" href="#">Settings</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="/vmsp/php/logout.php?log" title="Log out">
+                        <a class="dropdown-item" href="/gpms/php/logout.php?log" title="Log out">
                             <i class="icon-chevron-right"></i>
                             <span>Log Out</span>
                         </a>

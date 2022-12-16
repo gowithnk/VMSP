@@ -1,7 +1,7 @@
  <?php
     session_start();
     if ($_SESSION['user'] == "") {
-        header('location:/vmsp/index.html');
+        header('location:/gpms/index.html');
     }
 
     include('php/dbconn.php');
@@ -75,7 +75,7 @@ $fetch4 = mysqli_num_rows($query);
                     }
                     while ($fetch4 = mysqli_fetch_array($query)) {
                     ?>
-                        <li><a class="dropdown-item" href="/vmsp/php/slip.php?id=<?php echo $fetch4[0];?>">
+                        <li><a class="dropdown-item" href="/gpms/php/slip.php?id=<?php echo $fetch4[0];?>">
                                 <?php echo 'New user Added ' . '<span class="bg-success py-1 px-2" style="color:#fff;">' . $fetch4[1] . '</span>'; ?>
                             </a></li>
                     <?php } ?>

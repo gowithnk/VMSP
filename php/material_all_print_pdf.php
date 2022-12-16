@@ -4,8 +4,8 @@
 require_once('../vendor/autoload.php');
 include('dbconn.php');
 session_start();
-
-$sql = "SELECT * FROM material_pass ORDER BY id DESC LIMIT 1";
+$pid = $_GET['id'];
+$sql = "SELECT * FROM material_pass where id='$pid' ORDER BY id DESC LIMIT 1";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
 $challanNo = $fetch['ChallanNo'];
@@ -39,9 +39,9 @@ if (mysqli_num_rows($query) > 0) {
     $data .= '<tr><th><br><p style="font-size:16px;font-weight:bold;">Material Send To </p></tr>
     <tr><td style="width:30%"><p>Person Name :</p></td><td><p>' . $fetch['PersonName'] . '</p></td></tr>
     <tr><td style="width:30%"><p>Company Name :</p></td><td><p>' . $fetch['CompanyName'] . '</p></td></tr>
-    <tr><td style="width:30%"><p>Address :</p></td><td><p>' . $fetch['ToLocation'] . '</p></td></tr>
+    <tr><td style="width:30%"><p>To Location (Address) :</p></td><td><p>' . $fetch['ToLocation'] . '</p></td></tr>
 
-    <tr><th><br><p style="font-size:16px;font-weight:bold;">Material Send From </p></tr>
+    <tr><th><br><p style="font-size:16px;font-weight:bold;">Material Send From :</p></tr>
     <tr><td style="width:30%"><p>Company Name :</p></td><td><p>SYNOKEM PHARMACEUTICALS LIMITED</p></td></tr>
     <tr><td style="width:30%"><p>From Address :</p></td><td><p>' . $fetch['FromLocation'] . '</p></td></tr>
     <tr><td style="width:30%"><p>Employee Name :</p></td><td><p>' . $fetch['EmpId'] . '</p></td></tr>
