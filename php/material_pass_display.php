@@ -50,14 +50,9 @@ $fetch2 = mysqli_fetch_array($query);
     <link rel="shortcut icon" href="assets/ico/minus.png">
     <style>
     #dtMaterial_wrapper{
-        max-width: 91vw;
+        max-width: 100%;
     }
-    @media only screen and (min-width: 1300px) {
-        #dtMaterial_wrapper{
-        max-width: 91vw;
-    }
-}
-    @media only screen and (max-width: 1300px) {
+    @media only screen and (max-width: 1366px) {
         #dtMaterial_wrapper{
         max-width: 77vw;
     }
@@ -65,11 +60,6 @@ $fetch2 = mysqli_fetch_array($query);
     @media only screen and (max-width: 992px) {
         #dtMaterial_wrapper{
         max-width: 91vw;
-    }
-}
-    @media only screen and (max-width: 600px) {
-        #dtMaterial_wrapper{
-        max-width: 90vw;
     }
 }
 </style>
@@ -82,7 +72,7 @@ $fetch2 = mysqli_fetch_array($query);
     <div class="wrapper">
 
         <!-- SIDE MENU -->
-        <?php include('includes/sidebar-n.php'); ?>
+        <?php include('includes/sidebar-u.php'); ?>
 
         <div class="content">
             <div class="row">

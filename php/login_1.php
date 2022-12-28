@@ -19,7 +19,6 @@ if($check>0)
 	{	
 		if($fetch['user']==$user && $fetch['user']=='admin')
 		{
-			echo $_SESSION['ROLE'];
 			header('location:../index_1.php');
 			die();
 		}

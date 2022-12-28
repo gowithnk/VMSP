@@ -8,10 +8,10 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
         </div>
 
         <ul class="list-unstyled components">
-            <li class="sidenav-item">
+            <li class="sidenav-item <?= ($activePage == 'index_1') ? 'active':''; ?>">
                 <a class="py-2 ripple" href="/gpms/index_1.php" >
                     <i class="fa-solid fa-house me-2"></i>
-                    <span>Home</span>
+                    <span>Dashboard</span>
                 </a>
             </li>
             <li class="sidenav-item">

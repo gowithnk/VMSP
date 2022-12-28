@@ -8,10 +8,10 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
         </div>
 
         <ul class="list-unstyled components">
-            <li class="sidenav-item">
-                <a class="py-2 ripple " href="/gpms/index_1.php" >
+        <li class="sidenav-item <?= ($activePage == 'index_1') ? 'active':''; ?>">
+                <a class="py-2 ripple" href="/gpms/index_1.php" >
                     <i class="fa-solid fa-house me-2"></i>
-                    <span>Home</span>
+                    <span>Dashboard</span>
                 </a>
             </li>
             <li class="sidenav-item">
@@ -24,70 +24,54 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                     <i class="fa-regular fa-id-card me-2"></i>Create Pass</a>
                 </a>
             </li>
-            <li class="sidenav-item <?= ($activePage == 'pass_phone') ? 'active':''; ?>">
+            <li class="sidenav-item <?= ($activePage == 'material_pass_display') ? 'active':''; ?>">
                 <a class="py-2 ripple" href="/gpms/php/material_pass_display.php" >
                     <i class="fa-regular fa-id-card me-2"></i>View Material Passes</a>
                 </a>
             </li>
-            <li class="dp1">
+            <li class="dp1 <?= ($activePage == 'emp_insert_0' || $activePage == 'emp_display_0' ) ? 'active':''; ?>">
                 <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle py-2 ripple">
                     <i class="fa-solid fa-users me-2"></i>Employee</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu1">
-                    <li>
+                    <li class="<?= ($activePage == 'emp_insert_0') ? 'active':''; ?>">
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/emp_insert_0.php" title="Add">
                             <i class="fa-solid fa-user-plus me-2"></i>Add</a>
                     </li>
-                    <li>
+                    <li class="<?= ($activePage == 'emp_display_0') ? 'active':''; ?>">
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/emp_display_0.php" title="View">
                             <i class="fa-solid fa-users-viewfinder me-2"></i>View All</a>
                     </li>
-                    <!-- <li>
-                        <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/emp_edit1_0.php" title="Edit">
-                            <i class="fa-solid fa-user-pen me-2"></i>Edit</a>
-                    </li>
-                    <li>
-                        <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/emp_delete1_0.php" title="Delete">
-                            <i class="fa-solid fa-trash-can me-2"></i>Delete</a>
-                    </li> -->
                 </ul>
             </li>
-            <li class="dp2">
+            <li class="dp2 <?= ($activePage == 'department_0' || $activePage == 'department_display_0' ) ? 'active':''; ?>">
                 <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle py-2 ripple">
                 <i class="fa-solid fa-layer-group me-2"></i></i>Department</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu2">
-                    <li>
+                    <li class="<?= ($activePage == 'department_0') ? 'active':''; ?>">
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/department_0.php" title="Add">
                             <i class="fa-solid fa-user-plus me-2"></i>Add</a>
                     </li>
-                    <li>
+                    <li class="<?= ($activePage == 'department_display_0') ? 'active':''; ?>">
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/department_display_0.php" title="View">
                             <i class="fa-solid fa-users-viewfinder me-2"></i>View All</a>
                     </li>
-                    <!-- <li>
-                        <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/department_delete_0.php" title="Delete">
-                            <i class="fa-solid fa-trash-can me-2"></i>Delete</a>
-                    </li> -->
                 </ul>
             </li>
-            <li class="dp3">
+            <li class="dp3 <?= ($activePage == 'admin_user_0' || $activePage == 'admin_display_0' ) ? 'active':''; ?>">
                 <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle py-2 ripple">
                 <i class="fa-solid fa-toolbox me-2"></i></i>Admin Users</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu3">
-                    <li>
+                    <li class="<?= ($activePage == 'admin_user_0') ? 'active':''; ?>">
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/admin_user_0.php" title="Add">
                             <i class="fa-solid fa-user-plus me-2"></i>Add</a>
                     </li>
-                    <li>
+                    <li class="<?= ($activePage == 'admin_display_0') ? 'active':''; ?>">
                         <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/admin_display_0.php" title="View">
                             <i class="fa-solid fa-users-viewfinder me-2"></i>View All</a>
                     </li>
-                    <!-- <li>
-                        <a class="list-group-item list-group-item-action py-2 ripple" href="/gpms/php/admin_delete_0.php" title="Delete">
-                            <i class="fa-solid fa-trash-can me-2"></i>Delete</a>
-                    </li> -->
                 </ul>
             </li>
-            <li class="sidenav-item<?= ($activePage == 'report_display') ? 'active':''; ?>">
+            <li class="sidenav-item <?= ($activePage == 'report_0') ? 'active':''; ?>">
                 <a class="py-2 ripple" href="/gpms/php/report_0.php" >
                 <i class="fa-solid fa-camera-retro me-2"></i></i>Report</a>
                 </a>

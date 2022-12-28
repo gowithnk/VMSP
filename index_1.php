@@ -1,10 +1,11 @@
 <?php 
-if(isset($_SESSION['ROLE']) && $_SESSION['ROLE'] !== 'admin'){
-    echo "<script>
-            location.href='../dashboard.php';
-        </script>";
-        die();
-}
+// if(isset($_SESSION['ROLE']) && $_SESSION['ROLE'] !== 'admin'){
+//     echo "<script>
+//             alert('Access Denied!, Please login with Admin account');
+//             location.href='../dashboard.php';
+//         </script>";
+//         die();
+// }
 include('php/dbconn.php');
 
 $sql = "Select count(*) from inquery";

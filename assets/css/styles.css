@@ -125,7 +125,7 @@ button#sidebarCollapse {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #021e50;
 }
 
 a[data-toggle="collapse"] {

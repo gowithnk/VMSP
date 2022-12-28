@@ -34,7 +34,7 @@ if($query)
 {
 	echo "<script>
 		alert('Visitor Out time Updated');
-		location.href='../dashboard.php';
+		location.href='activevisitors.php';
 		</script>";
 }
 else

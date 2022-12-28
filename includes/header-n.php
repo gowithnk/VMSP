@@ -11,7 +11,7 @@ $sql = "SELECT * FROM login_user WHERE user='$user'";
 $query = mysqli_query($db, $sql);
 $fetch5 = mysqli_fetch_array($query);
 // user avatar
-$avatar = $fetch5[6];
+$avatar = $fetch5['image'];
 if (empty($avatar)) $avatar = 'avatar.png';
 // badge data
 $sql = "SELECT * FROM inquery WHERE status='0'";

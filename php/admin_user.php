@@ -75,7 +75,7 @@
 		<select class="form-control" name="user" required>
 			<option class="select-label" value="">User Role</option>
 			<option class="select-label" value="admin">Admin</option>
-			<option class="select-label" value="guard">Guard</option>
+			<option class="select-label" value="guard">Manager</option>
 		</select>
 	</div>
 	<div class="col-lg-12">
