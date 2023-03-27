@@ -203,9 +203,20 @@ ul.CTAs a {
     position: relative;
     flex: 1 1 auto;
     width: 100%;
+    font-size: .9rem ;
 }
 .form-select {
-    padding: 0.37rem 2.25rem 0.37rem 0.75rem;
+    padding: 0.3rem 2.25rem 0.3rem 0.5rem !important;
+    font-size: .9rem ;
+}  
+.card {
+    border: 1px solid #dbecff !important;
+} 
+.badge{
+    font-weight: 500;
+}
+label.form-label {
+    font-size: 0.9rem;
 }
 .footer-wrapper{
     background-color: #000c2c;
@@ -252,4 +263,11 @@ hr {
 .wrapper_area > p:last-child, .data_row{
     width: 50%;
     float: left;
+}
+spna.av_today {
+    font-size: 6px;
+    color: #000;
+    position: absolute;
+    bottom: 2px;
+    left: 8px;
 }

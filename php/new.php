@@ -30,7 +30,7 @@ $fetch=mysqli_fetch_array($query);
 
 $empEmail = $fetch['email_id'];
 $person_meet=$fetch['name'];
-$empPhone=$fetch['phone'];
+if($fetch['phone']==''){$empPhone=$fetch['office_phone'];}else{$empPhone=$fetch['phone'];};
 
 $img = $_POST['image'];
     $folderPath = "upload/";

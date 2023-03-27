@@ -89,21 +89,21 @@ $fetch = mysqli_fetch_array($query);
                                         <div class="col-lg-6">
                                             <select name="fromLocation" class="form-select mb-2" required>
                                                 <option value="">From Location</option>
-                                                <option value="Corporate Office">Corporate Office</option>
-                                                <option value="Registered Office">Registered Office</option>
-                                                <option value="Plant I">Plant I</option>
-                                                <option value="Plant II">Plant II</option>
-                                                <option value="Plant III">Plant III</option>
+                                                <option value="A1-14,     Main Rohtak Road, Paschim Vihar, Near Paschim Vihar West Metro Station New Delhi-110063, INDIA">Corporate Office</option>
+                                                <option value="14/486, Sunder Vihar, Outer Ring Road, Paschim Vihar, New Dehi-110 087, INDIA">Registered Office</option>
+                                                <option value="Plot No. 35-36, Sector 6 A, I.I.E, SIDCUL, Ranipur(BHEL), HARIDWAR, Uttrakhand-249403, INDIA">Plant I</option>
+                                                <option value="Plot No. 56-57, Sector 6 A, I.I.E, SIDCUL, Ranipur(BHEL), HARIDWAR, Uttrakhand-249403, INDIA">Plant II</option>
+                                                <option value="Plot No. 11, Block A, Sector - 4, I.I.E, (SIDCUL) Ranipur(BHEL), HARIDWAR, Uttrakhand-249403, INDIA">Plant III</option>
                                             </select>
                                         </div>
                                         <div class="col-lg-6">
                                             <select name="toLocation" id="slt" class="form-select mb-2" required>
                                                 <option value="">Address    </option>
-                                                <option value="Corporate Office">Corporate Office</option>
-                                                <option value="Registered Office">Registered Office</option>
-                                                <option value="Plant I">Plant I</option>
-                                                <option value="Plant II">Plant II</option>
-                                                <option value="Plant III">Plant III</option>
+                                                <option value="A1-14,     Main Rohtak Road, Paschim Vihar, Near Paschim Vihar West Metro Station New Delhi-110063, INDIA">Corporate Office</option>
+                                                <option value="14/486, Sunder Vihar, Outer Ring Road, Paschim Vihar, New Dehi-110 087, INDIA">Registered Office</option>
+                                                <option value="Plot No. 35-36, Sector 6 A, I.I.E, SIDCUL, Ranipur(BHEL), HARIDWAR, Uttrakhand-249403, INDIA">Plant I</option>
+                                                <option value="Plot No. 56-57, Sector 6 A, I.I.E, SIDCUL, Ranipur(BHEL), HARIDWAR, Uttrakhand-249403, INDIA">Plant II</option>
+                                                <option value="Plot No. 11, Block A, Sector - 4, I.I.E, (SIDCUL) Ranipur(BHEL), HARIDWAR, Uttrakhand-249403, INDIA">Plant III</option>
                                             </select>
                                             <div style="display: none;" id="otherLocation1" class="form-outline mb-2">
                                                 <input id="otherLocation" style="display: none;" type="text" class="form-control" />
@@ -120,13 +120,12 @@ $fetch = mysqli_fetch_array($query);
                                             <select class="form-select mb-2" name="department" required>
                                                 <option value="">Select Department</option>
                                                 <?php
-                                                include('dbconn.php');
                                                 $sql = "Select * from department";
                                                 $query = mysqli_query($db, $sql);
 
                                                 while ($fetch = mysqli_fetch_array($query)) {
                                                 ?>
-                                                    <option value="<?php echo $fetch[1] ?>"><?php echo $fetch[1] ?></option>
+                                                    <option value="<?php echo $fetch["department_name"] ?>"><?php echo $fetch["department_name"] ?></option>
                                                 <?php
                                                 }
                                                 ?>
@@ -160,13 +159,12 @@ $fetch = mysqli_fetch_array($query);
                                             <select class="form-select mb-2" name="empId" required>
                                                 <option value="">Select Employee ID</option>
                                                 <?php
-                                                include('dbconn.php');
                                                 $sql = "Select * from emp_table";
                                                 $query = mysqli_query($db, $sql);
 
                                                 while ($fetch = mysqli_fetch_array($query)) {
                                                 ?>
-                                                    <option value="<?php echo $fetch[1] ?>"><?php echo $fetch[4] . ' (' . $fetch[1] . ')' ?></option>
+                                                    <option value="<?php echo $fetch["name"] ?>"><?php echo $fetch["code"] . ' - (' . $fetch["name"] . ')' ?></option>
                                                 <?php
                                                 }
                                                 ?>
@@ -197,13 +195,13 @@ $fetch = mysqli_fetch_array($query);
                                         <div class="col-lg-6">
                                             <div class="form-outline mb-2">
                                                 <input name="personName" required type="text" id="personName" class="form-control" required />
-                                                <label class="form-label" for="personName">Person Name</label>
+                                                <label class="form-label" for="personName">Person Name (send to)</label>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-outline mb-1">
                                                 <input name="companyName" required type="text" id="companyName" class="form-control" required />
-                                                <label class="form-label" for="companyName">Company Name</label>
+                                                <label class="form-label" for="companyName">Company Name (send to)</label>
                                             </div>
                                         </div>
                                         <!-- <div class="col-lg-6 mb-1">
@@ -227,7 +225,7 @@ $fetch = mysqli_fetch_array($query);
                                             </div>
                                         </div>
                                         <hr>
-                                        <!-- Item 1 -->
+                                        <!-- Item Repeater -->
                                         <div id="show_item">
                                             <div class="row g-2 px-1" style="margin-left: 2px;">
                                                 <div class="col-lg-4">

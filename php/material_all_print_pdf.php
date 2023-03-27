@@ -16,7 +16,7 @@ if (mysqli_num_rows($query) > 0) {
     $data = '<div class="print_area p-2">';
     $data .= '<table cellpadding="5" style="width:100%;"><tr><td style="width:20%;text-align:center;"><img style="" src="../images/logo1.png" width="65px"></td>
     <td><p class="mb-1" style="font-size:18px;font-weight:bold;">SYNOKEM PHARMACEUTICALS LIMITED</p>
-    <p class="address_area">Plot No. 56 - 57, Sector - 6A, IIE, SIDCUL, Haridwar, Uttarakhand - 249403</p>
+    <p class="address_area"> '.$fetch['FromLocation'] .'</p>
     <p >GSTIN No. : 05AAACS1164N1ZC</p>
     <p >Delivery Challan (Material Information)</p>
     </td></tr>
@@ -25,23 +25,27 @@ if (mysqli_num_rows($query) > 0) {
     <p><label>Date & Time :- </label><span>' . $fetch['Date'] . ', ' . $fetch['OutTime'] . '</span></p>
     </td></tr></table>';
     $data .= '<br><hr>';
-    $data .= '<div class="wrapper_area p-2 mt-3">';
+    
+    $data .= '<div class="wrapper_area p-2 mt-1">';
     $data .= '<table cellpadding="5" style="width:100%;">
     <tr><td style="width:30%"><p>Material Pass :</p></td><td><p>'  .$fetch['MaterialPass'] .'</p></td></tr>
     <tr><td style="width:30%"><p>Material Type :</p></td><td><p>' .$fetch['ItemCategory'] .'</p></td></tr>
     <tr><td style="width:30%"><p>Challan Type :</p></td><td><p>' . $fetch['ReturnType'] . '</p></td></tr>
     <tr><td style="width:30%"><p>Purpose :</p></td><td><p>' . $fetch['Reason'] . '</p></td></tr>';
-
-    if($fetch[11] === 'RGP'){
+    
+    if($fetch["ReturnType"] === 'RGP'){
         $data .= '<tr><td style="width:30%"><p>Return Date :</p></td><td><p>' . $fetch['EstimatedReturnDate'] . '</p></td></tr>';
     }else{$data .= '';}
+    $data .= '</table>';
+    $data .= '<br><hr>';
 
-    $data .= '<tr><th><br><p style="font-size:16px;font-weight:bold;">Material Send To </p></tr>
+    $data .= '<table width="100%"><tr><th style="width:30%"><br><p style="font-size:16px;font-weight:bold;">Material Send To :</p></th></tr>
     <tr><td style="width:30%"><p>Person Name :</p></td><td><p>' . $fetch['PersonName'] . '</p></td></tr>
     <tr><td style="width:30%"><p>Company Name :</p></td><td><p>' . $fetch['CompanyName'] . '</p></td></tr>
-    <tr><td style="width:30%"><p>To Location (Address) :</p></td><td><p>' . $fetch['ToLocation'] . '</p></td></tr>
-
-    <tr><th><br><p style="font-size:16px;font-weight:bold;">Material Send From :</p></tr>
+    <tr><td style="width:30%"><p>To Location (Address) :</p></td><td><p>' . $fetch['ToLocation'] . '</p></td></tr></table>';
+    
+    $data .= '<br><hr>';
+    $data .= '<table width="100%"><tr><th style="width:30%"><br><p style="font-size:16px;font-weight:bold;">Material Send From :</p></th></tr>
     <tr><td style="width:30%"><p>Company Name :</p></td><td><p>SYNOKEM PHARMACEUTICALS LIMITED</p></td></tr>
     <tr><td style="width:30%"><p>From Address :</p></td><td><p>' . $fetch['FromLocation'] . '</p></td></tr>
     <tr><td style="width:30%"><p>Employee Name :</p></td><td><p>' . $fetch['EmpId'] . '</p></td></tr>
@@ -49,8 +53,8 @@ if (mysqli_num_rows($query) > 0) {
     <tr><td style="width:30%"><p>Approved By :</p></td><td><p>' . $fetch['ApprovedBy'] . '</p></td></tr>
     </table>';
 
-    $data .= '<br><table cellpadding="5" style="width:100%;">';
-    $data .= '<tr><th style="width:15%"><p>Item</p></th><th style="width:15%"><p>Quantity</p></th><th style="width:15%"><p>Amount</p></th>
+    $data .= '<br><table cellpadding="5" style="width:100%;border:1px solid gray;">';
+    $data .= '<tr style="width:100%;border:1px solid gray;"><th style="width:15%"><p>Item</p></th><th style="width:15%"><p>Quantity</p></th><th style="width:15%"><p>Amount</p></th>
     <th style="width:30%"><p>Description</p></th><th style="width:25%"><p>Remark</p></th></tr>';
     
     $sql2 = "SELECT * FROM material_items where id = '$mid' ORDER BY id DESC";
@@ -58,7 +62,7 @@ if (mysqli_num_rows($query) > 0) {
 
     while($midata = mysqli_fetch_array($query2)){
     if(!empty($midata['id'])){
-    $data .= '<tr><td style="width:15%"><p>' .$sNum++  .'</p></td><td style="width:15%"><p>' . $midata['ItemQuantity'] 
+    $data .= '<tr style="border-top:1px solid lightgray;"><td style="width:15%"><p>' .$sNum++  .'</p></td><td style="width:15%"><p>' . $midata['ItemQuantity'] 
     . '</p></td><td style="width:15%"><p> ₹ ' . $midata['ItemAmount'] . '</p></td>
     <td style="width:30%"><p>' . $midata['ItemDescription'] . '</p></td><td style="width:25%"><p>' . $midata['ItemRemark'] . '</p></td></tr>';
     }else{$data .= '';}

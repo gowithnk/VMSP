@@ -42,9 +42,9 @@
 				</div>				
 				<div class="form-group mb-2">
 					<label style="font-size: 18px;">Gender : </label>
-					<input class="form-check-input" type="radio" name="gender" value="Male" style="margin-left: 18px;" required>
+					<input class="form-check-input" type="radio" name="gender" value="male" style="margin-left: 18px;" required>
 					<label>Male</label>
-					<input class="form-check-input" style=" margin-left:20px;" type="radio" name="gender" value="Female" required>
+					<input class="form-check-input" style=" margin-left:20px;" type="radio" name="gender" value="female" required>
 					<label>Female</label>
 				</div>
 				<div class="form-outline mb-3">

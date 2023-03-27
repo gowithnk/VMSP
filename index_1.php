@@ -71,6 +71,7 @@ if ($result2 = mysqli_query($db, $sql)) {
         <!-- Navbar -->
         <?php if(isset($_SESSION['ROLE']) && $_SESSION['ROLE'] !== 'admin'){
     echo "<script>
+            alert('Access Denied! Please login with Admin ID');
             location.href='/gpms/dashboard.php';
         </script>";
         die();

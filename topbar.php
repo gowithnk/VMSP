@@ -10,15 +10,15 @@
     $sql = "select * from login_user where username='$user'";
     $query = mysqli_query($db, $sql);
     $fetch = mysqli_fetch_array($query);
-// badge data
-$sql = "SELECT * FROM inquery WHERE status='0'";
-$query = mysqli_query($db, $sql);
-$fetch3 = mysqli_num_rows($query);
-// Notifications
-$date = date("Y-m-d");
-$sql = "SELECT * FROM inquery WHERE Date='$date' ORDER BY Name DESC";
-$query = mysqli_query($db, $sql);
-$fetch4 = mysqli_num_rows($query);
+    // badge data
+    $sql = "SELECT * FROM inquery WHERE status='0'";
+    $query = mysqli_query($db, $sql);
+    $fetch3 = mysqli_num_rows($query);
+    // Notifications
+    $date = date("Y-m-d");
+    $sql = "SELECT * FROM inquery WHERE Date='$date' ORDER BY Name DESC";
+    $query = mysqli_query($db, $sql);
+    $fetch4 = mysqli_num_rows($query);
 
     // user avatar
     $avatar = $fetch[6];
@@ -61,32 +61,30 @@ $fetch4 = mysqli_num_rows($query);
                  </ul>
              </div>
              <div class="dropdown">
-                <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" 
-                data-mdb-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bell"></i>
-                    <span class="badge rounded-pill badge-notification bg-danger"><?php echo $fetch3; ?></span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                    <?php
-                    include('php/dbconn.php');
-                    
-                    if(($fetch4)==0){
-                        echo '<li><a class="dropdown-item" href="#">Nothing to show</a></li>';
-                    }
-                    while ($fetch4 = mysqli_fetch_array($query)) {
-                    ?>
-                        <li><a class="dropdown-item" href="/gpms/php/slip.php?id=<?php echo $fetch4[0];?>">
-                                <?php echo 'New user Added ' . '<span class="bg-success py-1 px-2" style="color:#fff;">' . $fetch4[1] . '</span>'; ?>
-                            </a></li>
-                    <?php } ?>
-                </ul>
-            </div>
+                 <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                     <i class="fas fa-bell"></i>
+                     <span class="badge rounded-pill badge-notification bg-danger"><?php echo $fetch3; ?></span>
+                 </a>
+                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                     <?php
+                        include('php/dbconn.php');
+
+                        if (($fetch4) == 0) {
+                            echo '<li><a class="dropdown-item" href="#">Nothing to show</a></li>';
+                        }
+                        while ($fetch4 = mysqli_fetch_array($query)) {
+                        ?>
+                         <li><a class="dropdown-item" href="/gpms/php/slip.php?id=<?php echo $fetch4[0]; ?>">
+                                 <?php echo 'New user Added ' . '<span class="bg-success py-1 px-2" style="color:#fff;">' . $fetch4[1] . '</span>'; ?>
+                             </a></li>
+                     <?php } ?>
+                 </ul>
+             </div>
              <ul style="margin-right:0;" class="nav navbar-nav navbar-right">
                  <li>
                      <a href="#">
 
-                         <img alt="" class="admin-pic img-circle" 
-                         src="<?php echo '/vms/images/' . $avatar; ?>">
+                         <img alt="" class="admin-pic img-circle" src="<?php echo '/vms/images/' . $avatar; ?>">
                          <?php echo $fetch['name'] ?>
                      </a>
                  </li>

@@ -8,7 +8,6 @@ echo "<table style='width:100%;' id='dtEmp' class='table text-wrap align-middle 
 echo "<thead class='table-dark'>";
 echo "<tr>";
 echo "<th> Name</th>";
-echo "<th> Gender</th>";
 echo "<th> Emp. Code</th>";
 echo "<th> Phone</th>";
 echo "<th> E-mail</th>";
@@ -21,9 +20,9 @@ echo "</tbody>";
 while ($fetch = mysqli_fetch_array($query)) {
     echo "<tr>";
     echo "<td> $fetch[name]</td>";
-    echo "<td> $fetch[gender]</td>";
     echo "<td> $fetch[code]</td>";
-    echo "<td> $fetch[phone]</td>";
+    if($fetch["phone"] == ''){echo "<td> $fetch[office_phone]</td>";}else{echo "<td> $fetch[phone]</td>";};
+    // echo "<td> $fetch[phone]</td>";
     echo "<td> $fetch[email_id]</td>";
     echo "<td> $fetch[department_name]</td>";
     echo "<td> 

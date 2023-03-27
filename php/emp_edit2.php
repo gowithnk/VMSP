@@ -1,7 +1,7 @@
 <?php
 include('dbconn.php');
 $id = $_GET['id'];
-$_SESSION['id'] = $id;
+// $_SESSION['id'] = $id;
 $sql = "Select * from emp_table where id='$id'";
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
@@ -12,34 +12,34 @@ $fetch = mysqli_fetch_array($query);
 		<div class="row">
 			<div class="col-12 py-1 px-4">
 				<div class="form-outline mb-3">
-					<input class="form-control" type="text" id="name" name="name" value="<?php echo $fetch[1]; ?>" required>
+					<input class="form-control" type="text" id="name" name="name" value="<?php echo $fetch["name"]; ?>" required>
 					<label class="form-label" for="name">Enter New Name</label>
 				</div>
 				<div class="form-group mb-3">
 					<label class="me-2 mb-0">Gender : </label>
-					<input <?php if ($fetch[3] == "Male") { echo "checked"; } ?> 
-					type="radio" name="gender" class="me-1" value="Male">
+					<input <?php if($fetch["gender"] == "male") { echo "checked"; } ?> 
+					type="radio" name="gender" class="me-1" value="male">
 					<label class="mb-0 me-3">Male</label>
-					<input <?php if ($fetch[3] == "Female") { echo "checked"; } ?> 
-					type="radio" class="me-1" name="gender" value="Female">
+					<input <?php if($fetch["gender"] == "female") { echo "checked"; } ?> 
+					type="radio" class="me-1" name="gender" value="female">
 					<label class="mb-0">Female</label>
 				</div>
 				
 				<div class="form-outline mb-3">
-					<input class="form-control" type="text" id="phone" name="phone" value="<?php echo $fetch[2]; ?>" required>
+					<input class="form-control" type="number" id="phone" name="phone" value="<?php echo $fetch["phone"]; ?>" required>
 					<label class="form-label" for="phone">New Phone No</label>
 				</div>
 				<div class="form-outline mb-3">
-					<input class="form-control" type="text" name="code" value="<?php echo $fetch[4]; ?>" required>
+					<input class="form-control" type="text" name="code" value="<?php echo $fetch["code"]; ?>" required>
 					<label class="form-label" for="phone">Employee Code</label>
 				</div>
 				<div class="form-outline mb-3">
 					<input class="form-control" type="email" name="email" placeholder="abc.domain.com(E-Mail)" 
-					value="<?php echo $fetch[5]; ?>" required>
+					value="<?php echo $fetch["email_id"]; ?>" required>
 					<label class="form-label" for="phone">Email Address</label>
 				</div>
 				<div class="form-group">
-						<select class="form-control" name="department" value="<?php echo $fetch[6]; ?>" id="inputDepartment" required>
+						<select class="form-control" name="department" value="<?php echo $fetch["department_name"]; ?>" id="inputDepartment" required>
 						<option selected value="">Select Department</option>
 							<?php
 							include('dbconn.php');
@@ -47,13 +47,13 @@ $fetch = mysqli_fetch_array($query);
 							$sql = "Select * from department";
 							$query = mysqli_query($db, $sql);
 
-							if (!empty($fetch[6])) { ?>
-								<option selected value="<?php echo $fetch[6] ?>"><?php echo $fetch[6] ?></option>
+							if (!empty($fetch["department_name"])) { ?>
+								<option selected value="<?php echo $fetch["department_name"] ?>"><?php echo $fetch["department_name"] ?></option>
 							<?php  } ?>
 							<?php
 							while ($row = mysqli_fetch_array($query)) {
 							?>
-								<option value="<?php echo $row[1] ?>"><?php echo $row[1] ?></option>
+								<option value="<?php echo $row["department_name"] ?>"><?php echo $row["department_name"] ?></option>
 
 							<?php } ?>
 						</select>

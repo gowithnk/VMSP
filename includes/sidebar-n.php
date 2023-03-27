@@ -24,7 +24,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                     <i class="fa-regular fa-id-card me-2"></i>Create Pass </a>
                 </a>
             </li>
-            <li class="sidenav-item <?= ($activePage == 'pass_phone') ? 'active':''; ?>">
+            <li class="sidenav-item <?= ($activePage == 'material_pass_display') ? 'active':''; ?>">
                 <a class="py-2 ripple" href="/gpms/php/material_pass_display.php" >
                     <i class="fa-regular fa-id-card me-2"></i>View Material Passes</a>
                 </a>

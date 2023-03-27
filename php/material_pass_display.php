@@ -122,6 +122,7 @@ $fetch2 = mysqli_fetch_array($query);
         // } );
         $(document).ready(function() {
             var table = $('#dtMaterial').DataTable({
+                order: [[0, 'desc']],
                 dom: 'Bfrtip',
                 lengthChange: false,
                 buttons: ['copy', 'csv', 'excel', 'print'],

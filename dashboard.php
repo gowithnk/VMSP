@@ -71,7 +71,9 @@ if ($result = mysqli_query($db, $sql)) {
                         </div>
                         <div class="note-dark p-2"><a href="php/activevisitors.php">
                                 <p class="display-7 text-light">Active Visitors:
-                                    <span class="badge badge-success fs-5" style="margin-left: 5px;"><?php echo $rowcount; ?></span>
+                                    <span class="badge badge-success fs-5" style="margin-left: 5px;position:relative;"><?php echo $rowcount; ?>
+                                        <spna class="av_today">Today</spna>
+                                    </span>
                                 </p>
                             </a>
                         </div>

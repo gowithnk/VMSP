@@ -32,10 +32,8 @@ if (isset($_POST['submit'])) {
 	$out_time = date("h:i A");
 
 
-	$sql = "INSERT INTO material_pass(MaterialPass,FromLocation,ToLocation,Department,ItemCategory,ItemSubCategory,EmpId,ApprovedBy,Reason,
-PersonName,CompanyName,ReturnType,EstimatedReturnDate,Date,OutTime,ChallanNo) 
-VALUES('$materialPass','$fromLocation','$toLocation','$department','$itemCategory','$itemSubCategory','$empId','$approvedBy','$reason','$personName',
-'$companyName','$returnType','$estimatedReturnDate','$date','$out_time','$challanNo')";
+	$sql = "INSERT INTO material_pass(MaterialPass,FromLocation,ToLocation,Department,ItemCategory,ItemSubCategory,EmpId,ApprovedBy,Reason,PersonName,CompanyName,ReturnType,EstimatedReturnDate,Date,OutTime,ChallanNo) 
+	VALUES('$materialPass','$fromLocation','$toLocation','$department','$itemCategory','$itemSubCategory','$empId','$approvedBy','$reason','$personName','$companyName','$returnType','$estimatedReturnDate','$date','$out_time','$challanNo')";
 	$query = mysqli_query($db, $sql);
 
 	$id = mysqli_insert_id($db);
