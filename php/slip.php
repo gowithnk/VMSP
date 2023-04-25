@@ -32,11 +32,11 @@ $fetch = mysqli_fetch_array($query);
 </head>
 
 <body>
-		<div id="divToPrint" class="card" style="width: 30rem;margin-top:20px;left:50px;">
+		<div id="divToPrint" class="card" style="width: 40rem;margin-top:20px;left:50px;">
 			<div class="card-body">
 				<img src="../images/logo.png" width="200px"><br><br>
 				<div class="row">
-					<div class="col-4" style="padding-right: 0px !important;">
+					<div class="col-3" style="padding-right: 0px !important;">
 						<p style="font-weight:600;">Name : </p>
 						<p style="font-weight:600;">Company : </p>
 						<p style="font-weight:600;">Purpose : </p>
@@ -44,17 +44,17 @@ $fetch = mysqli_fetch_array($query);
 						<p style="font-weight:600;">Entry Time : </p>
 						<p style="font-weight:600;">Date : </p>
 					</div>
-					<div class="col-4">
-						<p style="font-weight:600;"><?php echo "$fetch[1]"; ?></p>
-						<p style="font-weight:600;"><?php echo "$fetch[12]"; ?></p>
-						<p style="font-weight:600;"><?php echo "$fetch[13]"; ?></p>
-						<p style="font-weight:600;"><?php echo "$fetch[6]"; ?></p>
-						<p style="font-weight:600;"><?php echo "$fetch[7]"; ?></p>
-						<p style="font-weight:600;"><?php echo "$fetch[10]"; ?></p>
+					<div class="col-5">
+						<p style="font-weight:600;"><?php echo "$fetch[Name]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[Company]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[Purpose]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[Person_Meet]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[In_Time]"; ?></p>
+						<p style="font-weight:600;"><?php echo "$fetch[Date]"; ?></p>
 					</div>
-					<div class="col-3">
-						<img src="<?php echo $fetch[9] ?>" height="110px" width="110"><br>
-						<img src="<?php echo $fetch[4] ?>" width="110">
+					<div class="col-3 text-center">
+						<img src="<?php echo $fetch['qr_code'] ?>" height="110px" width="110"><br>
+						<img src="<?php echo $fetch['Image'] ?>" width="110">
 					</div>
 				</div><br>
 				<!--Instruction box in the main form-->
@@ -66,9 +66,8 @@ $fetch = mysqli_fetch_array($query);
 						<li>Employees must always tend to their visitors while they are inside our premises.</li>
 					</ul>
 				</div>
-				<div class="slip_left">
+				<div class="slip_left text-center">
 					<div class="slip_btn">
-						<!-- <button class="btn btn-primary" id="p1" onclick="print1()" style="margin-right: 20px;">Print</button> -->
 						<a href="print_pass.php" target="_blank" class="btn btn-primary" id="p1" style="margin-right: 20px;">Print</a>
 						<a id="p2" class="btn btn-info" href="../dashboard.php">Back</a><br>
 					</div>

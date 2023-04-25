@@ -10,13 +10,14 @@ use PHPMailer\PHPMailer\Exception;
 include('dbconn.php');
 if(isset($_POST['submit']))
 {
-date_default_timezone_set('Asia/Kolkata');
+
 $name=$_POST['name1'];
 $gender=$_POST['gender'];
 $phone=$_POST['phone'];
 $department=$_POST['department'];
-$in_time=date("h:i");
-$date=date("Y-m-d");
+date_default_timezone_set('Asia/Kolkata');
+$in_time=date("h:i A");
+$date=date("d-m-Y");
 $person_meet_id=$_POST['person_meet_id'];
 $v_email=$_POST['v_email'];
 $purpose=$_POST['purpose'];
@@ -88,11 +89,9 @@ if ($err) {
 // SMS End here ----------
 
 // mail
-
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
-
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -108,15 +107,15 @@ try {
     );
     //Server settings
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'sh005.bigrock.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'synokem.apps@gmail.com';                     //SMTP username
-    $mail->Password   = 'yfpneyjqsquoujgq';                              //SMTP password
+    $mail->Username   = 'gpms@synokem.com';                     //SMTP username
+    $mail->Password   = 'Syn@12345^^';                              //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     
-    $mail->setFrom('synokem.apps@gmail.com', 'Synokem VMS');
+    $mail->setFrom('gpms@synokem.com', 'Synokem VMS');
     $mail->addAddress($empEmail, 'Niranjan');     //Add a recipient
     $mail->addAttachment($file);         //Add attachments
 

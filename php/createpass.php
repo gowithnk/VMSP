@@ -49,7 +49,7 @@ $fetch = mysqli_fetch_array($query);
 	</div>
 	<div class="col-lg-6 col-md-6">
 		<div class=" mb-2">
-			<select class="form-select" name="person_meet_id" style="color: #000 !important;" id="inputHTM" required>
+			<select class=" form-control" name="person_meet_id" style="color: #000 !important;" id="inputHTM" required>
 				<option value="">Please select whom to meet</option>
 				<?php
 				include('dbconn.php');

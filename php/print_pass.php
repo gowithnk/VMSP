@@ -11,29 +11,65 @@ $sql = "SELECT * FROM inquery WHERE id='$id' OR Phone='$phone' ORDER BY id DESC 
 $query = mysqli_query($db, $sql);
 $fetch = mysqli_fetch_array($query);
 
+$mpdf = new \Mpdf\Mpdf([
+'mode' => 'utf-8', 
+'format' => [125, 135],
+'margin_left' => 5,
+'margin_right' => 5,
+'margin_top' => 8,
+'margin_bottom' => 10,
+'margin_header' => 0,
+'margin_footer' => 0]);
+
+
 if(mysqli_num_rows($query)>0){
-    $data .= '<img style="margin-top:-10px;margin-left:50px;" src="../images/logo.png" width="150px"><br>';
-    $data .= '<div style="widthy:100%; ">';
-    $data .= '<p style="width:100%;margin-left:-20px;font-size:13px;"><span>Name : </span>' .'<span>' .$fetch[1] .'</span>' 
-    .'<span><img style="margin-right:-30px;margin-bottom:-60px;float:right;" src="' .$fetch[9] .'"' .' height="70px" width="70"></span></p>';
-    $data .= '<p style="margin-left:-20px;font-size:13px;"><span>Company : </span>' .'<span>' .$fetch[12] .'</span></p>';
-    $data .= '<p style="margin-left:-20px;font-size:13px;"><span>Purpose : </span>' .'<span>' .$fetch[13] .'</span></p>';
-    $data .= '<p style="margin-left:-20px;font-size:13px;"><span>Person To Meet : </span>' .'<span>' .$fetch[6] .'</span></p>';
-    $data .= '<p style="margin-left:-20px;font-size:13px;"><span>Entry Time : </span>' .'<span>' .$fetch[7] .'</span>'
-    .'<span><img style="margin-left:20px;margin-bottom:-55px;float:right;" src="' .$fetch[4] .'"' .' height="70px" width="80"></span></p>';
-    $data .= '<p style="margin-left:-20px;font-size:13px"><span>Date : </span>' .'<span>' .$fetch[10] .'</span></p>';
-    $data .= '<p style="margin-left:-20px;font-size:16px;font-weight:600;">Instruction To Follow:</p>';
-    $data .= '<span style="margin-left:-30px;font-size:12px;font-weight:400;">
-        Visitors should sign in at the [reception/ gate/ front-office] and show some form of identification.<br>
-        Visitors will receive passess and return them to [reception/ gate/ front-office] once the visit is over.<br>
-        Employees must always tend to their visitors while they are inside our premises.</span>
-    </p>';
-    $data .= '</div>';
+    $data .= '<table cellpadding="3" style="width:100%;font-size:13px;">
+        <tr>
+            <td colspan="3" style="width:100%;text-align:center;margin-left:200px;"><img src="../images/logo.png" width="180px"></td>
+        </tr>
+        <tr><td><br></td></tr>
+        <tr>
+            <td width="25%">
+                <p style="margin-bottom:10px;">Name : </p> 
+                <br><p> Company :</p>
+            </td>
+            <td width="70%" align="left">' .$fetch['Name'] . ' <br><br>  ' .$fetch['Company'] .' </td>
+            <td align="right"><img style="margin-bottom:-20px;float:right;" src="' .$fetch['qr_code'] .'"' .' width="70"></td>
+        </tr>
+        <tr>
+            <td width="25%">
+                <p style="margin-bottom:10px;">Purpose : </p> 
+                <br><p> Person To Meet :</p>
+            </td>
+            <td colspan="2" align="left">' .$fetch['Purpose'] . ' <br><br>  ' .$fetch['Person_Meet'] .' </td>
+        </tr>
+        <tr>
+            <td width="25%">
+                <p style="margin-bottom:10px;">Entry Time : </p> 
+                <br><p> Date :</p>
+            </td>
+            <td align="left">' .$fetch['In_Time'] . ' <br><br>  ' .$fetch['Date'] .' </td>
+            <td align="right"><img style="margin-bottom:-20px;float:right;" src="' .$fetch['Image'] .'"' .' width="100" height="90"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            <p style="font-size:16px;font-weight:600;"><br>Instruction To Follow:</p> 
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="left" style="font-size:11px;"><ul> <li>Visitors should sign in at the [reception/ gate/ front-office] and show some form of identification.</li>
+            <li>Visitors will receive passess and return them to [reception/ gate/ front-office] once the visit is over.</li>
+            <li>Employees must always tend to their visitors while they are inside our premises.</li></ul></td>
+        </tr>
+        <tr>
+            <td colspan="3" style="width:100%;text-align:center;margin-left:200px;"><br><img src="../images/visitor-logo.png" width="180px"></td>
+        </tr>
+    </table>';
+
 }else{
     $data = 'No data found';
 }
 
-$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [100, 150]]);
 
 $mpdf->WriteHTML($data);
 

@@ -20,6 +20,7 @@
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../css/selectize.css" />
 </head>
 
 <body>
@@ -53,12 +54,16 @@
 
     <script type="text/javascript" src="../assets/js/load.js"></script>
     <script type="text/javascript" src="../assets/js/main.js"></script>
+    <script type="text/javascript" src="../javascript/selectize-core.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#sidebarCollapse').on('click', function() {
                 $('#sidebar').toggleClass('active');
             });
         });
+        $('#inputHTM').selectize({
+         normalize: true
+      });
     </script>
 
 </body>
